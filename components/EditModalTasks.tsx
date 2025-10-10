@@ -2,20 +2,20 @@
 
 import React, { useState } from 'react';
 import { ChevronLeft, UTurnLeft, UTurnRight } from './icons';
-import { ChevronsUpDown, Copy, Settings } from 'lucide-react';
+import { ChevronsUpDown, Copy, Settings, X } from 'lucide-react';
 import AIInput from './ui/ai-input';
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
 
 interface EditModalProps {
-  originalText: string;
+
 }
 
-const EditModal: React.FC<EditModalProps> = ({ originalText }) => {
+export const EditModalTasks: React.FC<EditModalProps> = () => {
 
 
 
   return (
-    <div className='p-4'>
+    <div className='relative p-4'>
       <svg style={{ display: 'none' }}>
         <filter
           id="glass-distortion"
@@ -72,17 +72,16 @@ const EditModal: React.FC<EditModalProps> = ({ originalText }) => {
           />
         </filter>
       </svg>
-      <div style={{
-        filter: `url(#glass-distortion)`
-      }} className="relative border backdrop-blur-[2px]  bg-neutral-500/10 z-50 rounded-3xl max-w-lg mx-auto"    >
+      <div className="relative border  bg-neutral-500/10 rounded-3xl max-w-lg mx-auto"    >
 
+      <div className="absolute w-full h-full z-0 inset-0 [filter:url(#glass-distortion)] overflow-hidden"></div>
         <div className='absolute w-full h-full rounded-3xl blur-[1px]' style={{
           boxShadow: "inset 1px 1px 1px 0 rgba(200, 200, 200, 0.1), inset -1px -1px 1px 1px rgba(200, 200, 200, 0.1)"
         }} />
 
 
         {/* Header */}
-        <div className='z-10'>
+        <div className=''>
           <div className="p-2 border-b">
             <div className="flex items-center rounded-lg p-2">
 
@@ -94,14 +93,11 @@ const EditModal: React.FC<EditModalProps> = ({ originalText }) => {
           </div>
 
           {/* Body */}
-          <div className="flex-1 p-4 ">
-            <textarea
-              readOnly
-              value={originalText}
-              className="w-full h-full min-h-[140px]  text-foreground text-base resize-none outline-none font-sans"
-              rows={4}
-              placeholder="Enter your edited text here..."
-            />
+          <div className="flex-1 flex flex-row items-start justify-start gap-2 p-4 min-h-[100px]">
+            <span className='bg-secondary/50 border-border/80 border hover:bg-secondary/90 cursor-pointer px-2 py-1 rounded-full block'>Fix Grammar</span>
+            <span className='bg-secondary/50 border-border/80 border hover:bg-secondary/90 cursor-pointer px-2 py-1 rounded-full block'>Tweet Enhancer</span>
+            <span className='bg-secondary/50 border-border/80 border hover:bg-secondary/90 cursor-pointer px-2 py-1 rounded-full block'>Casual Tone</span>
+            <span className='bg-secondary/50 border-border/80 border hover:bg-secondary/90 cursor-pointer px-2 py-1 rounded-full block'>Shorten</span>
           </div>
 
           {/* Footer */}
@@ -112,35 +108,9 @@ const EditModal: React.FC<EditModalProps> = ({ originalText }) => {
                   type="button"
                   className="p-2 rounded-md text-gray-400 text-lg transition duration-200 hover:bg-neutral-500/30 hover:text-white rounded"
                 >
-                  <ChevronLeft className='w-4 h-4' />
-                </button>
-                <button
-                  type="button"
-                  className="p-2 rounded-md text-gray-400 text-lg transition duration-200 hover:bg-neutral-500/30 hover:text-white rounded"
-                >
-                  <UTurnLeft className='w-4 h-4' />
-                </button>
-                <button
-                  type="button"
-                  className="p-2 rounded-md text-gray-400 text-lg transition duration-200 hover:bg-neutral-500/30 hover:text-white rounded"
-                >
-                  <UTurnRight className='w-4 h-4' />
+                  <X className='w-4 h-4' />
                 </button>
 
-                <button
-                  type="button"
-                  className="p-2 rounded-md text-gray-400 text-lg transition duration-200 hover:bg-neutral-500/30 hover:text-white rounded"
-                >
-                  <Copy className='w-4 h-4' />
-                </button>
-
-                <div
-
-                  className="bg-neutral-500/20 ml-1 transition duration-200 hover:bg-neutral-500/30 cursor-pointer px-3 py-1 text-sm rounded-full text-base"
-                // onClick={handleApply}
-                >
-                  Apply
-                </div>
 
               </div>
 
@@ -153,7 +123,7 @@ const EditModal: React.FC<EditModalProps> = ({ originalText }) => {
                     >
                       <div>
                         <p className='text-xs'>Continue from Original</p>
-                        <p className='text-xs font-semibold'>12 words</p>
+                        <p className='text-xs font-semibold'>11 words</p>
                       </div>
                       <div>
                         <ChevronsUpDown className='size-4' />
@@ -161,35 +131,35 @@ const EditModal: React.FC<EditModalProps> = ({ originalText }) => {
                     </div>
                   </PopoverTrigger>
                   <PopoverContent className='p-0 divide-y divide-y-border bg-secondary/50 backdrop-blur-[1px] rounded-2xl max-w-[200px]'>
-                   
-                      <div
-                        className="gap-2 py-2 w-full flex cursor-pointer transition duration-200 text-gray-400 px-3 py-1 text-sm flex items-center gap-1 hover:border-gray-500 hover:text-white"
 
-                      >
-                        <div className='flex-1'>
-                          <p className='text-xs'>Continue from Original</p>
-                          <p className='text-xs font-semibold'>12 words</p>
-                        </div>
-                       
+                    <div
+                      className="gap-2 py-2 w-full flex cursor-pointer transition duration-200 text-gray-400 px-3 py-1 text-sm flex items-center gap-1 hover:border-gray-500 hover:text-white"
+
+                    >
+                      <div className='flex-1'>
+                        <p className='text-xs'>Continue from Original</p>
+                        <p className='text-xs font-semibold'>11 words</p>
                       </div>
 
-                      <div
-                        className="gap-2 py-2 w-full flex cursor-pointer transition duration-200 text-gray-400 px-3 py-1 text-sm flex items-center gap-1 hover:border-gray-500 hover:text-white"
+                    </div>
 
-                      >
-                        <div className='flex-1'>
-                          <p className='text-xs'>Continue from Result</p>
-                          <p className='text-xs font-semibold'>11 words</p>
-                        </div>
-                       
+                    <div
+                      className="gap-2 py-2 w-full flex cursor-pointer transition duration-200 text-gray-400 px-3 py-1 text-sm flex items-center gap-1 hover:border-gray-500 hover:text-white"
+
+                    >
+                      <div className='flex-1'>
+                        <p className='text-xs'>Continue from Result</p>
+                        <p className='text-xs font-semibold'>10 words</p>
                       </div>
-           
+
+                    </div>
+
                   </PopoverContent>
 
                 </Popover>
 
                 <button className='text-muted-foreground p-2'>
-                  <Settings className='w-4 h-4'/>
+                  <Settings className='w-4 h-4' />
                 </button>
 
 
@@ -211,5 +181,3 @@ const EditModal: React.FC<EditModalProps> = ({ originalText }) => {
 
   );
 };
-
-export default EditModal;

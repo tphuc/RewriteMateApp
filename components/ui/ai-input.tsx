@@ -125,6 +125,9 @@ export default function AIInput() {
                         "relative z-10 flex items-center bg-gradient-to-b p-1 from-white/20 to-transparent p-1.5 justify-center w-6 h-6 rounded-full transition-opacity duration-300",
                         isFocused ? "opacity-90" : "opacity-50"
                     )}
+                    style={{
+                        mixBlendMode:"exclusion",
+                    }}
                 >
                     <Pen className="w-4 h-4 opacity-50" />
                 </div>
