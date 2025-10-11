@@ -3,6 +3,7 @@ import EditModal from "@/components/EditModal";
 import { EditModalTasks } from "@/components/EditModalTasks";
 import { FaqSection } from "@/components/faq";
 import Footer from "@/components/footer";
+import GetEarlyAccess from "@/components/get-early-access";
 import { HeroTitle } from "@/components/HeroTitle";
 import { MacTitle } from "@/components/MacTitle";
 import { AuroraBackground } from "@/components/ui/aurora-background";
@@ -19,6 +20,9 @@ export default function Home() {
 
           <HeroTitle />
           <p className="text-center text-muted-foreground">Available for Mac OS 14.0+</p>
+          <div className="z-20 pt-4 flex items-center justify-center">
+          <GetEarlyAccess/>
+          </div>
           <div className="mt-[10%]">
             <div className="relative border-1 rounded-3xl space-y-4 pb-[10%] max-w-md mx-auto p-4 bg-background/80 backdrop-blur-sm">
               <MacTitle />
@@ -28,6 +32,7 @@ export default function Home() {
               <span className="bg-gradient-to-b from-secondary/80 to-secondary">I want my emails to sound not too formal but still serious.</span>
               <div className="absolute top-[50%] right-[38%] text-muted-foreground"><MousePointer className="fill-muted-foreground/80" /></div>
             </div>
+           
             <div className="-mt-[10%] z-10">
               <EditModal originalText="I want my emails to sound professional without feeling overly formal." />
 
