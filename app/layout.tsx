@@ -21,7 +21,7 @@ const siteConfig = {
   description:
     'RewriteMate is a macOS app that helps you instantly improve, rephrase, and refine any text — anywhere on your Mac. The better writing tool, built right into your workflow.',
   url: 'https://rewritemate.app',
-  ogImage: 'https://rewrite-mate-app.vercel.app/opengraph.webp',
+  ogImage: 'https://rewritemate.app.app/opengraph.webp',
 };
 
 export const metadata: Metadata = {
@@ -41,7 +41,6 @@ export const metadata: Metadata = {
     'better writing tool',
     'Mac writing productivity',
   ],
-  creator: '@tphuc',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -65,7 +64,7 @@ export const metadata: Metadata = {
     images: [siteConfig.ogImage],
   },
   icons: {
-    icon: 'favicon.ico',
+    icon: '/favicon.ico',
   },
   manifest: `${siteConfig.url}/site.webmanifest`,
 };
