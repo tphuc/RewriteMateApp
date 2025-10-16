@@ -52,7 +52,7 @@ export default async function PricingPlansPage() {
                 <p className="text-center text-xl text-muted-foreground">Choose the plan that works best for you.</p>
                 <br/>
                 <div className=" gap-8 max-w-5xl mx-auto space-y-4">
-                    {plans.map((plan: any) => (
+                    {plans?.map?.((plan: any) => (
                         <div
                             key={plan.id}
                             style={{
@@ -67,18 +67,18 @@ export default async function PricingPlansPage() {
                             }} />
                             <div className="flex items-center justify-between">
                             <h2 className="text-2xl font-semibold mb-2">
-                                {plan.planFeature.planData.name}
+                                {plan?.planFeature?.planData?.name}
                             </h2>
                             <p className="text-2xl font-semibold tracking-tight mb-2">
                                <PriceText priceFormatted={plan.priceFormatted} />
-                                {plan.planFeature.planData.name?.toLowerCase() !== 'byok' && <span className="text-base font-medium text-foreground/90">
+                                {plan?.planFeature?.planData?.name?.toLowerCase() !== 'byok' && <span className="text-base font-medium text-foreground/90">
                                     /{plan.interval}
                                 </span>}
                             </p>
                             </div>
 
                             <ul className="mb-6 space-y-1 text-sm">
-                                {plan.planFeature.planData.descriptions.map(
+                                {plan?.planFeature?.planData?.descriptions.map(
                                     (feature: string, i: number) => (
                                         <li className="flex items-center gap-1" key={i}><Check className="w-4 h-4"/> <span>{feature}</span></li>
                                     )
