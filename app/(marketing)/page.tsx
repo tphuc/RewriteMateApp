@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import GetEarlyAccess from "@/components/get-early-access";
 import { HeroTitle } from "@/components/HeroTitle";
 import { MacTitle } from "@/components/MacTitle";
+import PricingPlansPage from "@/components/pricing-plans";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { Kbd, KbdGroup } from "@/components/ui/kbd";
 import { MousePointer } from "lucide-react";
@@ -15,7 +16,7 @@ export default function Home() {
   return (
     <div className="relative max-w-screen min-h-screen  scrollbar-hide">
       <AuroraBackground className="relative w-full min-h-screen flex items-center">
-        <main className="space-y-2 pt-[10%]">
+        <main className="space-y-2 pt-[30%] px-3 md:pt-[10%]">
 
 
           <HeroTitle />
@@ -70,7 +71,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative py-[5%] max-w-2xl mx-auto w-full px-4">
+        <div className="relative max-w-2xl mx-auto w-full px-4">
 
           <h1 className="w-full text-4xl md:text-5xl max-w-2xl ml-auto font-semibold tracking-tight pb-4 text-right">
             Custom Instructions
@@ -97,6 +98,7 @@ export default function Home() {
         </div>
 
       </div>
+      <PricingPlansPage/>
       <FaqSection/>
       <Footer/>
     </div>
