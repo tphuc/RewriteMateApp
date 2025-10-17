@@ -24,7 +24,7 @@ const siteConfig = {
   ogImage: 'https://rewritemate.app/opengraph.webp',
 };
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: {
     default: 'RewriteMate',
     template: `%s`,
@@ -70,6 +70,7 @@ export const metadata: Metadata = {
 };
 
 
+export {metadata};
 
 export default function RootLayout({
   children,
