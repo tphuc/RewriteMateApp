@@ -63,10 +63,11 @@ export default function Home() {
           <p className="text-2xl md:text-3xl max-w-2xl mx-auto text-muted-foreground">No switching apps, no losing flow.</p>
           <br />
           <div className="relative  mx-auto max-w-2xl">
-            <div className="bg-secondary p-2 rounded-3xl inline-flex items-center justify-center gap-4">
-              <Image src='/apple-mail.webp' style={{ width: 46, height: 46 }} width={300} height={300} alt='apple-mail' />
-              <Image src='/apple-notes.webp' style={{ width: 50, height: 50 }} width={300} height={300} alt='apple-notes' />
-              <Image src='/notion-logo.webp' style={{ width: 50, height: 50 }} width={300} height={300} alt='apple-mail' />
+            <div className="bg-secondary p-2 rounded-3xl inline-flex items-center justify-center gap-4 border">
+              <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='/apple-mail.webp' style={{ width: 46, height: 46 }} width={300} height={300} alt='Mail' />
+              <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='/apple-notes.webp' style={{ width: 50, height: 50 }} width={300} height={300} alt='Notes' />
+              <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='/notion-logo.webp' style={{ width: 50, height: 50 }} width={300} height={300} alt='Notion' />
+              <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='/logo.png' style={{ width: 50, height: 50 }} width={300} height={300} alt='RewriteMate' />
             </div>
           </div>
         </div>

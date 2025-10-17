@@ -21,6 +21,8 @@ export default function Nav() {
       </Link>
 
       {/* Right: Contact Button */}
+      <div className='flex-1'/>
+      <a className='text-lg font-semibold' href='https://x.com/rewritemateapp'>Twitter</a>
       <ContactButtonClient/>
       </div>
     </nav>

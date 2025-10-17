@@ -9,8 +9,8 @@ export function ContactButtonClient() {
   }
 
   return (
-    <Button variant={'ghost'} className="bg-transparent text-lg font-semibold text-foreground" onClick={handleClick}>
+    <div  className="text-lg cursor-pointer px-3 py-1 rounded-lg font-semibold text-foreground/90 hover:text-foreground" onClick={handleClick}>
       Contact
-    </Button>
+    </div>
   )
 }

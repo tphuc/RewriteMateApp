@@ -8,11 +8,12 @@ function PriceText({ priceFormatted }: { priceFormatted: string }) {
     const [whole, fraction] = priceFormatted.replace("$", "").split(".")
   
     return (
-      <span className="font-bold text-2xl">
+      <span className="text-2xl font-bold">
         $
-        {whole}.
+        {whole}
+        .
         {fraction && (
-          <span className="relative font-semibold text-2xl text-foreground/[82%] tracking-tighter ml-0.5">{fraction}</span>
+          <span  className="text-xl relative align-top tracking-tighter text-foreground/90 font-semibold relative pl-0.5">{fraction}</span>
         )}
       </span>
     )
@@ -51,14 +52,14 @@ export default async function PricingPlansPage() {
                 <h1 className="text-4xl md:text-5xl tracking-tight text-center font-bold">Plans & Pricing</h1>
                 <p className="text-center text-xl text-muted-foreground">Choose the plan that works best for you.</p>
                 <br/>
-                <div className=" gap-8 max-w-5xl mx-auto space-y-4">
+                <div className=" gap-8 max-w-5xl cursor-default mx-auto space-y-4">
                     {plans?.map?.((plan: any) => (
                         <div
                             key={plan.id}
                             style={{
-                                boxShadow: "inset 1px 1px 3px 0.5px rgba(200, 200, 200, 0.3), inset -1px -1px 5px 0.5px rgba(200, 200, 200, 0.1)",
+                                boxShadow: "inset 0.5px 0.5px 0px 0.5px rgba(200, 200, 200, 0.1), inset -0.5px -0.5px 0px 0.5px rgba(200, 200, 200, 0.1)",
                             }}
-                            className="relative overflow-hidden z-10 rounded-3xl p-6 shadow-sm hover:shadow-lg transition-all duration-200"
+                            className="relative overflow-hidden z-10 bg-secondary/20 rounded-3xl p-6 shadow-sm hover:shadow-lg transition-all duration-200"
                         >
 
                             <div className="absolute w-full bg-secondary h-full blur-[10px] opacity-[38%] top-0 left-0" style={{
