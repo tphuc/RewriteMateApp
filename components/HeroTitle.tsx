@@ -21,7 +21,7 @@ export function HeroTitle() {
       </span>
       </span>
       {" "}
-      anything on your Mac
+      anything
     </h1>
 
 

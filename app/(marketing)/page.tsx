@@ -5,6 +5,7 @@ import { FaqSection } from "@/components/faq";
 import Footer from "@/components/footer";
 import GetEarlyAccess from "@/components/get-early-access";
 import { HeroTitle } from "@/components/HeroTitle";
+import IOSSimulator from "@/components/ios-simulator";
 import { MacTitle } from "@/components/MacTitle";
 import PricingPlansPage from "@/components/pricing-plans";
 import { AuroraBackground } from "@/components/ui/aurora-background";
@@ -57,8 +58,19 @@ export default function Home() {
           </KbdGroup>
         </div>
 
+        <div className="flex flex-col lg:flex-row w-full min-h-[60vh] py-20 mx-auto items-center px-4 gap-4 max-w-screen-md">
+          <div className="space-y-4">
+            <h1 className="text-4xl tracking-tighter max-w-sm md:text-5xl font-bold">
+              iOS Keyboard Extension
+              </h1>
+              <p className='text-2xl text-secondary-foreground'>Rewrite anything on your phone with one tap.
+</p>
+          </div>
+          <IOSSimulator/>
+        </div>
+
         <div className="relative py-[12%] px-4">
-          <h1 className="text-4xl md:text-5xl max-w-2xl mx-auto font-semibold tracking-tight pb-4">Works Everywhere on macOS</h1>
+          <h1 className="text-4xl md:text-5xl max-w-2xl mx-auto font-semibold tracking-tight pb-4">Works Everywhere</h1>
           <p className="text-2xl md:text-3xl max-w-2xl mx-auto text-muted-foreground">Rewrite anywhere you write — <br /> from Notes and Mail to Notion, Docs, or Slack. </p>
           <p className="text-2xl md:text-3xl max-w-2xl mx-auto text-muted-foreground">No switching apps, no losing flow.</p>
           <br />
