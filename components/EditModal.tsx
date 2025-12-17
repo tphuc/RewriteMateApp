@@ -16,7 +16,7 @@ const EditModal: React.FC<EditModalProps> = ({ originalText }) => {
 
   return (
     <div className='p-4'>
-      <svg style={{ display: 'none' }}>
+      {/* <svg style={{ display: 'none' }}>
         <filter
           id="glass-distortion"
           x="0%"
@@ -32,7 +32,6 @@ const EditModal: React.FC<EditModalProps> = ({ originalText }) => {
             seed="5"
             result="turbulence"
           />
-          {/* Seeds: 14, 17, */}
 
           <feComponentTransfer in="turbulence" result="mapped">
             <feFuncR type="gamma" amplitude="1" exponent="10" offset="0.5" />
@@ -71,9 +70,9 @@ const EditModal: React.FC<EditModalProps> = ({ originalText }) => {
             yChannelSelector="G"
           />
         </filter>
-      </svg>
+      </svg> */}
       <div style={{
-        filter: `url(#glass-distortion)`
+        // filter: `url(#glass-distortion)`
       }} className="relative border backdrop-blur-[2px]  bg-neutral-500/10 z-50 rounded-3xl max-w-lg mx-auto"    >
 
         <div className='absolute w-full h-full rounded-3xl blur-[1px]' style={{

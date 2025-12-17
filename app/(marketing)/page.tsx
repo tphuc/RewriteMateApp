@@ -1,3 +1,4 @@
+import { AppStoreBtn } from "@/components/appstore-btn";
 import CustomInstructionsList from "@/components/custom-instruction-list";
 import EditModal from "@/components/EditModal";
 import { EditModalTasks } from "@/components/EditModalTasks";
@@ -9,9 +10,11 @@ import IOSSimulator from "@/components/ios-simulator";
 import { MacTitle } from "@/components/MacTitle";
 import PricingPlansPage from "@/components/pricing-plans";
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import { Button } from "@/components/ui/button";
 import { Kbd, KbdGroup } from "@/components/ui/kbd";
-import { MousePointer } from "lucide-react";
+import { Apple, MousePointer } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -21,9 +24,16 @@ export default function Home() {
 
 
           <HeroTitle />
-          <p className="text-center text-muted-foreground">Available for Mac OS 14.0+</p>
-          <div className="z-20 pt-4 flex items-center justify-center">
-          <GetEarlyAccess/>
+
+          <div className="z-20 pt-10 flex items-center justify-center">
+            {/* <GetEarlyAccess/> */}
+            <Link style={{ zIndex: 20 }} href='https://apps.apple.com/vn/app/rewritemate/id6755306532'>
+              <AppStoreBtn
+                variant="light"
+                className="scale-[1.1]"
+              />
+
+            </Link>
           </div>
           <div className="mt-[10%]">
             <div className="relative border-1 rounded-3xl space-y-4 pb-[10%] max-w-md mx-auto p-4 bg-background/80 backdrop-blur-sm">
@@ -34,7 +44,7 @@ export default function Home() {
               <span className="bg-gradient-to-b from-secondary/80 to-secondary">I want my emails to sound not too formal but still serious.</span>
               <div className="absolute top-[50%] right-[38%] text-muted-foreground"><MousePointer className="fill-muted-foreground/80" /></div>
             </div>
-           
+
             <div className="-mt-[10%] z-10">
               <EditModal originalText="I want my emails to sound professional without feeling overly formal." />
 
@@ -48,9 +58,9 @@ export default function Home() {
       </AuroraBackground>
       <div className="min-h-[50vh] w-full relative">
         <br />
-      
+
         <div className="mx-auto flex items-center justify-center gap-4 relative max-w-sm">
-        <p className="text-muted-foreground/80">Open writing tool instantly with configurable hotkeys</p>
+          <p className="text-muted-foreground/80">Open writing tool instantly with configurable hotkeys</p>
           <KbdGroup >
             <Kbd className="size-8 text-lg rounded-lg border">⇧</Kbd>
             <Kbd className="size-8 text-lg rounded-lg border">⌥</Kbd>
@@ -62,11 +72,17 @@ export default function Home() {
           <div className="space-y-4">
             <h1 className="text-4xl tracking-tighter max-w-sm md:text-5xl font-bold">
               iOS Keyboard Extension
-              </h1>
-              <p className='text-2xl text-secondary-foreground'>Rewrite anything on your phone with one tap.
-</p>
+            </h1>
+            <p className='text-2xl text-secondary-foreground'>Rewrite anything on your phone with one tap</p>
+            <Link style={{ zIndex: 20 }} className="px-2 border-[0px]" href='https://apps.apple.com/vn/app/rewritemate/id6755306532'>
+              <AppStoreBtn
+                variant="light"
+                className="scale-[1.1]"
+              />
+
+            </Link>
           </div>
-          <IOSSimulator/>
+          <IOSSimulator />
         </div>
 
         <div className="relative py-[12%] px-4">
@@ -111,9 +127,9 @@ export default function Home() {
         </div>
 
       </div>
-      <PricingPlansPage/>
-      <FaqSection/>
-      <Footer/>
+      <PricingPlansPage />
+      <FaqSection />
+      <Footer />
     </div>
   );
 }
