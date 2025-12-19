@@ -23,6 +23,7 @@ type AppStoreBtnProps = {
     className?: string
   }
   
+
 export function AppStoreBtn({
     variant = "dark",
     className = "",
@@ -31,13 +32,13 @@ export function AppStoreBtn({
   
     return (
       <div
+        id='downloadforios'
         className={cn(`
           inline-flex items-center justify-between gap-[2px]
           rounded-[8px] border-[1px]
           pl-[4px] pr-[10px] py-[6px]
           overflow-hidden
-          transition-all
-          active:scale-95`,
+          transition-all`,
           isDark
           ? "bg-gradient-to-b from-[#111111] to-black text-white border-[#ffffff]/50"
           : "bg-gradient-to-b from-[#eeeeee] to-white text-black border-[#000000]/50",

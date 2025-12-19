@@ -28,7 +28,7 @@ export default async function PricingPlansPage() {
     }
 
     const res = await fetch(`${apiUrl}/plans`, {
-        next: { revalidate: 3600 }, // Revalidate every hour for fresh pricing
+        next: { revalidate: 600 }, // Revalidate every hour for fresh pricing
     })
 
     if (!res.ok) {

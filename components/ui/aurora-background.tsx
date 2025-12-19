@@ -10,8 +10,8 @@ const DEFAULT_AURORA_COLORS = [
   "#22d3ee", // cyan
   "#4ade80", // green
   "#a78bfa", // violet
-  "#f0abfc", // pink
-  "#2dd4bf", // teal
+  "#4E61D3", // pink
+  "#4E61D3", // teal
 ] as const;
 
 export const AuroraBackground = ({

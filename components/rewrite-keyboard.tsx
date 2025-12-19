@@ -1,7 +1,7 @@
 import React from 'react';
 import {  Briefcase, MessageCircle, RefreshCw, Mic, Grid2X2, History, Globe2, LucideGlobe } from 'lucide-react';
 import { Input } from './ui/input';
-import { Globe, Grid, MicroPhone, Sparkles, Translate, Pencil } from './icons';
+import { Globe, Grid, MicroPhone, Sparkles, Translate, Pencil, PaperPlane } from './icons';
 
 
 const tasks = [
@@ -50,10 +50,10 @@ const tasks = [
 export default function RewriteKeyboard() {
     return (
         <div className='relative w-full h-full flex flex-col px-0.5'>
-            <div className='w-full py-2 flex items-center gap-2 px-2'>
+            <div className='w-full py-2 flex items-center gap-1 px-2'>
                 <Input type='search' placeholder='describe your changes...' className='rounded-full border-0 h-8 text-sm' />
-                <div className='p-2 rounded-full bg-border border'>
-                    <Pencil className='w-3.5 h-3.5 fill-foreground' />
+                <div style={{background: 'oklch(0.7074 0.1825 257.82 / 39.42%)', border:'0.8px solid oklch(0.7074 0.1825 257.82 / 60%)'}} className='flex items-center justify-center p-2 rounded-md'>
+                    <PaperPlane className='w-3.5 h-3.5 fill-foreground' />
                 </div>
             </div>
             <div className='relative border-t-[0.5px]'>

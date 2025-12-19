@@ -22,7 +22,7 @@ type Props = {
 };
 
 const StatusBar: React.FC = () => (
-  <div className="relative flex items-center justify-between w-full py-1 mt-4 text-[11px] text-white/90">
+  <div className="relative flex items-center justify-between w-full py-1 px-4 mt-4 text-[11px] text-white/90">
     <div className="flex items-center gap-2">
       <div className="w-2 h-2 rounded-full " />
       <span className="hidden font-semibold sm:inline">9:41</span>
@@ -47,8 +47,8 @@ export default function IOSSimulator({ width = 320, showControls = true, childre
   const wrapperStyle = typeof width === "number" ? { width: `${width}px` } : undefined;
 
   return (
-    <div className="p-6 relative flex flex-col items-center gap-4">
-      <div className="relative" style={wrapperStyle}>
+    <div className="p-6  relative flex flex-col items-center gap-4">
+      <div className="relative bg-black overflow-hidden rounded-[60px]" style={wrapperStyle}>
         {/* Device shell */}
   
           {/* outer bezel */}

@@ -15,14 +15,15 @@ export default function Nav() {
           alt="RewriteMate Logo"
           width={42}
           height={42}
-          className="rounded-[12px] border-2 border-background/80"
+          className="rounded-[12px] border-1 border-background/80"
         />
         <span className="font-semibold text-lg">RewriteMate</span>
       </Link>
 
       {/* Right: Contact Button */}
       <div className='flex-1'/>
-      <a className='text-lg font-semibold' href='https://x.com/rewritemateapp'>Twitter</a>
+      <Link className='text-lg font-semibold' href='/ios'>iOS</Link>
+
       <ContactButtonClient/>
       </div>
     </nav>

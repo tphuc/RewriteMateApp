@@ -25,6 +25,9 @@ export default function Footer() {
         <Link href="/privacy" className="hover:underline">
           Privacy Policy
         </Link>
+        <Link href="/ios" className="hover:underline">
+         iOS
+        </Link>
       </div>
     </footer>
   );

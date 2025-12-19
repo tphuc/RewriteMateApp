@@ -1,20 +1,23 @@
 import { AppStoreBtn } from "@/components/appstore-btn";
 import CustomInstructionsList from "@/components/custom-instruction-list";
+import DownloadMacOSBtn from "@/components/download-macos-btn";
 import EditModal from "@/components/EditModal";
 import { EditModalTasks } from "@/components/EditModalTasks";
 import { FaqSection } from "@/components/faq";
 import Footer from "@/components/footer";
 import GetEarlyAccess from "@/components/get-early-access";
 import { HeroTitle } from "@/components/HeroTitle";
+import { AppleLogoSvg } from "@/components/icons";
 import IOSSimulator from "@/components/ios-simulator";
 import { MacTitle } from "@/components/MacTitle";
 import PricingPlansPage from "@/components/pricing-plans";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { Button } from "@/components/ui/button";
 import { Kbd, KbdGroup } from "@/components/ui/kbd";
-import { Apple, MousePointer } from "lucide-react";
+import { Apple, Check, MousePointer } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+
 
 export default function Home() {
   return (
@@ -25,15 +28,24 @@ export default function Home() {
 
           <HeroTitle />
 
-          <div className="z-20 pt-10 flex items-center justify-center">
+          <div className="z-20 pt-10 gap-4 flex items-center justify-center">
+          <DownloadMacOSBtn/>
+          <Link className="z-20 inline-flex font-semibold items-center gap-2 rounded-lg bg-white px-5 py-2 text-black hover:opacity-90" href='https://apps.apple.com/vn/app/rewritemate/id6755306532'>
+            Download for iOS
+            <AppleLogoSvg
+          className={`h-4 w-4`}
+        />
+          </Link>
             {/* <GetEarlyAccess/> */}
-            <Link style={{ zIndex: 20 }} href='https://apps.apple.com/vn/app/rewritemate/id6755306532'>
+            {/* <Link style={{ zIndex: 20 }} href='https://apps.apple.com/vn/app/rewritemate/id6755306532'>
               <AppStoreBtn
                 variant="light"
                 className="scale-[1.1]"
               />
 
-            </Link>
+            </Link> */}
+             
+          
           </div>
           <div className="mt-[10%]">
             <div className="relative border-1 rounded-3xl space-y-4 pb-[10%] max-w-md mx-auto p-4 bg-background/80 backdrop-blur-sm">
@@ -68,22 +80,8 @@ export default function Home() {
           </KbdGroup>
         </div>
 
-        <div className="flex flex-col lg:flex-row w-full min-h-[60vh] py-20 mx-auto items-center px-4 gap-4 max-w-screen-md">
-          <div className="space-y-4">
-            <h1 className="text-4xl tracking-tighter max-w-sm md:text-5xl font-bold">
-              iOS Keyboard Extension
-            </h1>
-            <p className='text-2xl text-secondary-foreground'>Rewrite anything on your phone with one tap</p>
-            <Link style={{ zIndex: 20 }} className="px-2 border-[0px]" href='https://apps.apple.com/vn/app/rewritemate/id6755306532'>
-              <AppStoreBtn
-                variant="light"
-                className="scale-[1.1]"
-              />
 
-            </Link>
-          </div>
-          <IOSSimulator />
-        </div>
+
 
         <div className="relative py-[12%] px-4">
           <h1 className="text-4xl md:text-5xl max-w-2xl mx-auto font-semibold tracking-tight pb-4">Works Everywhere</h1>

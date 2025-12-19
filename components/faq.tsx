@@ -10,8 +10,7 @@ import {
     {
         id: "what-is",
         question: "What is RewriteMate?",
-        answer: `RewriteMate is the better writing tool for macOS — built to help you instantly improve, rephrase, and refine any text across your system.
-        It works everywhere on your Mac, letting you rewrite text from Notes, Mail, Safari, or any app without switching windows.`,
+        answer: `RewriteMate is an AI writing assistant for macOS and iOS that helps you rewrite, refine, and improve text instantly. \n It works system-wide on Mac and as an iOS keyboard extension, so you can enhance your writing in any app without switching contexts.`,
       },
     {
       id: "data",
