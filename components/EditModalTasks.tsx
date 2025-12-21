@@ -93,11 +93,11 @@ export const EditModalTasks: React.FC<EditModalProps> = () => {
           </div>
 
           {/* Body */}
-          <div className="flex-1 flex flex-row items-start justify-start gap-2 p-4 min-h-[100px]">
-            <span className='bg-secondary/50 border-border/80 border hover:bg-secondary/90 cursor-pointer px-2 py-1 rounded-full block'>Fix Grammar</span>
-            <span className='bg-secondary/50 border-border/80 border hover:bg-secondary/90 cursor-pointer px-2 py-1 rounded-full block'>Tweet Enhancer</span>
-            <span className='bg-secondary/50 border-border/80 border hover:bg-secondary/90 cursor-pointer px-2 py-1 rounded-full block'>Casual Tone</span>
-            <span className='bg-secondary/50 border-border/80 border hover:bg-secondary/90 cursor-pointer px-2 py-1 rounded-full block'>Shorten</span>
+          <div className="flex-1 flex flex-row  items-start justify-start gap-2 p-4 min-h-[100px]" style={{flexWrap:"wrap", maxWidth:"92vw"}}>
+            <span className='bg-secondary/50 border-border/80 border hover:bg-secondary/90 cursor-pointer px-2 py-1 rounded-full whitespace-nowrap block'>Fix Grammar</span>
+            <span className='bg-secondary/50 border-border/80 border hover:bg-secondary/90 cursor-pointer px-2 py-1 rounded-full whitespace-nowrap block'>Tweet Enhancer</span>
+            <span className='bg-secondary/50 border-border/80 border hover:bg-secondary/90 cursor-pointer px-2 py-1 rounded-full whitespace-nowrap block'>Casual Tone</span>
+            <span className='bg-secondary/50 border-border/80 border hover:bg-secondary/90 cursor-pointer px-2 py-1 rounded-full whitespace-nowrap block'>Shorten</span>
           </div>
 
           {/* Footer */}
@@ -114,7 +114,7 @@ export const EditModalTasks: React.FC<EditModalProps> = () => {
 
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 <Popover>
                   <PopoverTrigger asChild>
                     <div

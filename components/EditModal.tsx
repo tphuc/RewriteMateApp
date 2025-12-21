@@ -15,7 +15,7 @@ const EditModal: React.FC<EditModalProps> = ({ originalText }) => {
 
 
   return (
-    <div className='p-4'>
+    <div className='relative ' style={{maxWidth:"98vw"}}>
       {/* <svg style={{ display: 'none' }}>
         <filter
           id="glass-distortion"
@@ -143,15 +143,15 @@ const EditModal: React.FC<EditModalProps> = ({ originalText }) => {
 
               </div>
 
-              <div className="flex items-center gap-2">
-                <Popover>
+              <div className="flex  relative items-center" style={{maxWidth:"100vw", overflow:"hidden"}}>
+                <Popover modal>
                   <PopoverTrigger asChild>
                     <div
-                      className="relative gap-2 cursor-pointer transition duration-200 text-gray-400 px-3 py-1 rounded-full text-sm flex items-center gap-1 hover:border-gray-500 hover:text-white"
+                      className="relative gap-2 cursor-pointer transition duration-200 text-gray-400 py-1 pl-2 rounded-full text-sm flex items-center gap-1 hover:border-gray-500 hover:text-white"
 
                     >
                       <div>
-                        <p className='text-xs line-clamp-1'>Continue from Original</p>
+                        <p className='text-xs ellipsis line-clamp-1'>Continue from Original</p>
                         <p className='text-xs font-semibold  line-clamp-1'>12 words</p>
                       </div>
                       <div>
@@ -159,8 +159,8 @@ const EditModal: React.FC<EditModalProps> = ({ originalText }) => {
                       </div>
                     </div>
                   </PopoverTrigger>
-                  <PopoverContent className='p-0 divide-y divide-y-border bg-secondary/50 backdrop-blur-[1px] rounded-2xl max-w-[200px]'>
-                   
+                  <PopoverContent  className='p-0 divide-y divide-y-border bg-secondary/50 backdrop-blur-[1px] rounded-2xl'>
+                    
                       <div
                         className="gap-2 py-2 w-full flex cursor-pointer transition duration-200 text-gray-400 px-3 py-1 text-sm flex items-center gap-1 hover:border-gray-500 hover:text-white"
 
@@ -187,21 +187,12 @@ const EditModal: React.FC<EditModalProps> = ({ originalText }) => {
 
                 </Popover>
 
-                <button className='text-muted-foreground p-2'>
-                  <Settings className='w-4 h-4'/>
-                </button>
-
 
               </div>
             </div>
 
 
-            <button
-              type="button"
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-base hover:text-white"
-            >
-
-            </button>
+          
           </div>
         </div>
       </div>

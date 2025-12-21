@@ -59,7 +59,7 @@ import {
               <AccordionTrigger className="text-2xl">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-lg whitespace-pre-line">
+              <AccordionContent className="text-muted-foreground text-md md:text-lg whitespace-pre-line">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

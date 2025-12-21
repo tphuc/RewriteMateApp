@@ -61,10 +61,9 @@ export default function GetEarlyAccess() {
     return (
       <Button
         onClick={() => setShowForm(true)}
-        size="lg"
-        className="z-20 hover:bg-primary transition duration-200 ease-in rounded-full text-lg cursor-pointer hover:scale-[1.02]"
+        className="z-20 hover:bg-primary transition duration-200 ease-in rounded-full text-md font-semibold cursor-pointer py-1 hover:scale-[1.02]"
       >
-        Get early access
+        Join macOS Early Access
       </Button>
     )
   }

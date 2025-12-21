@@ -28,9 +28,11 @@ export default function Home() {
 
           <HeroTitle />
 
-          <div className="z-20 pt-10 gap-4 flex items-center justify-center">
-          <DownloadMacOSBtn/>
-          <Link className="z-20 inline-flex font-semibold items-center gap-2 rounded-lg bg-white px-5 py-2 text-black hover:opacity-90" href='https://apps.apple.com/vn/app/rewritemate/id6755306532'>
+          <div className="z-20 pt-10 gap-4 flex flex-col lg:flex-row px-4 items-center justify-center">
+          {/* <DownloadMacOSBtn/> */}
+
+              <GetEarlyAccess/>
+          <Link className="z-20 whitespace-nowrap  inline-flex font-semibold items-center gap-2 rounded-full bg-white px-5 py-2 text-black hover:opacity-90" href='https://apps.apple.com/vn/app/rewritemate/id6755306532'>
             Download for iOS
             <AppleLogoSvg
           className={`h-4 w-4`}
@@ -47,17 +49,17 @@ export default function Home() {
              
           
           </div>
-          <div className="mt-[10%]">
-            <div className="relative border-1 rounded-3xl space-y-4 pb-[10%] max-w-md mx-auto p-4 bg-background/80 backdrop-blur-sm">
+          <div className="mt-[10%] px-2 relative" style={{maxWidth:"100vw", overflow:"hidden"}}>
+            <div  className="relative border-1 rounded-3xl space-y-4 pb-[10%] mx-auto p-4 bg-background/80 backdrop-blur-sm">
               <MacTitle />
               <div className='absolute overflow-hidden top-0 left-0 w-full h-full rounded-3xl' style={{
                 boxShadow: "inset 0px 0px 1px 0 rgba(200, 200, 200, 0.1), inset -0.5px -0.5px 0.5px 0.5px rgba(20, 20, 20, 0.2)"
               }} />
-              <span className="bg-gradient-to-b from-secondary/80 to-secondary">I want my emails to sound not too formal but still serious.</span>
+              <span className="bg-gradient-to-b  from-secondary/80 to-secondary">I want my emails to sound not too formal but still serious.</span>
               <div className="absolute top-[50%] right-[38%] text-muted-foreground"><MousePointer className="fill-muted-foreground/80" /></div>
             </div>
 
-            <div className="-mt-[10%] z-10">
+            <div className="-mt-[10%] z-10 relative">
               <EditModal originalText="I want my emails to sound professional without feeling overly formal." />
 
             </div>
@@ -71,9 +73,9 @@ export default function Home() {
       <div className="min-h-[50vh] w-full relative">
         <br />
 
-        <div className="mx-auto flex items-center justify-center gap-4 relative max-w-sm">
+        <div className="mx-auto flex flex-col lg:flex-row items-center justify-center gap-4 relative max-w-[98vw]">
           <p className="text-muted-foreground/80">Open writing tool instantly with configurable hotkeys</p>
-          <KbdGroup >
+          <KbdGroup>
             <Kbd className="size-8 text-lg rounded-lg border">⇧</Kbd>
             <Kbd className="size-8 text-lg rounded-lg border">⌥</Kbd>
             <Kbd className="size-8 text-lg rounded-lg border">W</Kbd>
@@ -107,10 +109,10 @@ export default function Home() {
 
 
           <br />
-          <div className="relative mx-auto max-w-2xl flex flex-col items-end">
+          <div className="relative mx-auto max-w-2xl flex flex-col items-end" >
             <div className="relative h-full">
-
-              <div className="relative flex flex-col items-end">
+ 
+              <div className="relative flex flex-col items-end" style={{maxWidth:"96vw"}}>
                 <div className="absolute top-0 w-full z-10 h-[40%] bg-gradient-to-b from-background via-background/60 to-transparent"></div>
                 <EditModalTasks />
                 <div className="absolute bottom-0 w-full z-10 h-[40%] bg-gradient-to-t from-background via-background/10 to-transparent"></div>
