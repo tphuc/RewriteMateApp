@@ -152,7 +152,7 @@ const EditModal: React.FC<EditModalProps> = ({ originalText }) => {
                     >
                       <div>
                         <p className='text-xs ellipsis line-clamp-1'>Continue from Original</p>
-                        <p className='text-xs font-semibold  line-clamp-1'>12 words</p>
+                      <p className='text-xs font-semibold  line-clamp-1'>12 words</p>
                       </div>
                       <div>
                         <ChevronsUpDown className='size-4' />

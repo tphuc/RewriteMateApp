@@ -27,17 +27,19 @@ export default function Home() {
 
 
           <HeroTitle />
-
+        
           <div className="z-20 pt-10 gap-4 flex flex-col lg:flex-row px-4 items-center justify-center">
-          {/* <DownloadMacOSBtn/> */}
+          <DownloadMacOSBtn/>
 
-              <GetEarlyAccess/>
-          <Link className="z-20 whitespace-nowrap  inline-flex font-semibold items-center gap-2 rounded-full bg-white px-5 py-2 text-black hover:opacity-90" href='https://apps.apple.com/vn/app/rewritemate/id6755306532'>
+        
+
+     
+          {/* <Link className="z-20 whitespace-nowrap  inline-flex font-semibold items-center gap-2 rounded-full bg-white px-5 py-2 text-black hover:opacity-90" href='https://apps.apple.com/vn/app/rewritemate/id6755306532'>
             Download for iOS
             <AppleLogoSvg
           className={`h-4 w-4`}
         />
-          </Link>
+          </Link> */}
             {/* <GetEarlyAccess/> */}
             {/* <Link style={{ zIndex: 20 }} href='https://apps.apple.com/vn/app/rewritemate/id6755306532'>
               <AppStoreBtn
@@ -49,6 +51,7 @@ export default function Home() {
              
           
           </div>
+          <p className="mx-auto max-w-sm text-center">Requires macOS 14+</p>
           <div className="mt-[10%] px-2 relative" style={{maxWidth:"100vw", overflow:"hidden"}}>
             <div  className="relative border-1 rounded-3xl space-y-4 pb-[10%] mx-auto p-4 bg-background/80 backdrop-blur-sm">
               <MacTitle />

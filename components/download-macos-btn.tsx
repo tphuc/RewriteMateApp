@@ -38,24 +38,28 @@ export default function DownloadMacOSBtn() {
       try {
         const res = await fetch(APPCAST_URL)
         if (!res.ok) throw new Error('Failed to fetch appcast')
-
+  
         const xmlText = await res.text()
         const parser = new DOMParser()
         const xml = parser.parseFromString(xmlText, 'application/xml')
-
-        const item = xml.querySelector('item')
-        if (!item) throw new Error('No release found')
-
+  
+        const items = Array.from(xml.querySelectorAll('item'))
+        if (items.length === 0) throw new Error('No release found')
+  
+        const item = items[items.length - 1] // ✅ latest version
+  
         const version =
           item.querySelector('sparkle\\:version')?.textContent ?? ''
+  
         const shortVersion =
           item.querySelector('sparkle\\:shortVersionString')?.textContent ?? ''
-
+  
         const enclosure = item.querySelector('enclosure')
         const downloadUrl = enclosure?.getAttribute('url')
+  
+        if (!downloadUrl) throw new Error('No download URL found');
 
-        if (!downloadUrl) throw new Error('No download URL found')
-
+  
         setRelease({
           version,
           shortVersion,
@@ -67,7 +71,7 @@ export default function DownloadMacOSBtn() {
         setLoading(false)
       }
     }
-
+  
     fetchAppcast()
   }, [])
 
@@ -82,12 +86,13 @@ export default function DownloadMacOSBtn() {
   }
 
   return (
+    <>
     <a
       href={release.downloadUrl}
       target="_blank"
       rel="noopener noreferrer"
       download
-      className={cn("z-20 inline-flex font-semibold items-center gap-2 rounded-lg bg-white px-5 py-2 text-black hover:opacity-90", loading ? 'pointer-events-none opacity-60' : '')}
+      className={cn("z-20 inline-flex font-semibold items-center gap-2 rounded-full bg-white px-5 py-2 text-black hover:opacity-90", loading ? 'pointer-events-none opacity-60' : '')}
     >
       Download for macOS
       <AppleLogoSvg
@@ -95,6 +100,8 @@ export default function DownloadMacOSBtn() {
         />
 
     </a>
+    {/* <p>{release.version} {release.shortVersion} {release.downloadUrl}</p> */}
+    </>
   )
 }
 
