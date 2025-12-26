@@ -10,6 +10,7 @@ import { HeroTitle } from "@/components/HeroTitle";
 import IOSSimulator from "@/components/ios-simulator";
 import { MacTitle } from "@/components/MacTitle";
 import PricingPlansPage from "@/components/pricing-plans";
+import { StyledImage } from "@/components/styled-image";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { Button } from "@/components/ui/button";
 import { Kbd, KbdGroup } from "@/components/ui/kbd";
@@ -20,8 +21,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="relative max-w-screen min-h-screen  scrollbar-hide">
-      <AuroraBackground className="relative w-full min-h-screen flex items-center">
-        <main className="space-y-2 pt-[30%] px-3 md:pt-[10%]">
+      <div className="relative w-full  min-h-screen flex items-center justify-center">
+        <main className="space-y-2 pt-[30%] md:pt-[10%]">
 
 
           {/* <HeroTitle />
@@ -72,22 +73,85 @@ export default function Home() {
               <IOSSimulator />
             </div>
 
-            <br/>
-            <div className="mx-auto gap-4 max-w-screen-lg flex overflow-x-scroll no-scrollbar">
-           
-              <img alt='rewritemate-ios-keyboard-2' className="w-[300px] rounded-xl" src='/rewritemate-ios1.webp'/>
-              <img alt='rewritemate-ios-keyboard-2' className="w-[300px] rounded-xl" src='/rewritemate-ios2.webp'/>
-              <img alt='rewritemate-ios-keyboard-2' className="w-[300px] rounded-xl" src='/rewritemate-ios3.webp'/>
+            <br />
+
+            {/* Left fade */}
+
+            {/* Scroll container */}
+            <div
+              className="
+    relative
+      mx-auto
+      flex
+      flex-nowrap
+      gap-2
+      overflow-x-auto
+      no-scrollbar
+
+      lg:grid
+      lg:grid-cols-3
+      lg:gap-4
+      lg:max-w-screen-md
+      lg:overflow-x-visible
+    "
+            >
+              
+                <StyledImage
+                  alt="rewritemate-ios-keyboard-1"
+                  className="rounded-lg shrink-0 h-auto"
+                  style={{
+                    width: 280,
+
+                  }}
+                  src="/ios1.webp"
+                />
+            
+              <StyledImage
+                alt="rewritemate-ios-keyboard-2"
+                className="rounded-lg shrink-0 h-auto"
+                style={{
+                  width: 280,
+                  boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.8)"
+                }}
+                src="/ios2.webp"
+              />
+              <StyledImage
+                alt="rewritemate-ios-keyboard-3"
+                className="rounded-lg shrink-0 h-auto"
+                style={{
+                  width: 280,
+                  boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.8)"
+                }}
+                src="/ios3.webp"
+              />
+              <StyledImage
+                alt="rewritemate-ios-keyboard-4"
+                className="rounded-lg shrink-0 h-auto"
+                style={{
+                  width: 280,
+                  boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.8)"
+                }}
+                src="/ios4.webp"
+              />
+              <StyledImage
+                alt="rewritemate-ios-keyboard-5"
+                className="rounded-lg shrink-0 h-auto"
+                style={{
+                  width: 280,
+                  boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.8)"
+                }}
+                src="/ios5.webp"
+              />
             </div>
-
-
-
           </div>
 
-       
+
+
+
+
 
         </main>
-      </AuroraBackground>
+      </div>
 
       <FaqSection />
       <Footer />

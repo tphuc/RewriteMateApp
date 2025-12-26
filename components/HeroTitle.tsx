@@ -5,7 +5,7 @@ import { PointerHighlight } from "./ui/pointer-highlight";
 
 export function HeroTitle() {
   return (
-    <h1 className="relative text-5xl md:text-6xl font-bold tracking-tighter text-white/90 max-w-2xl text-center px-6 leading-tight tracking-tight">
+    <h1 className="relative text-4xl md:text-6xl font-bold tracking-tighter text-white/90 max-w-2xl text-center px-6 leading-tight tracking-tight">
       The fastest way to{" "}
       <span style={{background:"rgba(0,0,0,0.2)"}} className="relative overflow-hidden border border px-3 rounded-3xl">
       <div className='absolute top-0 left-0 w-full h-full rounded-3xl blur-[1px]' style={{

@@ -53,7 +53,7 @@ export default function IOSSimulator({ width = 320, showControls = true, childre
   
           {/* outer bezel */}
           <div className="relative rounded-[60px] p-2 overflow-hidden border-2 border-neutral-700" style={{ boxShadow: '0px 0px 2px 0px #fff' }}>
-            <div className="bg-black w-full h-full relative">
+            <div className="w-full h-full relative">
             {/* Top notch / status area */}
             <div className="absolute top-0 left-0 right-0 h-12 z-20">
               <div className="max-w-[400px] mx-auto">
@@ -62,7 +62,7 @@ export default function IOSSimulator({ width = 320, showControls = true, childre
             </div>
 
             {/* Screen area */}
-            <div className="relative bg-gradient-to-b from-background to-secondary/50 overflow-hidden flex flex-col rounded-[50px]" style={{ height: width as number * 1.94 }}>
+            <div className="relative bg-background overflow-hidden flex flex-col rounded-[50px]" style={{ height: width as number * 1.94 }}>
               {/* notch visual (center) */}
               <div className="absolute left-1/2 -translate-x-1/2 top-2 z-30 pointer-events-none">
                 <svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,7 +102,7 @@ export default function IOSSimulator({ width = 320, showControls = true, childre
     </div>
               </div>
 
-              <div className="bg-[#1a1a1a] shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] relative backdrop-blur-2xl w-full" style={{height:280, borderTopLeftRadius: 25, borderTopRightRadius: 25}}>
+              <div className="bg-[#1a1a1a] shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] relative backdrop-blur-2xl w-full" style={{height:280, borderTopLeftRadius: 25, borderTopRightRadius: 25, borderBottomLeftRadius: 50, borderBottomRightRadius: 50}}>
                 <RewriteKeyboard/>
               </div>
 
