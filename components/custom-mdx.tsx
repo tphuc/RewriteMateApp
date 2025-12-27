@@ -6,6 +6,7 @@ import React, { FC } from 'react';
 import remarkGfm from 'remark-gfm';
 import { cn } from '@/lib/utils';
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { StyledImage } from './styled-image';
 
 
 interface TableProps {
@@ -131,15 +132,15 @@ type ImageFlowProps = {
 
 function FlowImage({ src, alt }: { src: string; alt?: string }) {
 	return (
-		<Dialog>
+		<Dialog >
 			<DialogTrigger asChild>
-				<div className="flex-shrink-0 snap-center cursor-pointer">
-					<img
+				<div className="relative h-full flex-shrink-0 snap-center cursor-pointer">
+					<StyledImage
 						src={src}
 						alt={alt || ""}
 						width={440}
-						height={300}
-						className="rounded-sm border shadow-xs object-covert h-[300px] w-auto shadow-md drop-shadow-md"
+						style={{ width: "auto", height: 400 }}
+						className="object-cover h-[300px] w-auto shadow-md drop-shadow-md"
 					/>
 				</div>
 			</DialogTrigger>
@@ -160,11 +161,30 @@ function FlowImage({ src, alt }: { src: string; alt?: string }) {
 
 export function ImageFlow({ images, alt }: ImageFlowProps) {
 	return (
-		<div className="flex overflow-x-auto gap-4 snap-x snap-mandatory px-2 py-4 scrollbar-hide">
-			{images.map((url, idx) => (
-				<FlowImage key={idx} src={url} alt={alt} />
-			))}
+		<div className='relative'>
+				<div className="pointer-events-none
+		absolute z-10 top-0 left-0 h-full w-full 
+		" style={{
+					boxShadow: `
+            inset 20px 0 20px 0px #0a0a0aaa,
+            inset -20px 0 20px 0px #0a0a0aaa
+          `,
+				}}/>
+
+			{/* <div className="
+		absolute z-10 top-0 right-0 h-full w-[4%] bg-gradient-to-l from-background via-20% via-background/70 to-transparent
+		" /> */}
+			<div className="
+					flex overflow-x-auto gap-4 snap-x snap-mandatory px-2
+					
+				" >
+				{images.map((url, idx) => (
+					<FlowImage key={idx} src={url} alt={alt} />
+				))}
+
+			</div>
 		</div>
+
 	);
 }
 

@@ -21,7 +21,6 @@ export function StyledImage({
         {...imgProps}
         className={`rounded-lg shrink-0 h-auto ${className}`}
         style={{
-          width: 280,
           ...style, // allow full override
         }}
       />
