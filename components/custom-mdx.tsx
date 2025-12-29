@@ -175,7 +175,7 @@ export function ImageFlow({ images, alt }: ImageFlowProps) {
 		absolute z-10 top-0 right-0 h-full w-[4%] bg-gradient-to-l from-background via-20% via-background/70 to-transparent
 		" /> */}
 			<div className="
-					flex overflow-x-auto gap-4 snap-x snap-mandatory px-2
+					flex overflow-x-auto gap-4 py-2 snap-x snap-mandatory px-2
 					
 				" >
 				{images.map((url, idx) => (

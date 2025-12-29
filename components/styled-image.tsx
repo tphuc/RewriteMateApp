@@ -11,7 +11,7 @@ export function StyledImage({
     <div className="relative h-full w-full">
       {/* Inset border overlay */}
       <div
-        className="absolute inset-0 z-10 rounded-lg pointer-events-none"
+        className="absolute inset-0 z-10 h-full w-full rounded-lg pointer-events-none"
         style={{
           boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.2)",
         }}
@@ -19,8 +19,9 @@ export function StyledImage({
 
       <img
         {...imgProps}
-        className={`rounded-lg shrink-0 h-auto ${className}`}
+        className={`rounded-lg shrink-0 ${className}`}
         style={{
+          margin:0,
           ...style, // allow full override
         }}
       />

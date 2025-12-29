@@ -81,7 +81,7 @@ module.exports = {
         '150': '150% 150%',
       },
       boxShadow: {
-        lightSm: '0px 0px 0px 1px rgb(255, 255, 255), inset 0.5px 1px 1px 1px rgba(255, 255, 255, 0.9)',
+  
         light: '0px 0px 0px 0.5px  rgb(255, 255, 255),  inset 0px 0px 0px 0.5px  rgba(255, 255, 255, 1)',
         dark: '0px 0px 0px 1px  rgba(0, 0, 0, 1), inset 1px 1px 0px 0.5px rgba(100, 100, 100, 0.3)',
       }

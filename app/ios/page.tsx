@@ -1,5 +1,6 @@
 import { AppStoreBtn } from "@/components/appstore-btn";
 import CustomInstructionsList from "@/components/custom-instruction-list";
+import { ImageFlow } from "@/components/custom-mdx";
 import DownloadMacOSBtn from "@/components/download-macos-btn";
 import EditModal from "@/components/EditModal";
 import { EditModalTasks } from "@/components/EditModalTasks";
@@ -78,71 +79,18 @@ export default function Home() {
             {/* Left fade */}
 
             {/* Scroll container */}
-            <div
-              className="
-    relative
-      mx-auto
-      flex
-      flex-nowrap
-      gap-2
-      overflow-x-auto
-      no-scrollbar
-
-      lg:grid
-      lg:grid-cols-3
-      lg:gap-4
-      lg:max-w-screen-md
-      lg:overflow-x-visible
-    "
-            >
-              
-                <StyledImage
-                  alt="rewritemate-ios-keyboard-1"
-                  className="rounded-lg shrink-0 h-auto"
-                  style={{
-                    width: 280,
-
-                  }}
-                  src="/ios1.webp"
-                />
-            
-              <StyledImage
-                alt="rewritemate-ios-keyboard-2"
-                className="rounded-lg shrink-0 h-auto"
-                style={{
-                  width: 280,
-                  boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.8)"
-                }}
-                src="/ios2.webp"
-              />
-              <StyledImage
-                alt="rewritemate-ios-keyboard-3"
-                className="rounded-lg shrink-0 h-auto"
-                style={{
-                  width: 280,
-                  boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.8)"
-                }}
-                src="/ios3.webp"
-              />
-              <StyledImage
-                alt="rewritemate-ios-keyboard-4"
-                className="rounded-lg shrink-0 h-auto"
-                style={{
-                  width: 280,
-                  boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.8)"
-                }}
-                src="/ios4.webp"
-              />
-              <StyledImage
-                alt="rewritemate-ios-keyboard-5"
-                className="rounded-lg shrink-0 h-auto"
-                style={{
-                  width: 280,
-                  boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.8)"
-                }}
-                src="/ios5.webp"
-              />
-            </div>
+           
+            <ImageFlow images={
+              [
+                "https://rewritemate.app/ios1.webp",
+                "https://rewritemate.app/ios2.webp",
+                "https://rewritemate.app/ios3.webp",
+                "https://rewritemate.app/ios4.webp",
+                "https://rewritemate.app/ios5.webp",
+              ]
+            }
+              alt='RewriteMate on AppStore'
+            />
           </div>
 
 

@@ -53,7 +53,7 @@ export default function Nav() {
         {/* Desktop CTA */}
         <Link
           href="/ios"
-          className="rounded-full flex items-center flex-nowrap gap-2 whitespace-nowrap bg-white pl-3 pr-2 py-1 text-center text-md font-medium text-black"
+          className="rounded-full flex items-center flex-nowrap gap-2 whitespace-nowrap bg-white pl-4 pr-3 py-1 text-center shadow-dark font-semibold text-black"
         >
           Download for iOS
           <AppleLogoSvg className='w-4 h-4'/>
