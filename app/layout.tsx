@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
 
 
 const siteConfig = {
-  name: 'RewriteMate — The Better Writing Tool for macOS',
+  name: 'RewriteMate — AI Writing Tool assistant for macOS and iOS',
   description:
-    'RewriteMate is a macOS app that helps you instantly improve, rephrase, and refine any text — anywhere on your Mac. The better writing tool, built right into your workflow.',
+    'Helps you instantly improve, rephrase, and refine any text. The better writing tool, built right into your workflow.',
   url: 'https://rewritemate.app',
   ogImage: 'https://rewritemate.app/opengraph.webp',
 };
@@ -94,9 +94,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "url": "https://rewritemate.app",
-              "name": "RewriteMate — The Better Writing Tool for macOS",
+              "name": siteConfig.name,
               "alternateName": "RewriteMate",
-              "description": "RewriteMate is a macOS app that helps you instantly improve, rephrase, and refine any text — anywhere on your Mac. The better writing tool, built right into your workflow.",
+              "description": siteConfig.description,
               "publisher": {
                 "@type": "Organization",
                 "name": "RewriteMate",
