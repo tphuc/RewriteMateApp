@@ -74,7 +74,7 @@ export default async function Blog({ params }: any) {
 			<div className='min-h-20' />
 			<article>
 				<header className="mb-12 space-y-4">
-					{/* <img src={post.metadata?.image} alt='thumbnail' className='aspect-video w-full rounded-2xl'></img> */}
+					<img src={post.metadata?.image} alt='thumbnail' className='aspect-video w-full rounded-2xl'></img>
 					<div className='flex'>
 						<Link href='/blog' className='bg-secondary/62 hover:bg-secondary transition duration-200 pl-2 pr-3 rounded-full py-1 gap-2 flex items-center'> <ArrowLeft className='w-4 h-4' /> Back</Link>
 					</div>
@@ -100,8 +100,8 @@ export default async function Blog({ params }: any) {
 
 				<BlogAuthor
 					name="Felix Tran"
-					role="Indie Developer & Founder at RewriteMate"
-					bio="Turning rough ideas into calm, well-crafted products that feel simple, useful, and intentional."
+					role="Indie Developer & Founder"
+					bio=""
 				/>
 			</article>
 		</main>

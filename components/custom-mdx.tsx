@@ -7,6 +7,7 @@ import remarkGfm from 'remark-gfm';
 import { cn } from '@/lib/utils';
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { StyledImage } from './styled-image';
+import { AppStoreBtn } from './appstore-btn';
 
 
 interface TableProps {
@@ -231,6 +232,112 @@ const createHeading = (level: number): FC<{ children: string }> => {
 	return Heading;
 };
 
+
+
+type CTAVariant = {
+	title: string
+	headline: string
+	cta: string
+	image: string
+	gradient: {
+		from: string
+		to: string
+	}
+}
+
+const RewriteMateCTA = ({
+	variant = 0,
+}: {
+	variant?: number
+}) => {
+	const variants: CTAVariant[] = [
+		{
+			title: 'Write better everywhere',
+			headline: 'Rewrite, rephrase, and refine text instantly without switching apps.',
+			cta: "Download on App Store. It's Free",
+			image: '/showcase1.webp',
+			gradient: {
+				from: '#3853e2',
+				to: '#00cfcb',
+			},
+		},
+		{
+			title: 'No copy-paste. No app switching. Just better writing',
+			headline: 'RewriteMate brings AI writing assistance directly into your keyboard.',
+			cta: "Free download on the App Store",
+			image: '/showcase1.webp',
+			gradient: {
+				from: '#7c3aed',
+				to: '#ec4899',
+			},
+		},
+		{
+			title: 'Sound clear, natural, and confident in every message.',
+			headline: 'Polish emails, chats, and posts with an AI keyboard built for real communication.',
+			cta: "Free download on the App Store",
+			image: '/showcase1.webp',
+			gradient: {
+				from: '#0f766e',
+				to: '#22d3ee',
+			},
+		},
+		{
+			title: 'An AI keyboard that adapts to your writing style.',
+			headline: 'Create custom prompts and rewrite text your way—inside any app.',
+			cta: "Get RewriteMate on the App Store",
+			image: '/showcase2.webp',
+			gradient: {
+				from: '#1e293b',
+				to: '#334155',
+			},
+		},
+		{
+			title: 'One keyboard for rewriting, grammar, tone, and translation.',
+			headline: 'Improve clarity, fix mistakes, and adjust tone in seconds on iOS.',
+			cta: "Download on App Store. It's Free",
+			image: '/showcase2.webp',
+			gradient: {
+				from: '#3f6212',
+				to: '#84cc16',
+			},
+		},
+	]
+
+	const current = variants[variant] ?? variants[0]
+
+	return (
+		<div
+			style={{
+				marginTop: 20,
+				marginBottom: 20,
+				background: `linear-gradient(135deg, ${current.gradient.from}, ${current.gradient.to})`,
+			}}
+			className="rounded-2xl p-4 md:p-6 space-y-2"
+		>
+		
+				<h3 style={{margin:0}} className="text-2xl tracking-tighter font-semibold text-white">
+					{current.title}
+				</h3>
+
+				<p style={{margin:0}} className="text-white/80">
+					{current.headline}
+				</p>
+
+				<a
+					className="inline-flex mt-4"
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://apps.apple.com/app/rewritemate-ai-keyboard/id6755306532"
+				>
+					<div className="flex items-center gap-2 bg-white text-black rounded-full px-4 py-2 font-medium">
+						{current.cta}
+					</div>
+				</a>
+
+		</div>
+	)
+}
+
 const components = {
 	h1: createHeading(1),
 	h2: createHeading(2),
@@ -247,6 +354,7 @@ const components = {
 	p: Paragraph,
 	ImageGrid,
 	ImageFlow,
+	RewriteMateCTA
 };
 
 export const CustomMDX: FC<MDXRemoteProps> = (props) => {

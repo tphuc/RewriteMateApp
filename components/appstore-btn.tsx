@@ -32,7 +32,6 @@ export function AppStoreBtn({
   
     return (
       <div
-        id='downloadforios'
         className={cn(`
           inline-flex items-center justify-between gap-[2px]
           rounded-[8px] border-[1px]

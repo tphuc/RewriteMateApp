@@ -51,7 +51,7 @@ export default function Home() {
                   <li className="flex items-start gap-2">
                     <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                     <p className="leading-5 text-secondary-foreground">
-                      Customize prompts and instructions to match your voice
+                      Customize prompts and instructions to match your style
                     </p>
                   </li>
 
