@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="w-full justify-center flex items-center py-4">
        <Link href="/" className="flex items-center space-x-2">
         <Image
-          src="/logo.png"
+          src="https://storage.googleapis.com/tubememo-public/rewritemate/logo.webp"
           alt="RewriteMate Logo"
           width={80}
           height={80}

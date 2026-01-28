@@ -38,7 +38,7 @@ export default function Nav() {
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <Image
-            src="/logo.png"
+            src="https://storage.googleapis.com/tubememo-public/rewritemate/logo.webp"
             alt="RewriteMate Logo"
             width={42}
             height={42}
