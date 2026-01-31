@@ -33,11 +33,11 @@ export default function Features() {
                 </div>
 
             </section>
-            <div className="grid grid-cols-12 max-w-screen-xl mx-auto gap-4 px-4">
+            <div className="grid grid-cols-12 max-w-screen-lg mx-auto gap-4 ">
 
-                <div className="col-span-full md:col-span-5 flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
-                    <div className="px-8 pt-8">
-                        <p className="text-3xl text-secondary-foreground font-semibold tracking-tight">
+                <div className="col-span-full md:col-span-6 flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
+                    <div className="pt-8 px-8">
+                        <p className="text-2xl text-secondary-foreground font-semibold tracking-tight">
                             Works Everywhere
                         </p>
                         <p className="text-muted-foreground">
@@ -46,8 +46,7 @@ export default function Features() {
                     </div>
 
                     <div className="relative w-[98%] ml-[1%] px-8 pb-8">
-                        {/* <div className="absolute top-0 left-0 bg-gradient-to-b from-secondary to transparent w-full h-[50%] z-10" />
-              <div className="absolute bottom-0 left-0 bg-gradient-to-t from-secondary to transparent w-full h-[30%] z-10" /> */}
+
 
                         <div className="relative  mx-auto max-w-2xl">
                             <div className="bg-secondary p-2 rounded-3xl inline-flex items-center justify-center gap-4 border">
@@ -61,161 +60,130 @@ export default function Features() {
                     </div>
                 </div>
 
-                <div className="col-span-full md:col-span-7 row-span-2  relative flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
-                    <div className="px-8 pt-8 md:w-[72%] absolute top-0 left-0 z-20">
-                        <p className="text-3xl whitespace-nowrap text-secondary-foreground font-semibold tracking-tight">
-                            Shortcut-First Editing
+                <div className="col-span-full md:col-span-6 row-span-2 relative flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
+                    <div className="px-8 py-8 w-full h-[40%] md:h-auto absolute top-0 left-0 z-20 bg-gradient-to-b from-secondary via-secondary to-transparent">
+                        <p className="text-2xl whitespace-nowrap text-secondary-foreground font-semibold tracking-tight">
+                            Custom Rewrite Tasks
                         </p>
-                        <p className="text-muted-foreground">
-                            RewriteMate improves text directly where it lives. No popups, no side panels, no extra steps.
+                        <p className="text-muted-foreground  tracking-tight">
+                            Create and save your own rewrite instructions. Reuse them anytime to keep your tone and structure consistent.
                         </p>
+
                     </div>
 
-                    <div className="relative w-auto p-4">
-                        <div className="mt-[10%] mx-auto px-2 relative" style={{ maxWidth: "min(500px, 98vw)", overflow: "hidden" }}>
-                            <div className="relative border-1 rounded-3xl space-y-4 pb-[10%] mx-auto p-4 bg-background/80 backdrop-blur-sm">
-                                <MacTitle />
-                                <div className='absolute overflow-hidden top-0 left-0 w-full h-full rounded-3xl' style={{
-                                    boxShadow: "inset 0px 0px 1px 0 rgba(200, 200, 200, 0.1), inset -0.5px -0.5px 0.5px 0.5px rgba(20, 20, 20, 0.2)"
-                                }} />
-                                <span className="bg-gradient-to-b  from-secondary/80 to-secondary">I want my emails to sound not too formal but still serious.</span>
-                                <div className="absolute top-[50%] right-[38%] text-muted-foreground"><MousePointer className="fill-muted-foreground/80" /></div>
-                            </div>
+                    <div className="flex-1 flex flex-col justify-end items-end" >
 
-                            <div className="-mt-[5%]  z-10 relative">
+                        <div className="relative z-0 md:mt-[30%] mx-auto px-2 relative" style={{ maxWidth: "min(500px, 98vw)", minHeight: 300, overflow: "hidden" }}>
+
                             <img
-                                src="/showcase-ios-1.webp"
-                                height={400}
-                                className="h-full rounded-xl"
+                                src="/showcase-ios-2.webp"
+                                className="w-full  rounded-xl"
                                 style={{ objectFit: "contain" }}
                             />
-
-                            </div>
-
 
                         </div>
                     </div>
                 </div>
 
-                <div className="col-span-full md:col-span-4 flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
-                    <div className="px-8 pt-8">
-                        <p className="text-3xl text-secondary-foreground font-semibold tracking-tight">
-                            Mindmaps
+                <div className="relative col-span-full md:col-span-6 flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
+
+
+
+                    <div className="relative min-h-[300px]  -mt-[30%] md:-mt-[40%]  inline-block w-auto">
+
+                        <img
+                            src="/showcase-ios-3.webp"
+                            className="w-full rounded-xl"
+                            style={{ objectFit: "contain" }}
+                        />
+                    </div>
+
+
+                    <div className="absolute bottom-0 pb-4 pt-20 left-0 w-full z-10 px-8  bg-gradient-to-t from-secondary via-secondary to-transparent">
+                        <p className="text-2xl text-secondary-foreground font-semibold tracking-tight">
+                            Transparent Edits
                         </p>
                         <p className="text-muted-foreground">
                             Visualize complex ideas from videos as interactive mind maps. See connections, spot themes, and grasp the big picture at a glance.
                         </p>
                     </div>
-
-                    <div className="relative w-full px-2" >
-                        {/* <div className="absolute top-0 left-0 bg-gradient-to-b from-secondary to transparent w-full h-[50%] z-10" /> */}
-                        {/* <div className="absolute bottom-0 left-0 bg-gradient-to-t from-secondary to transparent w-full h-[30%] z-10" /> */}
-                        <div className="relative inline-block shadow-xl overflow-hidden border rounded-2xl w-auto">
-                            <img
-                                src="/hero-mindmap.webp"
-                                className="w-full rounded-xl"
-                                style={{ objectFit: "cover", scale: 1.2 }}
-                            />
-                        </div>
-                    </div>
                 </div>
 
                 <div className="col-span-full md:col-span-4 flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
-                    <div className="px-8 pt-8">
-                        <p className="text-3xl text-secondary-foreground font-semibold tracking-tight">
-                            Flashcards
-                        </p>
-                        <p className="text-muted-foreground">
-                            Turn key points into flashcards automatically. Review them with spaced repetition to remember more, faster.
-                        </p>
-                    </div>
 
-                    <div className="relative w-full px-2 flex items-center justify-center">
-                        {/* <div className="absolute top-0 left-0 bg-gradient-to-b from-secondary to transparent w-full h-[50%] z-10" /> */}
-                        {/* <div className="absolute bottom-0 left-0 bg-gradient-to-t from-secondary to transparent w-full h-[30%] z-10" /> */}
-                        <div className="relative inline-block overflow-hidden rounded-xl h-[400px] w-auto">
+                <div className="dark:hidden absolute top-0 left-0 bg-gradient-to-b from-secondary via-secondary to-transparent w-full h-[10%] z-10" />
+                        <div className="relative min-h-[300px]  -mt-[20%] md:-mt-[30%]  inline-block w-auto">
+
                             <img
-                                src="/hero-qa.png"
-                                height={400}
-                                className="h-full rounded-xl"
-                                style={{ objectFit: "contain", scale: 1.05 }}
-                            />
-                        </div>
-                    </div>
-                </div>
-
-
-                <div className="col-span-full md:col-span-4 flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
-                    <div className="px-8 pt-8">
-                        <p className="text-3xl text-secondary-foreground font-semibold tracking-tight">
-                            Multi-Language Support
-                        </p>
-                        <p className="text-muted-foreground">
-                            TubeMemo works across languages, so you can learn, create, and capture insights from videos worldwide
-                        </p>
-                    </div>
-
-                    <div className="relative w-full px-2 flex items-center justify-center" style={{ scale: 1.1 }}>
-                        <div className="absolute top-0 left-0 bg-gradient-to-b from-secondary to transparent w-full h-[50%] z-10" />
-                        <div className="absolute bottom-0 left-0 bg-gradient-to-t from-secondary to transparent w-full h-[30%] z-10" />
-                        <div className="relative inline-block border-2 shadow-xl overflow-hidden rounded-xl h-full w-auto" style={{ transform: "" }}>
-                            <img
-                                src="/hero-multi-lang.webp"
-                                height={400}
-                                className="h-full rounded-xl"
-                                style={{ objectFit: "cover" }}
-                            />
-                        </div>
-                    </div>
-                </div>
-
-                <div className="col-span-full md:col-span-6 flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
-                    <div className="px-8 pt-8">
-                        <p className="text-3xl text-secondary-foreground font-semibold tracking-tight">
-                            Draft Content
-                        </p>
-                        <p className="text-muted-foreground">
-                            Turn insights into blogs, tweets, or study notes — directly from your videos.
-                        </p>
-                    </div>
-
-                    <div className="relative w-full ml-[10%] px-2 flex items-center justify-center" style={{ scale: 1.1 }}>
-                        {/* <div className="absolute top-0 left-0 bg-gradient-to-b from-secondary to transparent w-full h-[50%] z-10" /> */}
-                        <div className="absolute bottom-0 left-0 bg-gradient-to-t from-secondary to transparent w-full h-[30%] z-10" />
-                        <div className="relative inline-block border-[1px] shadow-xl overflow-hidden rounded-xl w-full max-h-[500px] w-auto" style={{ transform: "translateY(50px)" }}>
-                            <img
-                                src="/hero-draft.webp"
-                                height={400}
+                                src="/showcase-ios-4.webp"
                                 className="w-full rounded-xl"
-                                style={{ objectFit: "cover" }}
+                                style={{ objectFit: "contain" }}
                             />
-                        </div>
                     </div>
-                </div>
-
-                <div className="col-span-full md:col-span-6 flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
-                    <div className="px-8 pt-8">
-                        <p className="text-3xl text-secondary-foreground font-semibold tracking-tight">
-                            Smart Library
+                    <div className="px-8 py-8">
+                        <p className="text-2xl text-secondary-foreground font-semibold tracking-tight">
+                            Privacy-First by Design
                         </p>
                         <p className="text-muted-foreground">
-                            Keep all your memos, highlights, and summaries organized in one searchable hub.
+                            Only the text you select is processed. RewriteMate doesn’t read or monitor anything in the background.
                         </p>
                     </div>
 
-                    <div className="relative w-full ml-[5%] px-2 flex items-center justify-center" style={{ scale: 1 }}>
-                        {/* <div className="absolute top-0 left-0 bg-gradient-to-b from-secondary to transparent w-full h-[50%] z-10" /> */}
-                        <div className="absolute bottom-0 left-0 bg-gradient-to-t from-secondary to transparent w-full h-[30%] z-10" />
-                        <div className="relative inline-block border-[1px] border-boder shadow-xl overflow-hidden rounded-xl w-full max-h-[500px] w-auto" style={{ transform: "translateY(50px)" }}>
-                            <img
-                                src="/hero-library.webp"
-                                height={400}
-                                className="w-full rounded-xl"
-                                style={{ objectFit: "cover" }}
-                            />
-                        </div>
-                    </div>
+                   
                 </div>
+
+
+                <div className="relative col-span-full md:col-span-4 flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
+
+                    <div className="dark:hidden absolute top-0 left-0 bg-gradient-to-b from-secondary via-secondary to-transparent w-full h-[10%] z-10" />
+                        <div className="relative min-h-[300px]  -mt-[20%] md:-mt-[30%]  inline-block w-auto">
+
+                            <img
+                                src="/showcase-ios-5.webp"
+                                className="w-full rounded-xl"
+                                style={{ objectFit: "contain" }}
+                            />
+                    </div>
+
+                    <div className="px-8 py-8">
+                        <p className="text-2xl text-secondary-foreground font-semibold tracking-tight">
+                            Quick AI Assistance
+                        </p>
+                        <p className="text-muted-foreground">
+                        Ask questions, explore ideas, or get help with wording directly from the keyboard, without leaving
+        the app or breaking your flow.
+                        </p>
+                    </div>
+
+
+                </div>
+
+                <div className="relative col-span-full md:col-span-4 flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
+
+                    <div className="dark:hidden absolute top-0 left-0 bg-gradient-to-b from-secondary via-secondary to-transparent w-full h-[10%] z-10" />
+                        <div className="relative min-h-[300px]  -mt-[20%] md:-mt-[30%]  inline-block w-auto">
+
+                            <img
+                                src="/showcase-ios-6.webp"
+                                className="w-full rounded-xl"
+                                style={{ objectFit: "contain" }}
+                            />
+                    </div>
+
+                    <div className="px-4 py-8">
+                        <p className="text-2xl text-secondary-foreground font-semibold tracking-tight">
+                        Write Across Languages
+
+                        </p>
+                        <p className="text-muted-foreground">
+Translate your text directly from the keyboard, so you can write naturally and communicate clearly with people in other languages.
+                        </p>
+                    </div>
+
+
+                </div>
+
+             
             </div>
 
 

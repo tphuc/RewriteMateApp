@@ -33,13 +33,13 @@ const AppleLogoSvg = (props: React.SVGProps<SVGSVGElement>) => (
 export default function Nav() {
   return (
     <nav className="fixed top-0 z-50 w-full px-4 py-3 ">
-      <div className="relative h-full w-full mx-auto bg-secondary/50 backdrop-blur-2xl px-4 py-2 rounded-full flex max-w-screen-md items-center justify-between gap-3">
-      <div
+      <div className="relative h-full w-full border mx-auto bg-gradient-to-b from-secondary/80 to-secondary backdrop-blur-2xl px-4 py-2 rounded-full flex max-w-screen-md items-center justify-between gap-3">
+      {/* <div
         className="absolute inset-0 z-10 h-full w-full rounded-full pointer-events-none"
         style={{
-          boxShadow: "inset 0 0 0 1px rgba(100,100,100,0.1)",
+          boxShadow: "inset 0 0 0 1px rgba(100,100,100,0.3)",
         }}
-      />
+      /> */}
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <Image
@@ -57,7 +57,7 @@ export default function Nav() {
 
         {/* Desktop CTA */}
         <Link
-          href="/ios"
+          href="https://apps.apple.com/vn/app/rewritemate/id6755306532"
           className="rounded-full flex items-center flex-nowrap gap-2 border shadow-xs whitespace-nowrap bg-gradient-to-b from-foreground/80 to-foreground text-background pl-4 pr-3 py-1 text-center shadow-dark font-semibold"
         >
           Download for iOS

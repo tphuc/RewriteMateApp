@@ -82,7 +82,7 @@ export default function Home() {
 
       </main>
 
-      {/* <Features /> */}
+      <Features />
 
       {/* <div className="min-h-[50vh] w-full relative">
         <br />
