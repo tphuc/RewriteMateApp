@@ -106,7 +106,7 @@ export const EditModalTasks: React.FC<EditModalProps> = () => {
               <div className="flex items-center gap-1">
                 <button
                   type="button"
-                  className="p-2 rounded-md text-gray-400 text-lg transition duration-200 hover:bg-neutral-500/30 hover:text-white rounded"
+                  className="p-2 rounded-md text-muted-foreground text-lg transition duration-200 hover:bg-neutral-500/30 hover:text-white rounded"
                 >
                   <X className='w-4 h-4' />
                 </button>
@@ -118,7 +118,7 @@ export const EditModalTasks: React.FC<EditModalProps> = () => {
                 <Popover>
                   <PopoverTrigger asChild>
                     <div
-                      className="relative gap-2 cursor-pointer transition duration-200 text-gray-400 px-3 py-1 rounded-full text-sm flex items-center gap-1 hover:border-gray-500 hover:text-white"
+                      className="relative gap-2 cursor-pointer transition duration-200 text-muted-foreground px-3 py-1 rounded-full text-sm flex items-center gap-1 hover:border-gray-500 hover:text-white"
 
                     >
                       <div>
@@ -133,7 +133,7 @@ export const EditModalTasks: React.FC<EditModalProps> = () => {
                   <PopoverContent className='p-0 divide-y divide-y-border bg-secondary/50 backdrop-blur-[1px] rounded-2xl max-w-[200px]'>
 
                     <div
-                      className="gap-2 py-2 w-full flex cursor-pointer transition duration-200 text-gray-400 px-3 py-1 text-sm flex items-center gap-1 hover:border-gray-500 hover:text-white"
+                      className="gap-2 py-2 w-full flex cursor-pointer transition duration-200 text-muted-foreground px-3 py-1 text-sm flex items-center gap-1 hover:border-gray-500 hover:text-white"
 
                     >
                       <div className='flex-1'>
@@ -144,7 +144,7 @@ export const EditModalTasks: React.FC<EditModalProps> = () => {
                     </div>
 
                     <div
-                      className="gap-2 py-2 w-full flex cursor-pointer transition duration-200 text-gray-400 px-3 py-1 text-sm flex items-center gap-1 hover:border-gray-500 hover:text-white"
+                      className="gap-2 py-2 w-full flex cursor-pointer transition duration-200 text-muted-foreground px-3 py-1 text-sm flex items-center gap-1 hover:border-gray-500 hover:text-white"
 
                     >
                       <div className='flex-1'>
@@ -169,7 +169,7 @@ export const EditModalTasks: React.FC<EditModalProps> = () => {
 
             <button
               type="button"
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-base hover:text-white"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-muted-foreground text-base hover:text-white"
             >
 
             </button>

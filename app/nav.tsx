@@ -32,17 +32,22 @@ const AppleLogoSvg = (props: React.SVGProps<SVGSVGElement>) => (
 
 export default function Nav() {
   return (
-    <nav className="absolute top-0 z-50 w-full px-6 py-4">
-      <div className="mx-auto flex max-w-screen-md items-center justify-between gap-3">
-        
+    <nav className="fixed top-0 z-50 w-full px-4 py-3 ">
+      <div className="relative h-full w-full mx-auto bg-secondary/50 backdrop-blur-2xl px-4 py-2 rounded-full flex max-w-screen-md items-center justify-between gap-3">
+      <div
+        className="absolute inset-0 z-10 h-full w-full rounded-full pointer-events-none"
+        style={{
+          boxShadow: "inset 0 0 0 1px rgba(100,100,100,0.1)",
+        }}
+      />
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <Image
             src="https://storage.googleapis.com/tubememo-public/rewritemate/logo.webp"
             alt="RewriteMate Logo"
-            width={42}
-            height={42}
-            className="rounded-[12px] border border-background/80"
+            width={30}
+            height={30}
+            className="rounded-[4px] shadow-xs"
           />
          
         </Link>
@@ -53,7 +58,7 @@ export default function Nav() {
         {/* Desktop CTA */}
         <Link
           href="/ios"
-          className="rounded-full flex items-center flex-nowrap gap-2 whitespace-nowrap bg-white pl-4 pr-3 py-1 text-center shadow-dark font-semibold text-black"
+          className="rounded-full flex items-center flex-nowrap gap-2 border shadow-xs whitespace-nowrap bg-gradient-to-b from-foreground/80 to-foreground text-background pl-4 pr-3 py-1 text-center shadow-dark font-semibold"
         >
           Download for iOS
           <AppleLogoSvg className='w-4 h-4'/>

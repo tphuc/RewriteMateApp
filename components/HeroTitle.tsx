@@ -5,24 +5,23 @@ import { PointerHighlight } from "./ui/pointer-highlight";
 
 export function HeroTitle() {
   return (
-    <h1 className="relative text-4xl md:text-6xl font-bold tracking-tighter text-white/90 max-w-2xl text-center px-6 leading-tight tracking-tight">
-      The fastest way to{" "}
-      <span style={{background:"rgba(0,0,0,0.2)"}} className="relative overflow-hidden border border px-3 rounded-3xl">
-      <div className='absolute top-0 left-0 w-full h-full rounded-3xl blur-[1px]' style={{
-          boxShadow: "inset 0px 0px 0.5px 0 rgba(200, 200, 200, 0.2), inset 0px 0px 0.5px 0px rgba(200, 200, 200, 0.2)"
-        }} />
-      <span
-        className="relative bg-gradient-to-r from-[#22d3ee] via-[#f0abfc] to-[#22d3ee]
-                   bg-[length:200%_auto] text-transparent bg-clip-text
-                   animate-gradient-x"
-      > 
-      
-        rewrite
-      </span>
-      </span>
-      {" "}
-      anything
-    </h1>
+    <div className="relative">
+       <div className="absolute top-0 left-0 bg-gradient-to-b from-secondary via-secondary/80 to-transparent w-full h-[30%]  z-10" />
+      <img
+        src='/showcase-ios-1.webp'
+        className="w-full rounded-xl md:h-[500px]"
+        style={{ objectFit: "contain" }}
+      />
+      <div className="relative -mt-[5%] pb-5 space-y-2">
+
+      <h1  className="relative leading-none text-3xl md:text-5xl font-bold tracking-tighter text-foreground mx-auto max-w-xl text-center leading-tighter tracking-tight">
+      Your Smart AI Keyboard <br/>  Writing Assistant
+      </h1>
+      <p className="text-center max-w-md mx-auto text-xl">
+      Instantly improve, rephrase, and refine any text. The better writing tool, built for iOS and macOS.
+      </p>
+      </div>
+    </div>
 
 
   )

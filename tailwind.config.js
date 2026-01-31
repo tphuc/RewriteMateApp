@@ -11,7 +11,29 @@ module.exports = {
       },
     },
     extend: {
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            // Customize default colors using CSS variables
+            '--tw-prose-body': theme('colors.slate.700'),
+            '--tw-prose-headings': theme('colors.slate.900'),
+            '--tw-prose-links': theme('colors.indigo.600'),
+            // Customize dark mode colors
+            '--tw-prose-invert-body': theme('colors.slate.300'),
+            '--tw-prose-invert-headings': theme('colors.slate.100'),
+            '--tw-prose-invert-links': theme('colors.indigo.400'),
+            // Add any other custom styles here
+            a: {
+              '&:hover': {
+                color: theme('colors.indigo.700'),
+              },
+            },
+          },
+        },
+      }),
       colors: {
+
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

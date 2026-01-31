@@ -15,7 +15,7 @@ const EditModal: React.FC<EditModalProps> = ({ originalText }) => {
 
 
   return (
-    <div className='relative ' style={{maxWidth:"98vw"}}>
+    <div className='relative ' style={{width:"min(500px, 98vw)"}}>
       {/* <svg style={{ display: 'none' }}>
         <filter
           id="glass-distortion"
@@ -73,7 +73,7 @@ const EditModal: React.FC<EditModalProps> = ({ originalText }) => {
       </svg> */}
       <div style={{
         // filter: `url(#glass-distortion)`
-      }} className="relative border backdrop-blur-[2px]  bg-neutral-500/10 z-50 rounded-3xl max-w-lg mx-auto"    >
+      }} className="relative border backdrop-blur-[2px]  bg-neutral-500/10 z-50 rounded-3xl max-w-md mx-auto"    >
 
         <div className='absolute w-full h-full rounded-3xl blur-[1px]' style={{
           boxShadow: "inset 1px 1px 1px 0 rgba(200, 200, 200, 0.1), inset -1px -1px 1px 1px rgba(200, 200, 200, 0.1)"

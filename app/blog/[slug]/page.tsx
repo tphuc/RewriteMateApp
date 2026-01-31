@@ -94,7 +94,7 @@ export default async function Blog({ params }: any) {
 				</header>
 
 				{/* Blog content */}
-				<div className="prose prose-neutral prose-invert max-w-none">
+				<div className="prose prose-neutral dark:prose-invert max-w-none">
 					<CustomMDX source={post.content} />
 				</div>
 

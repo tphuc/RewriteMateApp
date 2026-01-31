@@ -60,10 +60,10 @@ export default async function PricingPlansPage() {
                                 overflow:"hidden",
                                 boxShadow: "inset 0.5px 0.5px 0px 0.5px rgba(200, 200, 200, 0.1), inset -0.5px -0.5px 0px 0.5px rgba(200, 200, 200, 0.1)",
                             }}
-                            className="relative overflow-hidden z-10 bg-secondary/20 rounded-3xl p-6 shadow-sm hover:shadow-lg transition-all duration-200"
+                            className="relative overflow-hidden z-10 bg-secondary/80 rounded-3xl p-6 shadow-sm hover:shadow-lg transition-all duration-200"
                         >
 
-                            <div className="absolute w-full overflow-hidden rounded-3xl h-full opacity-[38%] top-0 left-0" style={{
+                            <div className="absolute w-full overflow-hidden rounded-3xl h-full opacity-[62%] top-0 left-0" style={{
                                 zIndex: -1,
                                 overflow:"hidden",
                                 background: plan?.planFeature?.planData?.name?.toLowerCase() === 'pro' ? "radial-gradient(circle at top left, #7572FF 0%, #24a6d4 45%, #B657FF 70%, #BA7ED9 85%, #C88A7E 100%)" : undefined,

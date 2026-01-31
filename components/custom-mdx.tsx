@@ -141,7 +141,7 @@ function FlowImage({ src, alt }: { src: string; alt?: string }) {
 						alt={alt || ""}
 						width={440}
 						style={{ width: "auto", height: 400 }}
-						className="object-cover h-[300px] w-auto shadow-md drop-shadow-md"
+						className="object-cover h-[300px] w-auto border dark:border-none"
 					/>
 				</div>
 			</DialogTrigger>
@@ -163,14 +163,14 @@ function FlowImage({ src, alt }: { src: string; alt?: string }) {
 export function ImageFlow({ images, alt }: ImageFlowProps) {
 	return (
 		<div className='relative'>
-				<div className="pointer-events-none
+				{/* <div className="pointer-events-none
 		absolute z-10 top-0 left-0 h-full w-full 
 		" style={{
 					boxShadow: `
             inset 20px 0 20px 0px #0a0a0aaa,
             inset -20px 0 20px 0px #0a0a0aaa
           `,
-				}}/>
+				}}/> */}
 
 			{/* <div className="
 		absolute z-10 top-0 right-0 h-full w-[4%] bg-gradient-to-l from-background via-20% via-background/70 to-transparent

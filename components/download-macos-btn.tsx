@@ -92,7 +92,7 @@ export default function DownloadMacOSBtn() {
       target="_blank"
       rel="noopener noreferrer"
       download
-      className={cn("z-20 inline-flex font-semibold items-center gap-2 rounded-full bg-white px-5 py-2 text-black hover:opacity-90", loading ? 'pointer-events-none opacity-60' : '')}
+      className={cn("z-20 inline-flex border dark:border-black shadow-xs font-semibold items-center gap-2 rounded-full bg-gradient-to-b from-white to-white dark:from-[#111111aa] dark:to-black px-5 py-2 hover:opacity-90", loading ? 'pointer-events-none opacity-60' : '')}
     >
       Download for macOS
       <AppleLogoSvg
