@@ -131,7 +131,8 @@ type ImageFlowProps = {
 	alt?: string;
 };
 
-function FlowImage({ src, alt }: { src: string; alt?: string }) {
+function FlowImage({ src: _src, alt }: { src: string; alt?: string }) {
+	let src = _src?.startsWith('http') ? _src : `https://storage.googleapis.com/tubememo-public/rewritemate/${_src}`
 	return (
 		<Dialog >
 			<DialogTrigger asChild>
