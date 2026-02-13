@@ -40,7 +40,7 @@ export default function Home() {
             />
           </Link>
 
-          <DownloadMacOSBtn />
+          {/* <DownloadMacOSBtn /> */}
 
           {/* <GetEarlyAccess/> */}
           {/* <Link style={{ zIndex: 20 }} href='https://apps.apple.com/vn/app/rewritemate/id6755306532'>

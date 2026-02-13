@@ -6,8 +6,8 @@ import Image from "next/image";
 
 export default function Features() {
     return (
-        <>
-            <section className="px-4 space-y-16 py-12 md:py-20">
+        <div>
+            <section className="relative px-4 space-y-16 py-12 md:py-20">
 
                 <div className="grid grid-cols-1 md:grid-cols-6 gap-4 max-w-screen-xl px-4 mx-auto">
                     {/* {features.map((feature, index) => {
@@ -33,7 +33,7 @@ export default function Features() {
                 </div>
 
             </section>
-            <div className="grid grid-cols-12 max-w-screen-lg mx-auto gap-4 ">
+            <div className="relative grid grid-cols-12 max-w-screen-lg mx-auto gap-4 ">
 
                 <div className="col-span-full md:col-span-6 flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
                     <div className="pt-8 px-8">
@@ -111,7 +111,7 @@ export default function Features() {
 
                 <div className="col-span-full md:col-span-4 flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
 
-                <div className="dark:hidden absolute top-0 left-0 bg-gradient-to-b from-secondary via-secondary to-transparent w-full h-[10%] z-10" />
+                <div className="dark:hidden  top-0 left-0 bg-gradient-to-b from-secondary via-secondary to-transparent w-full h-[10%] z-10" />
                         <div className="relative min-h-[300px]  -mt-[20%] md:-mt-[30%]  inline-block w-auto">
 
                             <img
@@ -187,6 +187,6 @@ Translate your text directly from the keyboard, so you can write naturally and c
             </div>
 
 
-        </>
+        </div>
     );
 }

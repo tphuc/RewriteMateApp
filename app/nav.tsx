@@ -55,12 +55,12 @@ export default function Nav() {
 
         <div className="flex-1" />
 
-        {/* Desktop CTA */}
+        {/* Desktop CTA https://apps.apple.com/vn/app/rewritemate/id6755306532 */}
         <Link
-          href="https://apps.apple.com/vn/app/rewritemate/id6755306532"
-          className="rounded-full flex items-center flex-nowrap gap-2 border shadow-xs whitespace-nowrap bg-gradient-to-b from-foreground/80 to-foreground text-background pl-4 pr-3 py-1 text-center shadow-dark font-semibold"
+          href="/macos"
+          className="rounded-full flex items-center flex-nowrap gap-2 border shadow-xs whitespace-nowrap bg-gradient-to-b from-background/80 to-background pl-4 pr-3 py-1 text-center shadow-dark font-semibold"
         >
-          Download for iOS
+           Download for Mac
           <AppleLogoSvg className='w-4 h-4'/>
         </Link>
 
@@ -96,11 +96,21 @@ const NavLinks = () => {
   return (
     <div className="flex flex-col items-start gap-4 md:flex-row md:items-center">
       <Link
+        href="/"
+        className="w-full text-lg font-semibold md:w-auto"
+      >
+        iOS
+      </Link>
+
+      
+      <Link
         href="/blog"
         className="w-full text-lg font-semibold md:w-auto"
       >
         Blog
       </Link>
+
+
 
       <ContactButtonClient />
     </div>

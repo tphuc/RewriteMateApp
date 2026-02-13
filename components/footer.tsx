@@ -18,15 +18,21 @@ export default function Footer() {
       <p className="mb-2">
         © {new Date().getFullYear()} RewriteMate. All rights reserved.
       </p>
-      <div className="flex justify-center gap-4 text-sm">
+      <div>
+        
+      </div>
+      <div className="flex justify-center flex-wrap gap-4 text-sm">
         <Link href="/terms-and-conditions" className="hover:underline">
           Terms & Conditions
         </Link>
         <Link href="/privacy" className="hover:underline">
           Privacy Policy
         </Link>
-        <Link href="/ios" className="hover:underline">
+        <Link href="/" className="hover:underline">
          iOS
+        </Link>
+        <Link href="/macos" className="hover:underline">
+         macOS
         </Link>
       </div>
     </footer>
