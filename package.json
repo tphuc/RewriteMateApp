@@ -12,6 +12,7 @@
     "sortimg": "sort -V app/blog/images.txt -o app/blog/images.txt"
   },
   "dependencies": {
+    "@adam.plesnik/tailwindcss-scroll-driven-animations": "^0.3.0",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-alert-dialog": "^1.1.15",
     "@radix-ui/react-dialog": "^1.1.15",
@@ -26,6 +27,7 @@
     "next": "15.5.9",
     "next-mdx-remote": "^5.0.0",
     "next-themes": "^0.4.6",
+    "radix-ui": "^1.4.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-wrap-balancer": "^1.1.1",

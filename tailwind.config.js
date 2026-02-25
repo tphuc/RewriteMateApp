@@ -91,25 +91,41 @@ module.exports = {
           '50%': { backgroundPosition: '100% 50%' },
           '100%': { backgroundPosition: '0% 50%' },
         },
-  
+
+
+        'reveal-up': {
+          from: {
+            opacity: '0',
+            transform: 'translateY(40px)',
+          },
+          to: {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+
+
       },
       animation: {
         'animated-gradient': 'animated-gradient 4s ease infinite',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+
+          'reveal-up': 'reveal-up 1s ease-out both',
+        
       },
       backgroundSize: {
         '200': '200% 200%',
         '150': '150% 150%',
       },
       boxShadow: {
-  
+
         light: '0px 0px 0px 0.5px  rgb(255, 255, 255),  inset 0px 0px 0px 0.5px  rgba(255, 255, 255, 1)',
         dark: '0px 0px 0px 1px  rgba(0, 0, 0, 1), inset 1px 1px 0px 0.5px rgba(100, 100, 100, 0.3)',
       }
     },
   },
   plugins: [require('tailwind-scrollbar-hide'), require("tailwindcss-animate"),
-		require('@tailwindcss/typography'), ],
+  require('@tailwindcss/typography'), require('@adam.plesnik/tailwindcss-scroll-driven-animations')],
 }
 

@@ -14,7 +14,7 @@ export default function BlogAuthor({
   avatarUrl = "/felixtran.webp",
 }: BlogAuthorProps) {
   return (
-    <div className="mt-12 flex items-start gap-4 rounded-2xl border border-neutral-200/70 bg-neutral-50 p-5 dark:border-neutral-800 dark:bg-neutral-900">
+    <div className="mt-12 flex items-start gap-4 rounded-2xl border border-neutral-200/70 bg-secondary p-5">
       {/* Avatar */}
       <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full bg-neutral-200 dark:bg-neutral-800">
         <Image
@@ -31,15 +31,15 @@ export default function BlogAuthor({
           Written by
         </span>
 
-        <h4 className="mt-0.5 text-base font-semibold text-neutral-900 dark:text-neutral-100">
+        <h4 className="mt-0.5 text-base font-semibold">
           {name}
         </h4>
 
-        <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="mt-1 text-sm text-muted-foreground">
           {role}
         </p>
 
-        <p className="mt-3 max-w-prose text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">
+        <p className="mt-3 max-w-prose text-sm leading-relaxed text-foreground">
           {bio}
         </p>
       </div>

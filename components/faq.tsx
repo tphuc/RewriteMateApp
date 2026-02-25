@@ -53,7 +53,7 @@ import {
           Frequently Asked Questions
         </h2>
   
-        <Accordion type="single" collapsible className="space-y-2">
+        <Accordion type="single" collapsible className="space-y-2 bg-secondary p-6 rounded-3xl">
           {faqs.map((faq) => (
             <AccordionItem key={faq.id} value={faq.id}>
               <AccordionTrigger className="text-2xl">

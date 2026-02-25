@@ -9,7 +9,7 @@ export function ContactButtonClient() {
   }
 
   return (
-    <div  className="text-lg cursor-pointer py-1 rounded-lg font-semibold text-foreground/90 hover:text-foreground" onClick={handleClick}>
+    <div  className="cursor-pointer py-1 font-medium text-foreground/90 hover:text-foreground" onClick={handleClick}>
       Contact
     </div>
   )

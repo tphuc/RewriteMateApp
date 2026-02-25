@@ -47,7 +47,7 @@ export default async function Page({
 					return (
 						<Link
 							key={post.slug}
-							className={`flex flex-col  border-[0.5px] rounded-3xl overflow-hidden`}
+							className={`flex flex-col  rounded-3xl overflow-hidden`}
 							href={`/blog/${post.slug}`}
 						>
 							<div
@@ -56,17 +56,17 @@ export default async function Page({
 								)}
 							>
 
-								<div className='w-full aspect-video'>
+								<div className='w-full bg-secondary aspect-video'>
 								{post.metadata.image ? (
 									<img
 										alt={post.metadata.title}
 										src={post.metadata.image}
-										className="aspect-video w-full"
+										className="aspect-video  w-full"
 										style={{ objectFit: 'cover' }}
 									/>
 								) : null}
 								</div>
-								<div className='p-4'>
+								<div className='p-4 '>
 									<h2 className="flex flex-col text-xl font-semibold tracking-tight text-left text-secondary-foreground">
 										{post.metadata.title}
 									</h2>

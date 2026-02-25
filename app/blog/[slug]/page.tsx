@@ -94,13 +94,13 @@ export default async function Blog({ params }: any) {
 				</header>
 
 				{/* Blog content */}
-				<div className="prose prose-neutral dark:prose-invert max-w-none">
+				<div className="prose prose-neutral max-w-none">
 					<CustomMDX source={post.content} />
 				</div>
 
 				<BlogAuthor
 					name="Felix Tran"
-					role="Indie Developer & Founder"
+					role="Indie Developer & RewriteMate Founder"
 					bio=""
 				/>
 			</article>

@@ -7,7 +7,7 @@ import { FaqSection } from "@/components/faq";
 import Footer from "@/components/footer";
 import GetEarlyAccess from "@/components/get-early-access";
 import { HeroTitle } from "@/components/HeroTitle";
-import { AppleLogoSvg, Sparkles } from "@/components/icons";
+import { AppleLogoSvg, BriefCase, BubbleLeftRight, DeveloperCode, PaintPallete, Sparkles, TextBubble } from "@/components/icons";
 import IOSSimulator from "@/components/ios-simulator";
 import { MacTitle } from "@/components/MacTitle";
 import PricingPlansPage from "@/components/pricing-plans";
@@ -18,27 +18,104 @@ import { Apple, Check, MousePointer } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Features from "./features";
+import IOSFeatures from "./ios-features";
+import PricingCard from "./pricing";
+import Footer2 from "./footer";
 
+const roles = [
+  {
+    icon: <DeveloperCode className="w-8 h-8 fill-background"/>,
+    title: "Developers",
+    description:
+      "Clean up explanations without losing technical accuracy. Refine documentation and PR notes while keeping your original intent intact.",
+  },
+  {
+    icon: <PaintPallete className="w-8 h-8 fill-background"/>,
+    title: "Designers",
+    description:
+      "Clarify your thinking without flattening your voice. Adjust tone and structure while staying true to how you communicate.",
+  },
+  {
+    icon: <TextBubble className="w-8 h-8 fill-background"/>,
+    title: "Content & Marketing",
+    description:
+      "Polish what you’ve already written. Improve clarity, flow, and consistency without rewriting from scratch.",
+  },
+  {
+    icon: <BubbleLeftRight className="w-8 h-8 fill-background"/>,
+    title: "Sales & Support",
+    description:
+      "Fine-tune replies before you send them. Soften tone, tighten wording, and keep your message clear under pressure.",
+  },
+  {
+    icon: <BriefCase className="w-8 h-8 fill-background"/>,
+    title: "Founders & Operators",
+    description:
+      "Refine important messages before they go out. Keep your voice consistent across updates, strategy docs, and announcements.",
+  },
+]
 
 export default function Home() {
   return (
-    <div className="relative max-w-screen min-h-screen px-2 scrollbar-hide">
+    <div className="relative bg-background min-h-screen scrollbar-hide">
 
-      <main className="space-y-2 mx-auto bg-secondary max-w-screen-lg mt-[30%] pb-[5%] px-3 md:mt-[10%] rounded-4xl border overflow-hidden">
+      <main className="space-y-2 mx-auto max-w-screen-lg mt-30 md:mt-[5%] pb-[5%] px-3 rounded-4xl overflow-hidden">
 
 
-        <HeroTitle />
+        <div className="relative grow-progress-2 space-y-4">
+          {/* <div className="absolute top-0 left-0 bg-gradient-to-b from-secondary via-secondary/80 to-transparent w-full h-[30%]  z-10" /> */}
+
+          <div className="relative  max-w-screen-lg px-4 mx-auto">
+          <div className="relative z-10">
+          <img
+              src='/hero-macos.avif'
+              className="w-full rounded-xl w-full"
+              style={{ objectFit: "contain", }}
+            />
+            <img
+              src='/hero-ios.avif'
+              className="absolute z-20 -bottom-[5%] right-[2%] md:right-[0%] scale-[0.96] rounded-xl w-[30%]"
+              style={{ objectFit: "contain", }}
+            />
+          </div>
+            
+               <div className="absolute z-0 mx-auto bottom-10 left-[20%] w-[60%] h-[200px] 
+  bg-gradient-to-br from-sky-600/80 via-sky-500/80 to-blue-400/80 
+  blur-3xl" 
+/>
+          </div>
+          <div className="relative pb-5 space-y-4">
+
+            <h1 className="relative mx-auto max-w-xl text-center text-4xl md:text-6xl font-bold tracking-tight leading-tight">
+              <span className="bg-gradient-to-br from-cyan-400 via-sky-500 to-blue-600 bg-clip-text text-transparent">
+                Your Better <br /> AI Writing Assistant
+            </span>
+            </h1>
+            <p className="text-center max-w-md mx-auto text-xl">
+              Instantly improve, rephrase, and refine any text. The better writing tool, built for iOS and macOS.
+            </p>
+          </div>
+        </div>
 
         <div className="z-20 gap-4 flex flex-col lg:flex-row px-4 items-center justify-center">
-       
 
 
-          <Link className="z-20 whitespace-nowrap border-1 dark:border-foreground shadow-xs inline-flex font-semibold items-center gap-2 rounded-full bg-gradient-to-b from-foreground/80 to-foreground  px-5 py-2 text-background hover:opacity-90" href='https://apps.apple.com/vn/app/rewritemate/id6755306532'>
+
+          {/* <Link className="z-20 whitespace-nowrap border-1 dark:border-foreground shadow-xs inline-flex font-semibold items-center gap-2 rounded-full bg-gradient-to-b from-foreground/80 to-foreground  px-5 py-2 text-background hover:opacity-90" href='https://apps.apple.com/vn/app/rewritemate/id6755306532'>
             Download for iOS
             <AppleLogoSvg
               className={`h-4 w-4`}
             />
-          </Link>
+          </Link> */}
+
+          <div className='hidden md:flex items-center justify-center flex-1 gap-2'>
+            <Link
+              href="https://apps.apple.com/app/rewritemate/id6755306532"
+              className="relative rounded-full hover:opacity-90 text-white flex overflow-hidden items-center shadow-xs flex-nowrap gap-2  whitespace-nowrap bg-gradient-to-tr from-sky-500/90 to-blue-500 px-8 py-2 text-center font-medium"
+            >
+              Try for Free
+            </Link>
+          </div>
 
           {/* <DownloadMacOSBtn /> */}
 
@@ -53,14 +130,14 @@ export default function Home() {
 
 
         </div>
-        <div className="flex items-center justify-center">
+        {/* <div className="flex items-center justify-center">
           <a href="https://launchigniter.com/product/rewritemate-ai-keyboard?ref=badge-rewritemate-ai-keyboard" target="_blank">
             <img src="https://launchigniter.com/api/badge/rewritemate-ai-keyboard?theme=light" alt="Featured on LaunchIgniter" width="212" height="55" />
           </a>
-        </div>
+        </div> */}
 
 
-        <p className="mx-auto max-w-sm text-center">Requires macOS 14+</p>
+
         {/* <div className="mt-[10%] mx-auto px-2 relative" style={{maxWidth:"min(500px, 98vw)", overflow:"hidden"}}>
             <div  className="relative border-1 rounded-3xl space-y-4 pb-[10%] mx-auto p-4 bg-background/80 backdrop-blur-sm">
               <MacTitle />
@@ -78,85 +155,73 @@ export default function Home() {
 
 
           </div> */}
-        <div className="absolute bottom-0 left-0 w-full h-[10vh] bg-gradient-to-t from-background to-transparent" />
+     
 
       </main>
 
-      <Features />
+      <div className="bg-secondary relative w-full h-full">
+        <IOSFeatures />
+      </div>
 
-      {/* <div className="min-h-[50vh] w-full relative">
-        <br />
 
-        <div className="mx-auto flex flex-col lg:flex-row items-center justify-center gap-4 relative max-w-[98vw]">
-          <p className="text-muted-foreground/80">Open writing tool instantly with configurable hotkeys</p>
-          <KbdGroup>
-            <Kbd className="size-8 text-lg rounded-lg border">⇧</Kbd>
-            <Kbd className="size-8 text-lg rounded-lg border">⌥</Kbd>
-            <Kbd className="size-8 text-lg rounded-lg border">W</Kbd>
-          </KbdGroup>
+      <div className="bg-[#111112] relative w-full">
+
+        <div className="relative grow-progress max-w-screen-lg py-10 px-4 mx-auto">
+         
+          <img
+            src='/hero-macos.avif'
+            className="w-full z-10 relative rounded-xl w-full"
+            style={{ objectFit: "contain", }}
+          />
+          <div className="absolute z-0 mx-auto bottom-10 left-[15%] w-[70%] h-[300px] 
+  bg-gradient-to-b from-sky-500/50 via-blue-500/50 to-sky-300/50 
+  blur-3xl" 
+/>
+
         </div>
 
-
-
-
-        <div className="relative py-[12%] px-4">
-          <h1 className="text-4xl md:text-5xl max-w-2xl mx-auto font-semibold tracking-tight pb-4">Works Everywhere</h1>
-          <p className="text-2xl md:text-3xl max-w-2xl mx-auto text-muted-foreground">Rewrite anywhere you write — <br /> from Notes and Mail to Notion, Docs, or Slack. </p>
-          <p className="text-2xl md:text-3xl max-w-2xl mx-auto text-muted-foreground">No switching apps, no losing flow.</p>
-          <br />
-          <div className="relative  mx-auto max-w-2xl">
-            <div className="bg-secondary p-2 rounded-3xl inline-flex items-center justify-center gap-4 border">
-              <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='/apple-mail.webp' style={{ width: 46, height: 46 }} width={300} height={300} alt='Mail' />
-              <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='/apple-notes.webp' style={{ width: 50, height: 50 }} width={300} height={300} alt='Notes' />
-              <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='/notion-logo.webp' style={{ width: 50, height: 50 }} width={300} height={300} alt='Notion' />
-              <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='https://storage.googleapis.com/tubememo-public/rewritemate/logo.webp' style={{ width: 50, height: 50 }} width={300} height={300} alt='RewriteMate' />
+        <section className="text-background/90 grow-progress py-24">
+          <div className="mx-auto max-w-5xl px-6">
+            <div className="max-w-2xl mb-16">
+              <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">
+                Built for the way you work
+              </h2>
+              <p className="mt-4 opacity-80 text-xl leading-relaxed">
+                RewriteMate helps professionals communicate clearly across every workflow.
+              </p>
             </div>
-          </div>
-        </div>
 
-        <div className="relative max-w-2xl mx-auto w-full px-4">
-
-          <h1 className="w-full text-4xl md:text-5xl max-w-2xl ml-auto font-semibold tracking-tight pb-4 text-right">
-            Custom Instructions
-          </h1>
-          <p className="text-2xl md:text-3xl max-w-3xl mx-auto text-muted-foreground text-right">Save your own rewrite prompts <br /> as custom tasks. </p>
-
-
-          <br />
-          <div className="relative mx-auto max-w-2xl flex flex-col items-end" >
-            <div className="relative h-full">
-
-              <div className="relative flex flex-col items-end" style={{ maxWidth: "96vw" }}>
-              
-                <div className="max-w-md flex gap-2 flex-row overflow-x-scroll">
-                  <div className="bg-gradient-to-b from-blue-500/90 to-blue-800 px-4 py-2 rounded-2xl text-white fill-white">
-                    <Sparkles className="w-6 h-6 text-white" />
-                    <span>Proofread Text</span>
+            <div className="grid gap-y-12 gap-x-16 md:grid-cols-2">
+              {roles.map((role) => (
+                <div key={role.title} className="group">
+                  <div className="flex items-center gap-2">
+                  <span className="text-2xl">
+                    {role.icon}
+                  </span>
+                  <span className="text-2xl md:text-3xl font-medium tracking-tight">
+                    {role.title}
+                  </span>
                   </div>
 
-                  <div className="bg-gradient-to-b from-blue-500/90 to-blue-800 px-4 py-2 rounded-2xl text-white fill-white">
-                    <Sparkles className="w-6 h-6 text-white" />
-                    Paraphrase Text
-                  </div>
-
-                  <div className="bg-gradient-to-b from-blue-500/90 to-blue-800 px-4 py-2 rounded-2xl text-white fill-white">
-                    <Sparkles className="w-6 h-6 text-white" />
-                    Translate Text
-                  </div>
+                  <p className="mt-4 opacity-80 text-lg leading-relaxed max-w-md">
+                    {role.description}
+                  </p>
                 </div>
-              
-              </div>
-
+              ))}
             </div>
-
-
           </div>
-        </div>
+        </section>
+      </div>
 
-      </div> */}
-      <PricingPlansPage />
+
+<PricingCard/>
+      {/* <PricingPlansPage /> */}
       <FaqSection />
-      <Footer />
+      {/* <Footer /> */}
+      <Footer2/>
+
+
+
     </div>
   );
 }

@@ -35,7 +35,7 @@ export default function Features() {
             </section>
             <div className="relative grid grid-cols-12 max-w-screen-lg mx-auto gap-4 ">
 
-                <div className="col-span-full md:col-span-6 flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
+                <div className="col-span-full md:col-span-6 flex flex-col overflow-hidden w-full rounded-4xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
                     <div className="pt-8 px-8">
                         <p className="text-2xl text-secondary-foreground font-semibold tracking-tight">
                             Works Everywhere
@@ -49,7 +49,7 @@ export default function Features() {
 
 
                         <div className="relative  mx-auto max-w-2xl">
-                            <div className="bg-secondary p-2 rounded-3xl inline-flex items-center justify-center gap-4 border">
+                            <div className="bg-secondary p-2 rounded-4xl inline-flex items-center justify-center gap-4">
                                 <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='/apple-mail.webp' style={{ width: 46, height: 46 }} width={300} height={300} alt='Mail' />
                                 <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='/apple-notes.webp' style={{ width: 50, height: 50 }} width={300} height={300} alt='Notes' />
                                 <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='/notion-logo.webp' style={{ width: 50, height: 50 }} width={300} height={300} alt='Notion' />
@@ -60,7 +60,7 @@ export default function Features() {
                     </div>
                 </div>
 
-                <div className="col-span-full md:col-span-6 row-span-2 relative flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
+                <div className="col-span-full md:col-span-6 row-span-2 relative flex flex-col overflow-hidden w-full rounded-4xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
                     <div className="px-8 py-8 w-full h-[40%] md:h-auto absolute top-0 left-0 z-20 bg-gradient-to-b from-secondary via-secondary to-transparent">
                         <p className="text-2xl whitespace-nowrap text-secondary-foreground font-semibold tracking-tight">
                             Custom Rewrite Tasks
@@ -85,7 +85,7 @@ export default function Features() {
                     </div>
                 </div>
 
-                <div className="relative col-span-full md:col-span-6 flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
+                <div className="relative col-span-full md:col-span-6 flex flex-col overflow-hidden w-full rounded-4xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
 
 
 
@@ -104,12 +104,12 @@ export default function Features() {
                             Transparent Edits
                         </p>
                         <p className="text-muted-foreground">
-                            Visualize complex ideas from videos as interactive mind maps. See connections, spot themes, and grasp the big picture at a glance.
+                        Transparent Edits lets you see exactly what changed in your text before you accept it. Compare the original and the revised version side by side, so you stay fully in control of every edit.
                         </p>
                     </div>
                 </div>
 
-                <div className="col-span-full md:col-span-4 flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
+                <div className="col-span-full md:col-span-4 flex flex-col overflow-hidden w-full rounded-4xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
 
                 <div className="dark:hidden  top-0 left-0 bg-gradient-to-b from-secondary via-secondary to-transparent w-full h-[10%] z-10" />
                         <div className="relative min-h-[300px]  -mt-[20%] md:-mt-[30%]  inline-block w-auto">
@@ -133,7 +133,7 @@ export default function Features() {
                 </div>
 
 
-                <div className="relative col-span-full md:col-span-4 flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
+                <div className="relative col-span-full md:col-span-4 flex flex-col overflow-hidden w-full rounded-4xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
 
                     <div className="dark:hidden absolute top-0 left-0 bg-gradient-to-b from-secondary via-secondary to-transparent w-full h-[10%] z-10" />
                         <div className="relative min-h-[300px]  -mt-[20%] md:-mt-[30%]  inline-block w-auto">
@@ -158,7 +158,7 @@ export default function Features() {
 
                 </div>
 
-                <div className="relative col-span-full md:col-span-4 flex flex-col overflow-hidden w-full border rounded-3xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
+                <div className="relative col-span-full md:col-span-4 flex flex-col overflow-hidden w-full rounded-4xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
 
                     <div className="dark:hidden absolute top-0 left-0 bg-gradient-to-b from-secondary via-secondary to-transparent w-full h-[10%] z-10" />
                         <div className="relative min-h-[300px]  -mt-[20%] md:-mt-[30%]  inline-block w-auto">
