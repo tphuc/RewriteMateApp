@@ -12,6 +12,8 @@ export type Metadata = {
 	related?: any;
 };
 
+
+
 function parseFrontmatter(fileContent: string): {
 	metadata: Metadata;
 	content: string;
@@ -85,6 +87,49 @@ function getMDXData(
 	});
 }
 
+function getMDXDataSingle(
+	dir: string,
+	slug: string
+): { metadata: Metadata; slug: string; content: string } | null {
+	const mdxFiles = getMDXFilesOrderedByCreationTime(dir);
+
+	// Find file that matches the slug
+	const matchedFile = mdxFiles.find((file) => {
+		const fileSlug = path.basename(file, path.extname(file));
+		return fileSlug === slug;
+	});
+
+	if (!matchedFile) {
+		console.warn(`⚠️ No MDX file found for slug: ${slug}`);
+		return null;
+	}
+
+	const filePath = path.join(dir, matchedFile);
+
+	try {
+		const { metadata, content } = readMDXFile(filePath);
+
+		return {
+			metadata,
+			slug,
+			content,
+		};
+	} catch (e) {
+		console.error(`❌ Failed to parse ${filePath}`);
+		console.error("   Error:", (e as Error).message);
+
+		const raw = fs
+			.readFileSync(filePath, "utf-8")
+			.split("\n")
+			.slice(0, 10)
+			.join("\n");
+
+		console.error("   File preview:\n" + raw);
+
+		throw e;
+	}
+}
+
 export function getLastNBlogPosts(n: number): {
 	metadata: Metadata;
 	slug: string;
@@ -100,6 +145,17 @@ export function getBlogPosts(): {
 	content: string;
 }[] {
 	return getMDXData(path.join(process.cwd(), 'app', 'blog', 'markdown'));
+}
+
+export function getSingleBlogPost(slug: string): {
+	metadata: Metadata;
+	slug: string;
+	content: string;
+  } | null {
+	return getMDXDataSingle(
+	  path.join(process.cwd(), 'app', 'blog', 'markdown'),
+	  slug
+	);
 }
 
 export function formatDate(date: string, includeRelative = false): string {

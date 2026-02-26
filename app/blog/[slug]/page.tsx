@@ -1,11 +1,14 @@
 import { notFound } from 'next/navigation';
 import { baseUrl } from '@/app/sitemap';
-import { formatDate, getBlogPosts, getLastNBlogPosts } from '@/lib/blog';
+import { formatDate, getBlogPosts, getLastNBlogPosts, getSingleBlogPost } from '@/lib/blog';
 import { CustomMDX } from '@/components/custom-mdx';
 import { StyledImage } from '@/components/styled-image';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import BlogAuthor from './author';
+import { serialize } from 'next-mdx-remote/serialize'
+import remarkGfm from 'remark-gfm';
+
 
 export async function generateStaticParams() {
 	let posts = getBlogPosts();
@@ -65,7 +68,7 @@ export async function generateMetadata({ params }: any) {
 
 export default async function Blog({ params }: any) {
 	const { slug } = await params;
-	const post = getBlogPosts().find((post: any) => post.slug === slug);
+	const post = getSingleBlogPost(slug);
 
 	if (!post) notFound();
 
@@ -79,11 +82,11 @@ export default async function Blog({ params }: any) {
 						<Link href='/blog' className='bg-secondary/62 hover:bg-secondary transition duration-200 pl-2 pr-3 rounded-full py-1 gap-2 flex items-center'> <ArrowLeft className='w-4 h-4' /> Back</Link>
 					</div>
 					<p className="mb-3 text-sm ">
-						{formatDate(post.metadata.publishedAt)}
+						{formatDate(post?.metadata?.publishedAt)}
 					</p>
 
 					<h1 className="text-4xl font-semibold tracking-tight">
-						{post.metadata.title}
+						{post?.metadata?.title}
 					</h1>
 
 					{/* {post.metadata.summary && (

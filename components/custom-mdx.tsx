@@ -161,26 +161,13 @@ function FlowImage({ src: _src, alt }: { src: string; alt?: string }) {
 	);
 }
 
-export function ImageFlow({ images, alt }: ImageFlowProps) {
+export function ImageFlow({ images, alt, ...props }: ImageFlowProps) {
 	return (
 		<div className='relative'>
-				{/* <div className="pointer-events-none
-		absolute z-10 top-0 left-0 h-full w-full 
-		" style={{
-					boxShadow: `
-            inset 20px 0 20px 0px #0a0a0aaa,
-            inset -20px 0 20px 0px #0a0a0aaa
-          `,
-				}}/> */}
-
-			{/* <div className="
-		absolute z-10 top-0 right-0 h-full w-[4%] bg-gradient-to-l from-background via-20% via-background/70 to-transparent
-		" /> */}
 			<div className="
 					flex overflow-x-auto gap-4 py-2 snap-x snap-mandatory px-2
-					
 				" >
-				{images.map((url, idx) => (
+				{images?.map?.((url: any, idx: any) => (
 					<FlowImage key={idx} src={url} alt={alt} />
 				))}
 
@@ -298,7 +285,7 @@ const RewriteMateCTA = ({
 			cta: "Download on App Store. It's Free",
 			image: '/showcase2.webp',
 			gradient: {
-				from: '#3f6212',
+				from: '#00cfcb',
 				to: '#84cc16',
 			},
 		},
@@ -325,12 +312,12 @@ const RewriteMateCTA = ({
 				</p>
 
 				<a
-					className="inline-flex mt-4"
+					className="inline-flex mt-4 no-underline"
 					target="_blank"
 					rel="noopener noreferrer"
 					href="https://apps.apple.com/app/rewritemate-ai-keyboard/id6755306532"
 				>
-					<div className="flex items-center gap-2 bg-white text-black rounded-full px-4 py-2 font-medium">
+					<div className="flex items-center  gap-2 bg-white text-black rounded-full px-4 py-2 font-medium">
 						{current.cta}
 					</div>
 				</a>
@@ -353,7 +340,7 @@ const components = {
 	hr: CustomHR,
 	blockquote: CustomBlockquote,
 	p: Paragraph,
-	ImageGrid,
+	ImageGrid: ImageGrid,
 	ImageFlow,
 	RewriteMateCTA
 };
@@ -367,7 +354,11 @@ export const CustomMDX: FC<MDXRemoteProps> = (props) => {
 				mdxOptions: {
 					remarkPlugins: [remarkGfm], // Enable GFM for tables
 				},
+				blockJS: false,
+				blockDangerousJS: false
 			}}
+
+			
 		/>
 	);
 };
