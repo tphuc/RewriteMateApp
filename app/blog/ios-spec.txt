@@ -1,0 +1,286 @@
+
+
+RewriteMate - AI Keyboard iOS app 
+Functional Product Description
+
+⸻
+
+1. Main App (iOS Application)
+
+The Main App is used for configuration, organization, and system-level settings.
+It does not perform inline rewriting. It manages the keyboard’s behavior.
+
+⸻
+
+1.1 Home / Command Library Screen
+
+Purpose
+
+Displays all available AI commands.
+
+Layout
+	•	Top navigation bar
+	•	Title: “Commands”
+	•	Add (+) button (top-right)
+	•	Scrollable list of folders and/or standalone commands
+
+Behavior
+
+Command Item
+Each command row displays:
+	•	Command name
+	•	Short description (optional)
+	•	Folder indicator (if nested)
+
+Tapping a command:
+	•	Opens Command Detail screen
+
+Long press (if implemented):
+	•	Shows contextual actions:
+	•	Edit
+	•	Duplicate
+	•	Delete
+
+⸻
+
+1.2 Folder Management
+
+Create Folder
+
+User taps:
+	•	“+” button → “New Folder”
+
+Fields:
+	•	Folder name (required)
+
+After saving:
+	•	Folder appears in the command list
+	•	User can move commands into folder
+
+Folder View
+
+Displays:
+	•	List of commands inside folder
+	•	Edit and reorder capability (if enabled)
+
+⸻
+
+1.3 Create / Edit Command Screen
+
+Fields
+	1.	Command Name (required)
+	2.	Prompt / Instruction (multi-line text area)
+	3.	Output Mode:
+	•	Replace
+	•	Insert Below
+	•	Copy to Clipboard
+	4.	Model Selection (if user-configurable)
+	5.	Optional parameters:
+	•	Word limit
+	•	Temperature (if exposed)
+	•	Tone presets (if applicable)
+
+Save Behavior
+	•	Validation ensures name and prompt are not empty
+	•	On save:
+	•	Command is persisted
+	•	Available immediately inside keyboard
+
+⸻
+
+1.4 Built-in Commands
+
+The app ships with default commands such as:
+	•	Proofread
+	•	Rewrite
+	•	Summarize
+	•	Shorten
+	•	Expand
+	•	Translate
+
+These may be:
+	•	Editable
+	•	Duplicable
+	•	Protected from deletion (implementation-dependent)
+
+⸻
+
+1.5 Settings Screen
+
+Sections
+
+AI Provider
+	•	Select provider (e.g., OpenAI, Anthropic)
+	•	Enter API key
+	•	Model selection dropdown
+
+Keyboard Permissions
+	•	Button: “Enable Keyboard”
+	•	Opens iOS Settings > Keyboards
+	•	Indicator showing:
+	•	Installed
+	•	Full Access enabled / disabled
+
+Output Preferences
+	•	Default output behavior
+	•	Clipboard vs Selection priority
+
+⸻
+
+1.6 Data Storage
+
+User data includes:
+	•	Commands
+	•	Folders
+	•	API keys (secure storage)
+	•	Preferences
+
+Commands created in the Main App are synced to the Keyboard Extension.
+
+⸻
+
+2. Keyboard Extension
+
+The Keyboard Extension provides inline AI actions inside any text input field.
+
+⸻
+
+2.1 Default Keyboard State
+
+Collapsed State
+
+Displays:
+	•	System keyboard
+	•	RewriteMate toolbar (if implemented)
+	•	Primary AI trigger button
+
+⸻
+
+2.2 Expanded AI Panel
+
+Triggered by:
+	•	Tapping AI icon
+
+Panel contains:
+	•	Text source selector
+	•	Selected Text
+	•	Clipboard
+	•	Command list
+	•	Close button
+
+⸻
+
+2.3 Text Source Selection
+
+Options
+	1.	Selected Text
+	•	Uses currently highlighted text in host app
+	•	If no selection:
+	•	Show error state or fallback message
+	2.	Clipboard
+	•	Uses current clipboard content
+	•	If empty:
+	•	Show error state
+
+Switching source updates preview context.
+
+⸻
+
+2.4 Command Execution Flow
+
+Step 1:
+User selects text in host app
+OR copies content to clipboard
+
+Step 2:
+User opens RewriteMate keyboard
+
+Step 3:
+User taps a command
+
+Step 4:
+Loading state appears
+	•	Spinner
+	•	Disabled interaction
+
+Step 5:
+Preview screen appears
+
+Preview contains:
+	•	Generated output (scrollable)
+	•	Action buttons:
+	•	Replace
+	•	Insert
+	•	Copy
+	•	Retry
+	•	Cancel
+
+⸻
+
+2.5 Output Actions
+
+Replace
+	•	Replaces selected text in host app
+	•	If using clipboard source:
+	•	Inserts at cursor
+
+Insert
+	•	Inserts generated output at cursor position
+	•	Does not remove original text
+
+Copy
+	•	Copies output to clipboard
+	•	Does not modify host text
+
+Retry
+	•	Regenerates using same command
+
+Cancel
+	•	Closes preview
+	•	Returns to command list
+
+⸻
+
+2.6 Error States
+
+No Text Selected
+	•	Show message:
+“No text selected.”
+
+Clipboard Empty
+	•	Show message:
+“Clipboard is empty.”
+
+API Failure
+	•	Show error:
+“Request failed.”
+	•	Option:
+Retry
+
+No Internet
+	•	Show offline message
+
+⸻
+
+2.7 Performance Expectations
+	•	Response latency depends on model and connection
+	•	Keyboard should:
+	•	Avoid freezing
+	•	Maintain input focus
+	•	Restore typing state after action
+
+⸻
+
+System Interaction Summary
+
+Main App:
+	•	Configure commands
+	•	Manage provider
+	•	Organize tools
+
+Keyboard:
+	•	Select text
+	•	Run command
+	•	Preview result
+	•	Apply output
+

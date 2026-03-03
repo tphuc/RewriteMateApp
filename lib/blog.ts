@@ -64,15 +64,15 @@ function readMDXFile(filePath: string): {
 
 function getMDXData(
 	dir: string
-): { metadata: Metadata; slug: string; content: string }[] {
+): { metadata: Metadata; slug: string }[] {
 	const mdxFiles = getMDXFilesOrderedByCreationTime(dir);
 	return mdxFiles.map((file) => {
 		const filePath = path.join(dir, file);
 		try {
-			const { metadata, content } = readMDXFile(filePath);
+			const { metadata } = readMDXFile(filePath);
 			const slug = path.basename(file, path.extname(file));
 
-			return { metadata, slug, content };
+			return { metadata, slug };
 		} catch (e) {
 			console.error(`❌ Failed to parse ${filePath}`);
 			console.error("   Error:", (e as Error).message);
@@ -133,7 +133,6 @@ function getMDXDataSingle(
 export function getLastNBlogPosts(n: number): {
 	metadata: Metadata;
 	slug: string;
-	content: string;
 }[] {
 	const allPosts = getMDXData(path.join(process.cwd(), 'app', 'blog', 'markdown'));
 	return allPosts.slice(-n).reverse()
@@ -142,7 +141,6 @@ export function getLastNBlogPosts(n: number): {
 export function getBlogPosts(): {
 	metadata: Metadata;
 	slug: string;
-	content: string;
 }[] {
 	return getMDXData(path.join(process.cwd(), 'app', 'blog', 'markdown'));
 }

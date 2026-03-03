@@ -1,0 +1,348 @@
+RewriteMate
+
+Internal Product Specification
+Version: Core Architecture v1.11
+
+⸻
+
+1. Product Overview
+
+1.1 Product Definition
+
+RewriteMate is a customizable AI command engine embedded as an iOS system keyboard.
+
+It allows users to:
+	•	Execute predefined AI transformations on text
+	•	Create custom AI commands
+	•	Organize commands into folders
+	•	Apply transformations directly within any app
+	•	Insert or replace text without app switching
+
+⸻
+
+1.2 System Architecture
+
+RewriteMate consists of two primary layers:
+
+A. Keyboard Extension (Execution Layer)
+	•	Runs inside iOS keyboard
+	•	Executes AI commands
+	•	Handles text input/output
+	•	Manages selection and clipboard sources
+
+B. Main App (Configuration Layer)
+	•	Command creation and editing
+	•	Folder management
+	•	Command organization
+	•	Library management
+	•	User settings and provider configuration
+
+The main app defines structure.
+The keyboard executes that structure.
+
+⸻
+
+2. Core Abstractions
+
+2.1 Command
+
+A Command is the core functional unit of the system.
+
+Each command includes:
+	•	Name (string)
+	•	Icon (system or custom)
+	•	Folder association
+	•	AI instruction (prompt template)
+	•	Optional output constraints
+	•	Execution behavior (Insert / Replace enabled)
+
+A command:
+	1.	Accepts input text
+	2.	Sends structured prompt to AI provider
+	3.	Returns transformed text
+	4.	Allows user to Insert or Replace
+
+Commands are reusable and persistent.
+
+⸻
+
+2.2 Folder
+
+A Folder is a container for commands.
+
+Folder properties:
+	•	Name
+	•	Icon (optional)
+	•	Order index
+	•	Command count
+	•	Editable state
+
+Folders are used for organization only. They do not affect execution logic.
+
+⸻
+
+3. Default System Structure
+
+On first launch, the app includes predefined folders and commands.
+
+3.1 Default Folder: Rewrite
+
+Contains transformation-focused commands:
+	•	Proofread Text
+	•	Change Tone to Casual
+	•	Change Tone to Professional
+	•	Paraphrase Text
+	•	Shorten Text
+	•	Expand Text
+	•	Simplify Text
+	•	Summarize Text
+
+These are implemented as standard commands and may be editable.
+
+⸻
+
+3.2 Default Folder: Translate
+
+Contains language transformation commands:
+	•	Translate to English
+	•	Translate to Spanish
+	•	Additional languages supported
+
+Each translation direction is implemented as an independent command.
+
+⸻
+
+4. Customization System
+
+4.1 Create Custom Command
+
+Location:
+Library → All Commands → “+”
+
+User inputs:
+	•	Command name
+	•	Prompt instruction
+	•	Folder assignment
+	•	(Optional) output word limit default
+
+Result:
+New command stored in persistent library and available in keyboard.
+
+⸻
+
+4.2 Create Custom Folder
+
+Location:
+Library main screen → Folder “+” button
+
+User inputs:
+	•	Folder name
+
+Result:
+New container for organizing commands.
+
+⸻
+
+4.3 Edit Mode
+
+From:
+	•	Folder screen
+	•	All Commands screen
+
+Allows:
+	•	Rename command
+	•	Change folder
+	•	Delete command
+	•	Reorder commands
+	•	Rename folder
+	•	Delete folder (if not system-protected)
+
+⸻
+
+5. Keyboard Execution Layer
+
+5.1 Text Source Selection
+
+User can choose between:
+
+A. Use Selection
+	•	Pulls highlighted text from host app
+	•	Displays preview snippet
+	•	Displays word count
+
+B. Use Clipboard
+	•	Pulls latest copied text
+	•	Displays word count
+
+Text source selection is required before command execution.
+
+⸻
+
+5.2 Word Limit Control
+
+UI element:
+Dropdown (e.g., “10 words”)
+
+Purpose:
+	•	Constrains AI output length
+	•	Applies to current execution session
+	•	Overrides default if set
+
+⸻
+
+5.3 Command Surface
+
+Keyboard displays:
+	•	Frequently accessed commands
+	•	Folder-based grouping
+	•	Large tappable command cards
+
+Each card represents a single command instance.
+
+⸻
+
+5.4 Command Execution Flow
+	1.	User selects text or chooses clipboard
+	2.	User selects command
+	3.	AI request is executed
+	4.	Result returned to keyboard
+	5.	User chooses:
+	•	Replace (overwrite selection)
+	•	Insert (add at cursor)
+
+Execution is non-destructive until confirmed.
+
+⸻
+
+6. Compose Mode
+
+Compose is a freeform AI interface within the keyboard.
+
+Properties:
+	•	No predefined prompt template
+	•	User writes custom instruction
+	•	Optional word limit applies
+	•	Output available for Insert
+
+Use cases:
+	•	Drafting new content
+	•	Brainstorming
+	•	Open-ended writing tasks
+
+Compose differs from Commands:
+	•	Commands = predefined templates
+	•	Compose = ad hoc generation
+
+⸻
+
+7. Navigation Structure (Main App)
+
+7.1 Bottom Tab Navigation
+	•	Library
+	•	Profile
+
+⸻
+
+7.2 Library Screen
+
+Displays:
+	•	All Commands (aggregate view)
+	•	Folder list
+	•	Command counts
+	•	Edit mode toggle
+	•	Add folder button
+
+⸻
+
+7.3 All Commands Screen
+
+Displays:
+	•	Folder sections
+	•	Command grid layout
+	•	Add command per folder
+	•	Global edit
+
+⸻
+
+8. Insert vs Replace Model
+
+After AI returns result:
+
+Replace
+	•	Overwrites selected text
+	•	Primary action
+
+Insert
+	•	Inserts at cursor
+	•	Preserves original text
+
+This ensures:
+	•	Controlled editing
+	•	Reduced accidental overwrite
+	•	High trust UX
+
+⸻
+
+9. Provider Layer (High-Level)
+
+Although not shown in detail, system supports:
+	•	Configurable AI service provider
+	•	Model selection
+	•	API key management
+
+Provider configuration exists in Profile or Settings.
+
+Execution pipeline:
+
+Command → Prompt template → Provider → Model → Output → Keyboard
+
+⸻
+
+10. Data Model (High-Level)
+
+Command
+	•	id: UUID
+	•	name: String
+	•	promptTemplate: String
+	•	folderId: UUID
+	•	iconIdentifier: String
+	•	createdAt
+	•	updatedAt
+
+Folder
+	•	id: UUID
+	•	name: String
+	•	isSystemFolder: Bool
+	•	orderIndex: Int
+
+⸻
+
+11. Core Principles
+	1.	Template-based AI execution
+	2.	User-controlled customization
+	3.	Folder-driven organization
+	4.	Zero app switching
+	5.	In-place editing
+	6.	Modular command architecture
+
+⸻
+
+12. Non-Goals
+	•	Not a chat-first AI application
+	•	Not limited to proofreading
+	•	Not a fixed-feature writing assistant
+	•	Not dependent on hardcoded transformations
+
+All transformations are implemented as commands.
+
+⸻
+
+13. Product Definition (Internal)
+
+RewriteMate is:
+
+A modular AI command library
+Configured in-app
+Executed inside the iOS keyboard
+Allowing structured, reusable text transformations
+With full user control over organization and prompts

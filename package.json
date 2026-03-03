@@ -9,6 +9,7 @@
     "lint": "biome check",
     "format": "biome format --write",
     "mdx": "node app/blog/rename.js",
+    "images": "app/blog/fetchimages.sh",
     "sortimg": "sort -V app/blog/images.txt -o app/blog/images.txt"
   },
   "dependencies": {

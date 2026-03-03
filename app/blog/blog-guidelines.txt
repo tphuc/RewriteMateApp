@@ -1,0 +1,55 @@
+RewriteMate Blog Guidelines
+
+1. Purpose: Solving the "Job-to-Be-Done"
+
+The blog is a Solution Engine. Its primary SEO goal is to capture high-intent traffic by mapping specific writing "frictions" to immediate, in-place solutions.
+
+Pain-Point SEO: We don’t just target "AI writing"; we target "how to fix grammar in iMessage" or "professional tone for non-native speakers".
+
+The Transformation: Every post must move the reader from Friction (context-switching, anxiety, copy-pasting) to Flow (writing in-place, confidence, speed).
+
+2. Core Voice: The "Helpful Peer" (E-E-A-T)
+
+Google rewards content that demonstrates first-hand experience. Our voice is the "Helpful Peer"—someone who writes as much as the reader does.
+
+Precision over Hype: Use concrete nouns and active verbs. Replace "revolutionary" with "system-level".
+
+Grounded Authority: Avoid aggressive claims. Build trust through technical accuracy and a calm, supportive tone.
+
+Privacy-First: Mention security as a standard, not a feature. Quietly reassure the reader that their data is handled with professional restraint.
+
+3. SEO Structure: Scannability & Hierarchy
+
+Google’s crawlers and mobile users both prioritize clear hierarchies. Use a "Friction-First" structure to decrease bounce rates.
+
+H1: Must contain the primary keyword and represent the user’s goal (e.g., “How to [Action] on [Platform]” or “Best [Tool] for [Persona]”).
+
+The Lede (First 100 words): State the solution immediately. Use the primary keyword in the first paragraph to signal relevance to search engines.
+
+Semantic Subheadings (H2/H3): Use these to capture "People Also Ask" queries. Frame them as specific sub-problems (e.g., "Why Copy-Pasting Kills Your Flow").
+
+Comparison Tables: For "Comparison Matrix" posts, use Markdown tables to summarize Tool A vs. Tool B. Google often pulls these into Featured Snippets.
+
+4. Problem Framing: The "Copy-Paste Tax"
+
+To rank for "Problem-Aware" keywords, we must describe the friction better than the competitor does.
+
+Identify the Context: Focus on the physical act of writing on mobile—small screens, shifting apps, and the "Copy-Paste Tax".
+
+The Goal is Recognition: Use "Friction-first" language so the reader thinks, "This is exactly my workflow bottleneck".
+
+5. Technical Requirements for Next.js/MDX
+
+To ensure the automation remains production-ready and indexable:
+
+Frontmatter: Must include a summary (150–160 characters) for the meta-description and a keywords array for internal categorization.
+
+Visual Integration: Use <ImageFlow /> components with high-quality, descriptive alt text. Alt text should describe the workflow, not just the image (e.g., "Using RewriteMate to fix tone in a mobile email client").
+
+Internal Linking: Always include a placeholder for one related post to boost "Domain Authority" and keep users on-site.
+
+6. Audience & Trust
+
+Inclusive Identity: Address professionals, non-native speakers, and creators without using "marketing-speak".
+
+Zero-Friction CTA: Our calls-to-action are "Soft CTAs." Instead of "Buy Now," use "Explore the workflow" or "Compare the steps".
