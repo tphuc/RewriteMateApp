@@ -148,7 +148,7 @@ function FlowImage({ src: _src, alt }: { src: string; alt?: string }) {
 			</DialogTrigger>
 
 			<DialogContent className="max-w-[95vw] max-h-[95vh] p-0 flex flex-col items-center justify-center bg-transparent shadow-none border-none">
-				{alt && <DialogTitle className="text-sm mb-2">{alt}</DialogTitle>}
+				<DialogTitle className="text-sm mb-2">{alt || 'dialog'}</DialogTitle>
 				<Image
 					src={src}
 					alt={alt || ""}
