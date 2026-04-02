@@ -7,32 +7,6 @@ import Image from "next/image";
 export default function Features() {
     return (
         <div>
-            <section className="relative px-4 space-y-16 py-12 md:py-20">
-
-                <div className="grid grid-cols-1 md:grid-cols-6 gap-4 max-w-screen-xl px-4 mx-auto">
-                    {/* {features.map((feature, index) => {
-            // Big first feature
-            return <div
-              key={feature.name}
-              className={`relative rounded-[40px] bg-secondary/80 ${feature.className}`}
-            >
-              {feature.illustration && <div className={cn("", feature?.illustrationClassName)}>{feature.illustration}</div>}
-              <div className={cn("p-6", feature?.contentClassName)}>
-                <div className="flex items-center gap-2">
-                  <feature.icon className="h-7 w-7 text-primary" />
-                  <h3 className="font-semibold text-xl tracking-tight">{feature.name}</h3>
-                </div>
-                <p className="mt-2 text-muted-foreground/90">
-                  {feature.description}
-                </p>
-              </div> 
-            </div>
-          })} */}
-
-
-                </div>
-
-            </section>
             <div className="relative grid grid-cols-12 max-w-screen-lg mx-auto gap-4 ">
 
                 <div className="col-span-full md:col-span-6 flex flex-col overflow-hidden w-full rounded-4xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
