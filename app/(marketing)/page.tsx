@@ -108,7 +108,7 @@ export default function Home() {
             />
           </Link> */}
 
-          <div className='hidden md:flex items-center justify-center flex-1 gap-2'>
+          <div className='flex items-center justify-center flex-1 gap-2'>
             <Link
               href="https://apps.apple.com/app/rewritemate/id6755306532"
               className="relative rounded-full hover:opacity-90 text-white flex overflow-hidden items-center shadow-xs flex-nowrap gap-2  whitespace-nowrap bg-gradient-to-tr from-sky-500/90 to-blue-500 px-8 py-2 text-center font-medium"

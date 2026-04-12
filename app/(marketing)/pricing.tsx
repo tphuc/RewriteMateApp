@@ -56,7 +56,7 @@ export default function PricingCard() {
             <TabsContent value="monthly" className="mt-10 text-center">
               <div>
                 <span className="text-5xl md:text-6xl font-semibold tracking-tight">
-                  $7.99
+                  $5.99
                 </span>
                 <span className="text-xl md:text-2xl text-primary-foreground/80">
                   /month

@@ -75,7 +75,7 @@ const CustomHR: FC = () => (
 );
 
 const CustomBlockquote: FC<{ children: React.ReactNode }> = ({ children }) => (
-	<blockquote className="border-l-4 border-muted pl-4 text-orange-300/80">
+	<blockquote className="border-l-4 border-muted pl-4 text-slate-800">
 		{children}
 	</blockquote>
 );
