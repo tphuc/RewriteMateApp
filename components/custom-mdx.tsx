@@ -88,7 +88,7 @@ function RoundedImage(props: any) {
 				<img
 					width={800}
 					height={600}
-					className="rounded-md cursor-pointer bg-border w-full max-w-[90vw] rounded-md border shadow-md drop-shadow-lg"
+					className="rounded-md cursor-pointer bg-border w-full max-w-[90vw] rounded-md border shadow-xs"
 
 					{...props}
 					alt={props?.alt || ''}
