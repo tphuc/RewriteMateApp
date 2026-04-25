@@ -24,31 +24,31 @@ import Footer2 from "./footer";
 
 const roles = [
   {
-    icon: <DeveloperCode className="w-8 h-8 fill-background"/>,
+    icon: <DeveloperCode className="w-8 h-8 fill-background" />,
     title: "Developers",
     description:
       "Clean up explanations without losing technical accuracy. Refine documentation and PR notes while keeping your original intent intact.",
   },
   {
-    icon: <PaintPallete className="w-8 h-8 fill-background"/>,
+    icon: <PaintPallete className="w-8 h-8 fill-background" />,
     title: "Designers",
     description:
       "Clarify your thinking without flattening your voice. Adjust tone and structure while staying true to how you communicate.",
   },
   {
-    icon: <TextBubble className="w-8 h-8 fill-background"/>,
+    icon: <TextBubble className="w-8 h-8 fill-background" />,
     title: "Content & Marketing",
     description:
       "Polish what you’ve already written. Improve clarity, flow, and consistency without rewriting from scratch.",
   },
   {
-    icon: <BubbleLeftRight className="w-8 h-8 fill-background"/>,
+    icon: <BubbleLeftRight className="w-8 h-8 fill-background" />,
     title: "Sales & Support",
     description:
       "Fine-tune replies before you send them. Soften tone, tighten wording, and keep your message clear under pressure.",
   },
   {
-    icon: <BriefCase className="w-8 h-8 fill-background"/>,
+    icon: <BriefCase className="w-8 h-8 fill-background" />,
     title: "Founders & Operators",
     description:
       "Refine important messages before they go out. Keep your voice consistent across updates, strategy docs, and announcements.",
@@ -66,30 +66,30 @@ export default function Home() {
           {/* <div className="absolute top-0 left-0 bg-gradient-to-b from-secondary via-secondary/80 to-transparent w-full h-[30%]  z-10" /> */}
 
           <div className="relative  max-w-screen-lg px-4 mx-auto">
-          <div className="relative z-10">
-          <img
-              src='/hero-macos.avif'
-              className="w-full rounded-xl w-full"
-              style={{ objectFit: "contain", }}
-            />
-            <img
-              src='/hero-ios.avif'
-              className="absolute z-20 -bottom-[5%] right-[2%] md:right-[0%] scale-[0.96] rounded-xl w-[30%]"
-              style={{ objectFit: "contain", }}
-            />
-          </div>
-            
-               <div className="absolute z-0 mx-auto bottom-10 left-[20%] w-[60%] h-[200px] 
+            <div className="relative z-10">
+              <img
+                src='/hero-macos.avif'
+                className="w-full rounded-xl w-full"
+                style={{ objectFit: "contain", }}
+              />
+              <img
+                src='/hero-ios.avif'
+                className="absolute z-20 -bottom-[5%] right-[2%] md:right-[0%] scale-[0.96] rounded-xl w-[30%]"
+                style={{ objectFit: "contain", }}
+              />
+            </div>
+
+            <div className="absolute z-0 mx-auto bottom-10 left-[20%] w-[60%] h-[200px] 
   bg-gradient-to-br from-sky-600/80 via-sky-500/80 to-blue-400/80 
-  blur-3xl" 
-/>
+  blur-3xl"
+            />
           </div>
           <div className="relative pb-5 space-y-4">
 
             <h1 className="relative mx-auto max-w-xl text-center text-4xl md:text-6xl font-bold tracking-tight leading-tight">
               <span className="bg-gradient-to-br from-cyan-400 via-sky-500 to-blue-600 bg-clip-text text-transparent">
                 Your Better <br /> AI Writing Assistant
-            </span>
+              </span>
             </h1>
             <p className="text-center max-w-md mx-auto text-xl">
               Instantly improve, rephrase, and refine any text. The better writing tool, built for iOS and macOS.
@@ -113,7 +113,7 @@ export default function Home() {
               href="https://apps.apple.com/app/rewritemate/id6755306532"
               className="relative rounded-full hover:opacity-90 text-white flex overflow-hidden items-center shadow-xs flex-nowrap gap-2  whitespace-nowrap bg-gradient-to-tr from-sky-500/90 to-blue-500 px-8 py-2 text-center font-medium"
             >
-              Try for Free
+               Try for Free
             </Link>
           </div>
 
@@ -155,7 +155,7 @@ export default function Home() {
 
 
           </div> */}
-     
+
 
       </main>
 
@@ -167,7 +167,7 @@ export default function Home() {
       <div className="bg-[#111112] relative w-full">
 
         <div className="relative grow-progress max-w-screen-lg py-10 px-4 mx-auto">
-         
+
           <img
             src='/hero-macos.avif'
             className="w-full z-10 relative rounded-xl w-full"
@@ -175,8 +175,8 @@ export default function Home() {
           />
           <div className="absolute z-0 mx-auto bottom-10 left-[15%] w-[70%] h-[300px] 
   bg-gradient-to-b from-sky-500/50 via-blue-500/50 to-sky-300/50 
-  blur-3xl" 
-/>
+  blur-3xl"
+          />
 
         </div>
 
@@ -195,12 +195,12 @@ export default function Home() {
               {roles.map((role) => (
                 <div key={role.title} className="group">
                   <div className="flex items-center gap-2">
-                  <span className="text-2xl">
-                    {role.icon}
-                  </span>
-                  <span className="text-2xl md:text-3xl font-medium tracking-tight">
-                    {role.title}
-                  </span>
+                    <span className="text-2xl">
+                      {role.icon}
+                    </span>
+                    <span className="text-2xl md:text-3xl font-medium tracking-tight">
+                      {role.title}
+                    </span>
                   </div>
 
                   <p className="mt-4 opacity-80 text-lg leading-relaxed max-w-md">
@@ -214,11 +214,18 @@ export default function Home() {
       </div>
 
 
-<PricingCard/>
+      <PricingCard />
       {/* <PricingPlansPage /> */}
       <FaqSection />
       {/* <Footer /> */}
-      <Footer2/>
+
+      <div className="flex items-center gap-2 justify-center py-4 border-t border-border/50 bg-secondary/50 border-b w-full overflow-x-scroll scrollbar-hide no-scrollbar">
+        <a href="https://twelve.tools" target="_blank">
+          <img src="https://twelve.tools/badge0-white.svg" alt="Featured on Twelve Tools" width="200" height="54" />
+        </a>
+      </div>
+      <Footer2 />
+
 
 
 
