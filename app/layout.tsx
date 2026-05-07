@@ -85,6 +85,22 @@ export default function RootLayout({
         <meta name="apple-itunes-app" content="app-id=6755306532" />
       </head>
       
+       <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-MEVJ2HXGCF"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-MEVJ2HXGCF');
+          `}
+        </Script>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
