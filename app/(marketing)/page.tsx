@@ -226,6 +226,9 @@ export default function Home() {
         <a href="https://sidehunt.io/project/rewritemate-ai-keyboard" target="_blank" rel="noopener">
           <img src="https://sidehunt.io/badges/sidehunt-badge-light.svg" alt="Featured on Sidehunt" width="200" height="60" />
         </a>
+        <a href="https://startuups.com//projects/rewritemate-ai-keyboard" target="_blank" rel="noopener">
+  <img src="https://startuups.com//images/badges/startuupscom.badge.svg" alt="Featured on startuups" width="150" height="54" />
+</a>
       </div>
       <Footer2 />
 
