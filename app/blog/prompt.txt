@@ -1,0 +1,131 @@
+## 1. From the product description and positioning, extract structured SEO angles by crossing:
+
+- **Audience** (solo developers, indie makers, product designers, growth marketers, social media managers, content creators, non-designers)
+- **Pain point** (expensive 3D tools, desk-bound workflows, no design skills, slow mockup creation, static-only exports, high agency costs)
+- **Context** (App Store screenshots, TikTok/Reels ads, client presentations, A/B creative testing, promo videos, launch assets)Output internally: a list of **8 SEO angles**, each with:
+- `angle`: short label
+- `audience`: who this is for
+- `pain_point`: problem being solved
+- `context`: where/when this happens
+- `entry_awareness_layer`: problem-aware | solution-aware | product-aware
+
+
+## Step 1.5 — Fetch Existing Blogs & Deduplicate Angles
+
+Send a GET request to:
+```
+https://rewritemate/api/blogs
+```
+
+This returns a list of the last recent published blog posts:
+```json
+[
+  {
+    "title": "...",
+    "summary": "...",
+    "publishedAt": "...",
+    "keywords": ["..."]
+  }
+]
+```
+
+**Deduplicate your angles against this list:**
+
+For each of the 8 angles from Step 1, compare it against every existing blog by checking:
+- Overlap in topic/theme with the `title` or `summary`
+- Overlap in target `keywords`
+
+Score similarity mentally on a 0–100% scale. **Discard any angle that is 95% or more similar to an existing post.**
+
+After filtering, you should have a reduced list of **fresh angles** — topics not yet meaningfully covered.
+
+If fewer than 3 angles survive, generate additional angles from the product until you have at least 3 fresh ones.
+
+**Show the user a brief summary:**
+> "Checked 20 existing posts. Removed [N] overlapping angles. Proceeding with [M] fresh angles."
+
+
+## Step 2 — Keyword Discovery + Filtering
+
+For each angle from Step 1, construct **2–3 realistic Google search queries** a user would type.
+
+Run web searches for each query. From the results, extract keyword phrases that appear in:
+- Page titles and meta descriptions
+- "People also ask" style questions
+- Competitor blog headlines
+
+**Filter rules — discard keywords that are:**
+- Too broad (e.g. "AI writing", "keyboard app", "writing tool")
+- Competitor brand names
+- Purely transactional / purchase intent
+- Not mobile or iOS related
+
+**Keep keywords that are:**
+- Informational or how-to intent
+- Specific (long-tail preferred)
+- Clearly matched to a pain point RewriteMate solves
+- iOS / iPhone / mobile context
+
+Output internally: a shortlist of **5–8 keywords**, each with:
+- `keyword`: exact phrase
+- `intent`: how-to | listicle | comparison | problem-aware | informational
+- `audience`: who is searching
+- `relevance`: why RewriteMate solves this
+
+Pass to Step 3.
+
+## Step 3 — Generate 3 Blog Ideas
+
+From the filtered keywords:
+
+1. Cluster keywords by shared intent and topic
+2. Pick the **strongest cluster** — most specific, clearest pain point, obvious content format
+3. Generate **exactly 3 blog post ideas** from that cluster
+
+Each idea must include:
+- `title`: working blog post title
+- `keyword`: target keyword phrase
+- `intent`: search intent type
+- `format`: how-to | listicle | comparison | opinion | problem-aware
+- `hook`: what makes this angle interesting or click-worthy
+- `word_count_range`: e.g. "1200–1500"
+
+-----
+
+
+##  Write the Full Blog Post
+
+Write the complete blog post in Markdown using the winning idea.
+
+**Structure rules:**
+- H1: must contain the target keyword
+- Intro (first 100 words): must naturally include the target keyword
+- 4–6 H2 sections
+- CTA toward App Store at the end (and optionally once mid-post)
+- Word count: hit the range from the winning idea
+
+**Writing rules:**
+- Reference RewriteMate features naturally — never forced or salesy
+- Only mention features that exist in `ios.md` — do not invent anything
+- Write for the specific audience identified in the winning idea
+- Use short paragraphs, active voice, conversational but professional tone
+
+**Self-check before saving:**
+- [ ] Keyword in H1
+- [ ] Keyword in first 100 words
+- [ ] Keyword in at least 2 H2s
+- [ ] App Store CTA present
+- [ ] Word count is within range
+- [ ] No invented features
+
+- Include frontmatter at the top:
+
+```
+---
+title: "..."
+publishedAt: "YYYY-MM-DD"
+summary: "..."
+keywords: ["..."]
+image: ""
+---
+```
