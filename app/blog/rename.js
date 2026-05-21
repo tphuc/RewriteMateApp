@@ -13,7 +13,9 @@ function slugify(str) {
 
 // Limit slug to 100 characters max (excluding extension)
 function limitSlug(slug, maxLength = 100) {
-  return slug.length <= maxLength ? slug : slug.slice(0, maxLength);
+  return slug.length <= maxLength
+    ? slug
+    : slug.slice(0, maxLength);
 }
 
 // Extract title from the first 5 lines
@@ -21,9 +23,13 @@ function extractTitle(lines) {
   for (let line of lines) {
     if (line.trim().startsWith('title:')) {
       const match = line.match(/title:\s*['"](.+?)['"]/);
-      if (match) return match[1];
+
+      if (match) {
+        return match[1];
+      }
     }
   }
+
   return null;
 }
 
@@ -35,24 +41,43 @@ fs.readdir(folderPath, (err, files) => {
     return;
   }
 
-  console.log(files)
+  console.log(files);
 
   files.forEach(file => {
-    const fullPath = path.join(folderPath, file);
-    if (path.extname(file) !== '.md' && path.extname(file) !== '.mdx') return;
+    const ext = path.extname(file);
 
-    const stream = fs.createReadStream(fullPath, { encoding: 'utf8' });
+    // Only process .md and .mdx
+    if (ext !== '.md' && ext !== '.mdx') {
+      return;
+    }
+
+    // Ignore files whose current filename is already >= 10 chars
+    const currentName = path.basename(file, ext);
+
+    if (currentName.length >= 10) {
+      console.log(`Ignored: ${file}`);
+      return;
+    }
+
+    const fullPath = path.join(folderPath, file);
+
+    const stream = fs.createReadStream(fullPath, {
+      encoding: 'utf8'
+    });
+
     let buffer = '';
-    let lineCount = 0;
 
     stream.on('data', chunk => {
       buffer += chunk;
+
       const lines = buffer.split('\n');
 
+      // Stop early after enough content
       if (lines.length >= 5 || chunk.includes('---')) {
-        stream.destroy(); // Stop reading
+        stream.destroy();
 
         const firstFive = lines.slice(0, 5);
+
         const title = extractTitle(firstFive);
 
         if (!title) {
@@ -61,19 +86,28 @@ fs.readdir(folderPath, (err, files) => {
         }
 
         let slug = slugify(title);
+
         slug = limitSlug(slug, 100);
+
         const newFilename = `${slug}.mdx`;
         const newPath = path.join(folderPath, newFilename);
 
-        if (file !== newFilename) {
-          fs.rename(fullPath, newPath, err => {
-            if (err) {
-              console.error(`Error renaming ${file} to ${newFilename}:`, err);
-            } else {
-              console.log(`Renamed: ${file} → ${newFilename}`);
-            }
-          });
+        // Skip if filename already matches
+        if (file === newFilename) {
+          console.log(`Already correct: ${file}`);
+          return;
         }
+
+        fs.rename(fullPath, newPath, err => {
+          if (err) {
+            console.error(
+              `Error renaming ${file} to ${newFilename}:`,
+              err
+            );
+          } else {
+            console.log(`Renamed: ${file} → ${newFilename}`);
+          }
+        });
       }
     });
 

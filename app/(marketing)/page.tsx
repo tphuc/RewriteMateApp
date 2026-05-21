@@ -1,20 +1,5 @@
-import { AppStoreBtn } from "@/components/appstore-btn";
-import CustomInstructionsList from "@/components/custom-instruction-list";
-import DownloadMacOSBtn from "@/components/download-macos-btn";
-import EditModal from "@/components/EditModal";
-import { EditModalTasks } from "@/components/EditModalTasks";
 import { FaqSection } from "@/components/faq";
-import Footer from "@/components/footer";
-import GetEarlyAccess from "@/components/get-early-access";
-import { HeroTitle } from "@/components/HeroTitle";
 import { AppleLogoSvg, BriefCase, BubbleLeftRight, DeveloperCode, PaintPallete, Sparkles, TextBubble } from "@/components/icons";
-import IOSSimulator from "@/components/ios-simulator";
-import { MacTitle } from "@/components/MacTitle";
-import PricingPlansPage from "@/components/pricing-plans";
-import { AuroraBackground } from "@/components/ui/aurora-background";
-import { Button } from "@/components/ui/button";
-import { Kbd, KbdGroup } from "@/components/ui/kbd";
-import { Apple, Check, MousePointer } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Features from "./features";
@@ -99,15 +84,6 @@ export default function Home() {
 
         <div className="z-20 gap-4 flex flex-col lg:flex-row px-4 items-center justify-center">
 
-
-
-          {/* <Link className="z-20 whitespace-nowrap border-1 dark:border-foreground shadow-xs inline-flex font-semibold items-center gap-2 rounded-full bg-gradient-to-b from-foreground/80 to-foreground  px-5 py-2 text-background hover:opacity-90" href='https://apps.apple.com/vn/app/rewritemate/id6755306532'>
-            Download for iOS
-            <AppleLogoSvg
-              className={`h-4 w-4`}
-            />
-          </Link> */}
-
           <div className='flex items-center justify-center flex-1 gap-2'>
             <Link
               href="https://apps.apple.com/app/rewritemate/id6755306532"
@@ -116,18 +92,6 @@ export default function Home() {
                Try for Free
             </Link>
           </div>
-
-          {/* <DownloadMacOSBtn /> */}
-
-          {/* <GetEarlyAccess/> */}
-          {/* <Link style={{ zIndex: 20 }} href='https://apps.apple.com/vn/app/rewritemate/id6755306532'>
-              <AppStoreBtn
-                variant="light"
-                className="scale-[1.1]"
-              />
-
-            </Link> */}
-
 
         </div>
         {/* <div className="flex items-center justify-center">
@@ -167,7 +131,6 @@ export default function Home() {
       <div className="bg-[#111112] relative w-full">
 
         <div className="relative grow-progress max-w-screen-lg py-10 px-4 mx-auto">
-
           <img
             src='/hero-macos.avif'
             className="w-full z-10 relative rounded-xl w-full"
@@ -227,14 +190,13 @@ export default function Home() {
           <img src="https://sidehunt.io/badges/sidehunt-badge-light.svg" alt="Featured on Sidehunt" width="200" height="60" />
         </a>
         <a href="https://startuups.com//projects/rewritemate-ai-keyboard" target="_blank" rel="noopener">
-  <img src="https://startuups.com//images/badges/startuupscom.badge.svg" alt="Featured on startuups" width="150" height="54" />
+          <img src="https://startuups.com//images/badges/startuupscom.badge.svg" alt="Featured on startuups" width="150" height="54" />
+        </a>
+        <a href="https://sellwithboost.com" target="_blank" rel="noopener noreferrer">
+  <img src="https://sellwithboost.com/badge/listing.svg" alt="Listed on Sell With boost" style={{height:40}} />
 </a>
       </div>
       <Footer2 />
-
-
-
-
     </div>
   );
 }
