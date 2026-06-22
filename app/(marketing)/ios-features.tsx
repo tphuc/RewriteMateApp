@@ -14,9 +14,9 @@ export default function IOSFeatures() {
             <div className="relative rounded-[40px]  grow-progress overflow-hidden bg-background pt-[10%] md:py-[5%] space-y-10">
                 <div className=" relative space-y-2">
                     
-                    <p className="relative text-secondary-foreground text-3xl md:text-4xl font-semibold text-center tracking-tight max-w-xl mx-auto ">
+                    <h3 className="relative text-secondary-foreground text-3xl md:text-4xl font-semibold text-center tracking-tight max-w-xl mx-auto ">
                         Create Custom Commands
-                    </p>
+                    </h3>
                     <p className="text-xl md:text-2xl text-center max-w-md mx-auto text-muted-foreground font-medium tracking-tight">
                         Save your own writing rules to keep your tone and structure consistent.
                     </p>
@@ -34,9 +34,9 @@ export default function IOSFeatures() {
 
             <div className="rounded-[40px] grow-progress overflow-hidden bg-background p-[10%] md:py-[8%] space-y-10">
                 <div className="space-y-2">
-                    <p className="text-secondary-foreground text-3xl md:text-4xl font-semibold text-center max-w-xl mx-auto">
+                    <h3 className="text-secondary-foreground text-3xl md:text-4xl font-semibold text-center max-w-xl mx-auto">
                         Works in your favorite apps
-                    </p>
+                    </h3>
                     <p className="text-xl md:text-2xl text-center max-w-md mx-auto text-muted-foreground font-medium tracking-tight">
                         Edit and improve your text directly inside any app, without switching screens.
                     </p>
@@ -66,10 +66,10 @@ export default function IOSFeatures() {
                         <Image className="transition-transform ease-out duration-300 hover:scale-[1.02] hover:-translate-y-[10px] w-full" src='/text-selection.avif'  width={300} height={300} alt='Mail' />
                     </div>
                     <div className="space-y-2">
-                        <p className="text-secondary-foreground text-3xl md:text-4xl font-semibold text-center  max-w-xl mx-auto">
+                        <h3 className="text-secondary-foreground text-3xl md:text-4xl font-semibold text-center  max-w-xl mx-auto">
                             Smart text selection
 
-                        </p>
+                        </h3>
                         <p className="text-lg md:text-xl text-center max-w-md mx-auto text-muted-foreground font-medium tracking-tight">
                             Choose to transform text from the current app or use copied text from your clipboard.
                         </p>
@@ -79,9 +79,9 @@ export default function IOSFeatures() {
                 <div className="grow-progress rounded-[40px] col-span-full md:col-span-1 overflow-hidden bg-background px-[10%] pt-[10%] md:pt-[5%] space-y-4">
                    
                     <div className="space-y-0">
-                        <p className="text-secondary-foreground text-2xl md:text-3xl font-semibold text-center tracking-tight max-w-xl mx-auto">
+                        <h3 className="text-secondary-foreground text-2xl md:text-3xl font-semibold text-center tracking-tight max-w-xl mx-auto">
                         Sync across devices
-                        </p>
+                        </h3>
                         <p className="text-md md:text-lg text-center max-w-md mx-auto text-muted-foreground font-medium tracking-tight">
                         Access your saved commands and preferences seamlessly.
                         </p>
@@ -94,9 +94,9 @@ export default function IOSFeatures() {
                 <div className="grow-progress rounded-[40px] col-span-full md:col-span-1 overflow-hidden bg-background px-[10%] pt-[10%] md:pt-[5%] space-y-4">
                    
                    <div className="space-y-0">
-                       <p className="text-secondary-foreground text-2xl md:text-3xl font-semibold text-center tracking-tight max-w-xl mx-auto">
-                       Privacy by design
-                       </p>
+                       <h3 className="text-secondary-foreground text-2xl md:text-3xl font-semibold text-center tracking-tight max-w-xl mx-auto">
+                        Privacy by design
+                        </h3>
                        <p className="text-md md:text-lg text-center max-w-md mx-auto text-muted-foreground font-medium tracking-tight">
                        Your text is processed only when you choose to rewrite. Zero data collection.
                        </p>

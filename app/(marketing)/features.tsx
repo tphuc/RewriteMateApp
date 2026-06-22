@@ -11,9 +11,9 @@ export default function Features() {
 
                 <div className="col-span-full md:col-span-6 flex flex-col overflow-hidden w-full rounded-4xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
                     <div className="pt-8 px-8">
-                        <p className="text-2xl text-secondary-foreground font-semibold tracking-tight">
+                        <h3 className="text-2xl text-secondary-foreground font-semibold tracking-tight">
                             Works Everywhere
-                        </p>
+                        </h3>
                         <p className="text-muted-foreground">
                             Rewrite anywhere you write—from Notes and Mail to Notion, Docs, or Slack. No switching apps. No broken flow.
                         </p>
@@ -36,9 +36,9 @@ export default function Features() {
 
                 <div className="col-span-full md:col-span-6 row-span-2 relative flex flex-col overflow-hidden w-full rounded-4xl bg-secondary gap-2 justify-between max-w-screen-lg mx-auto">
                     <div className="px-8 py-8 w-full h-[40%] md:h-auto absolute top-0 left-0 z-20 bg-gradient-to-b from-secondary via-secondary to-transparent">
-                        <p className="text-2xl whitespace-nowrap text-secondary-foreground font-semibold tracking-tight">
+                        <h3 className="text-2xl whitespace-nowrap text-secondary-foreground font-semibold tracking-tight">
                             Custom Rewrite Tasks
-                        </p>
+                        </h3>
                         <p className="text-muted-foreground  tracking-tight">
                             Create and save your own rewrite instructions. Reuse them anytime to keep your tone and structure consistent.
                         </p>
@@ -74,9 +74,9 @@ export default function Features() {
 
 
                     <div className="absolute bottom-0 pb-4 pt-20 left-0 w-full z-10 px-8  bg-gradient-to-t from-secondary via-secondary to-transparent">
-                        <p className="text-2xl text-secondary-foreground font-semibold tracking-tight">
+                        <h3 className="text-2xl text-secondary-foreground font-semibold tracking-tight">
                             Transparent Edits
-                        </p>
+                        </h3>
                         <p className="text-muted-foreground">
                         Transparent Edits lets you see exactly what changed in your text before you accept it. Compare the original and the revised version side by side, so you stay fully in control of every edit.
                         </p>
@@ -95,9 +95,9 @@ export default function Features() {
                             />
                     </div>
                     <div className="px-8 py-8">
-                        <p className="text-2xl text-secondary-foreground font-semibold tracking-tight">
+                        <h3 className="text-2xl text-secondary-foreground font-semibold tracking-tight">
                             Privacy-First by Design
-                        </p>
+                        </h3>
                         <p className="text-muted-foreground">
                             Only the text you select is processed. RewriteMate doesn’t read or monitor anything in the background.
                         </p>
@@ -120,9 +120,9 @@ export default function Features() {
                     </div>
 
                     <div className="px-8 py-8">
-                        <p className="text-2xl text-secondary-foreground font-semibold tracking-tight">
+                        <h3 className="text-2xl text-secondary-foreground font-semibold tracking-tight">
                             Quick AI Assistance
-                        </p>
+                        </h3>
                         <p className="text-muted-foreground">
                         Ask questions, explore ideas, or get help with wording directly from the keyboard, without leaving
         the app or breaking your flow.
@@ -145,10 +145,10 @@ export default function Features() {
                     </div>
 
                     <div className="px-4 py-8">
-                        <p className="text-2xl text-secondary-foreground font-semibold tracking-tight">
+                        <h3 className="text-2xl text-secondary-foreground font-semibold tracking-tight">
                         Write Across Languages
 
-                        </p>
+                        </h3>
                         <p className="text-muted-foreground">
 Translate your text directly from the keyboard, so you can write naturally and communicate clearly with people in other languages.
                         </p>

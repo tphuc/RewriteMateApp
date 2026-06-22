@@ -7,7 +7,14 @@ export default async function sitemap() {
 	console.log('🛠️ [SITEMAP] Generating sitemap...');
 
 	// Static routes
-	const routes = ['', '/blog'].map((route) => ({
+	const routes = [
+		'',
+		'/blog',
+		'/tools/comparison/rewritemate-vs-grammarly',
+		'/tools/comparison/apple-writing-tools-alternative',
+		'/free-rewriter',
+		'/grammar-checker',
+	].map((route) => ({
 		url: `${baseUrl}${route}`,
 		lastModified: new Date().toISOString().split('T')[0],
 	}));

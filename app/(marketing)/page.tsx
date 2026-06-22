@@ -2,11 +2,17 @@ import { FaqSection } from "@/components/faq";
 import { AppleLogoSvg, BriefCase, BubbleLeftRight, DeveloperCode, PaintPallete, Sparkles, TextBubble } from "@/components/icons";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+import Script from "next/script";
 import Features from "./features";
 import IOSFeatures from "./ios-features";
 import PricingCard from "./pricing";
 import Footer2 from "./footer";
 import Backlinks from "./backlinks";
+import LatestBlogPosts from "./latest-blog-posts";
+import HowItWorks from "./how-it-works";
+import Comparison from "./comparison";
+import UseCases from "./use-cases";
 
 const roles = [
   {
@@ -41,11 +47,96 @@ const roles = [
   },
 ]
 
+const faqs = [
+  {
+    question: "What is RewriteMate?",
+    answer:
+      "RewriteMate is an AI writing assistant for macOS and iOS that helps you rewrite, refine, and improve text instantly. It works system-wide on Mac and as an iOS keyboard extension, so you can enhance your writing in any app without switching contexts.",
+  },
+  {
+    question: "Are my text or data stored?",
+    answer:
+      "No — RewriteMate follows a non-data-retention policy. Your text is never stored, logged in our server. Requests are securely processed through trusted AI providers via our proxy, and we only store your email and rewrite usage to manage subscriptions.",
+  },
+  {
+    question: "What is the BYOK plan?",
+    answer:
+      "BYOK (Bring Your Own Key) lets you connect your own API key from a supported AI provider. In this mode, your requests go directly from your Mac to the provider servers. No traffic or text passes through our infrastructure.",
+  },
+  {
+    question: "Does RewriteMate work offline?",
+    answer:
+      "RewriteMate requires an internet connection to communicate with AI models. However, all processing is lightweight and fast, and no data is stored after your rewrite is complete.",
+  },
+  {
+    question: "What are Custom Instructions?",
+    answer:
+      "Custom Instructions let you define how RewriteMate rewrites. You can create your own presets.",
+  },
+  {
+    question: "Is there a free plan?",
+    answer:
+      "Yes! RewriteMate includes a free tier with limited rewrites each month. Upgrade to the Pro plan for higher limits and faster performance.",
+  },
+];
+
+export const metadata: Metadata = {
+  title: "AI Writing Assistant for macOS & iOS | RewriteMate",
+  description:
+    "RewriteMate is the better AI writing tool for macOS and iOS. Improve, rephrase, and refine text instantly across every app — Mail, Notes, Notion, Slack, and more. Free to try.",
+  alternates: {
+    canonical: "https://rewritemate.app",
+  },
+  openGraph: {
+    title: "RewriteMate — AI Writing Assistant for macOS & iOS",
+    description:
+      "The better writing tool, built right into your workflow.",
+  },
+};
+
 export default function Home() {
   return (
     <div className="relative bg-background min-h-screen scrollbar-hide">
 
       <main className="space-y-2 mx-auto max-w-screen-lg mt-30 md:mt-[5%] pb-[5%] px-3 rounded-4xl overflow-hidden">
+        <Script
+          type="application/ld+json"
+          id="faq-schema"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            }),
+          }}
+        />
+        <Script
+          type="application/ld+json"
+          id="software-schema"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: "RewriteMate",
+              operatingSystem: "iOS, macOS",
+              applicationCategory: "ProductivityApplication",
+              description:
+                "AI writing assistant for iOS and macOS that helps you rewrite, refine, and improve text instantly.",
+              offers: {
+                "@type": "Offer",
+                price: "5.99",
+                priceCurrency: "USD",
+              },
+            }),
+          }}
+        />
 
 
         <div className="relative grow-progress-2 space-y-4">
@@ -55,11 +146,13 @@ export default function Home() {
             <div className="relative z-10">
               <img
                 src='/hero-macos.avif'
+                alt="RewriteMate macOS app interface"
                 className="w-full rounded-xl w-full"
                 style={{ objectFit: "contain", }}
               />
               <img
                 src='/hero-ios.avif'
+                alt="RewriteMate iOS keyboard extension"
                 className="absolute z-20 -bottom-[5%] right-[2%] md:right-[0%] scale-[0.96] rounded-xl w-[30%]"
                 style={{ objectFit: "contain", }}
               />
@@ -124,6 +217,8 @@ export default function Home() {
 
       </main>
 
+      <HowItWorks />
+
       <div className="bg-secondary relative w-full h-full">
         <IOSFeatures />
       </div>
@@ -148,7 +243,7 @@ export default function Home() {
           <div className="mx-auto max-w-5xl px-6">
             <div className="max-w-2xl mb-16">
               <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">
-                Built for the way you work
+                AI Writing Assistant for Every Professional
               </h2>
               <p className="mt-4 opacity-80 text-xl leading-relaxed">
                 RewriteMate helps professionals communicate clearly across every workflow.
@@ -179,9 +274,11 @@ export default function Home() {
 
 
       <PricingCard />
-      {/* <PricingPlansPage /> */}
+      <UseCases />
+      <Comparison />
+
       <FaqSection />
-      {/* <Footer /> */}
+      <LatestBlogPosts />
 
       <Backlinks />
       <Footer2 />
