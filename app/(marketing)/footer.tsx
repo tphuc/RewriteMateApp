@@ -36,7 +36,9 @@ export default function Footer2() {
             <h3 className="font-semibold mb-5">Resources</h3>
             <ul className="space-y-3">
               {/* <li><Link href="#" className="hover:text-foreground/90 transition">Help</Link></li> */}
-              <li><Link href="#" className="hover:text-foreground/90 transition">Blog</Link></li>
+              <li><Link href="/blog" className="hover:text-foreground/90 transition">Blog</Link></li>
+              <li><Link href="/free-rewriter" className="hover:text-foreground/90 transition">AI Text Rewriter</Link></li>
+              <li><Link href="/grammar-checker" className="hover:text-foreground/90 transition">Grammar Checker</Link></li>
               <li><Link href="/privacy" className="hover:text-foreground/90 transition">Privacy Policy</Link></li>
               <li><Link href="/terms-and-conditions" className="hover:text-foreground/90 transition">Terms of Use</Link></li>
               {/* <li><Link href="#" className="hover:text-foreground/90 transition">Media Kit</Link></li> */}

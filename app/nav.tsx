@@ -12,6 +12,8 @@ import {
 } from '@/components/ui/drawer'
 
 import { ContactButtonClient } from '@/components/contact-button'
+import ToolsDropdown from '@/components/tools-dropdown'
+import LearnDropdown from '@/components/learn-dropdown'
 import { DialogTitle } from '@radix-ui/react-dialog'
 
 const AppleLogoSvg = (props: React.SVGProps<SVGSVGElement>) => (
@@ -41,7 +43,7 @@ export default function Nav() {
         }}
       /> */}
         {/* Logo */}
-        <div className='flex items-center justify-center flex-1 gap-2'>
+        <div className='flex items-center justify-center gap-2'>
           <Link href="/" className="flex items-center space-x-2">
             <Image
               src="https://storage.googleapis.com/tubememo-public/rewritemate/logo.webp"
@@ -70,7 +72,7 @@ export default function Nav() {
           <NavLinks />
         </div>
 
-        <div className='hidden md:flex items-center justify-center flex-1 gap-2'>
+        <div className='hidden md:flex items-center justify-center gap-2'>
           <Link
             href="https://apps.apple.com/app/rewritemate/id6755306532"
             className="relative rounded-full hover:opacity-90 text-white flex overflow-hidden items-center shadow-xs flex-nowrap gap-2  whitespace-nowrap bg-gradient-to-tr from-blue-500/90 to-blue-500 pl-4 pr-3 py-1.5 shadow-xs text-center"
@@ -106,7 +108,7 @@ export default function Nav() {
 const NavLinks = () => {
   return (
     <div className="flex flex-col items-start gap-6 md:flex-row md:items-center">
-      <Link
+      {/* <Link
         href="/macos"
         className="w-full font-medium md:w-auto"
       >
@@ -118,7 +120,7 @@ const NavLinks = () => {
         className="w-full font-medium md:w-auto"
       >
         iOS
-      </Link>
+      </Link> */}
 
 
       <Link
@@ -128,7 +130,8 @@ const NavLinks = () => {
         Blog
       </Link>
 
-
+      <LearnDropdown />
+      <ToolsDropdown />
 
       <ContactButtonClient />
     </div>
