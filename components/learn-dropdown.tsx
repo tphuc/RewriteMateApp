@@ -41,7 +41,7 @@ export default function LearnDropdown() {
       <div className="hidden md:block">
         <Popover open={open} onOpenChange={setOpen}>
           <PopoverTrigger asChild>
-            <button className="inline-flex items-center gap-1 font-medium text-sm cursor-pointer hover:text-foreground/80 transition-colors">
+            <button className="inline-flex items-center gap-1 font-medium cursor-pointer hover:text-foreground/80 transition-colors">
               Learn
               <ChevronDown
                 className={`w-3.5 h-3.5 transition-transform ${open ? "rotate-180" : ""}`}
