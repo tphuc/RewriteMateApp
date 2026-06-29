@@ -3,9 +3,9 @@ import Link from "next/link";
 import { ArrowRight, Check, Sparkles, PenLine } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Free Writing Guide — Write Clearly & Confidently | RewriteMate",
+  title: "Free Writing Guide & Mobile Prompt Instructions | RewriteMate",
   description:
-    "Learn how to write clearly and confidently. Practical tips on structure, tone, editing, and common weaknesses. Use RewriteMate's AI keyboard to polish your writing in any app.",
+    "Learn to structure drafts clearly and use custom AI prompts to refine your mobile text. The ultimate guide to editing text on iOS using tailored prompt commands without copy-pasting.",
   alternates: { canonical: "https://rewritemate.app/learn/writing-guide" },
 };
 
@@ -17,7 +17,7 @@ export default function WritingGuide() {
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Writing Guide</h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
           Write clearly, concisely, and with confidence. Learn the principles of good writing,
-          then use RewriteMate&apos;s AI keyboard to polish words in any app — Messages, Mail,
+          then use RewriteMate"s AI keyboard to polish words in any app — Messages, Mail,
           Notes, Slack, and more.
         </p>
         <div className="flex items-center justify-center gap-3">
@@ -52,13 +52,72 @@ export default function WritingGuide() {
         </div>
       </section>
 
+{/* Prompt Engineering Section */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold tracking-tight">Mastering Mobile AI: Prompt Engineering</h2>
+        <p className="text-muted-foreground text-sm leading-relaxed max-w-2xl">
+          Good writing applies to how you instruct AI, too. When you use an advanced keyboard extension,
+          writing custom instructions turns the AI into a precise assistant that mirrors your true intent.
+        </p>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="rounded-xl bg-secondary p-5 border border-red-500/10">
+            <h3 className="font-semibold text-sm text-red-400">The Problem with Rigid Buttons</h3>
+            <p className="text-sm text-muted-foreground mt-2">
+              Standard mobile presets like &ldquo;Make Professional&rdquo; or &ldquo;Casual&rdquo; strip away context,
+              often producing dry, generic fluff that sounds robotic.
+            </p>
+          </div>
+          <div className="rounded-xl bg-secondary p-5 border border-green-500/10">
+            <h3 className="font-semibold text-sm text-green-400">The Power of Custom Instructions</h3>
+            <p className="text-sm text-muted-foreground mt-2">
+              Editable prompts give you total control. Specify the details:
+              <code className="block bg-background p-2 rounded mt-1.5 text-xs text-sky-400">&ldquo;Shorten this email, make it warm, and do not apologize.&rdquo;</code>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Prompt vs Preset Comparison */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold tracking-tight">Fixed Presets vs. Custom Commands</h2>
+        <div className="space-y-3">
+          {[
+            {
+              scenario: `Saying "No" to a Client`,
+              preset: "Rigid preset turns it into a long, cold legal rejection.",
+              custom: `Custom Prompt: "Polite but firm pushback. Keep it under 2 sentences."`,
+            },
+            {
+              scenario: "Drafting a Quick Slack Update",
+              preset: "Standard AI over-formats it with excessive corporate jargon.",
+              custom: `Custom Prompt: "Convert into a brief bulleted summary for internal teams."`,
+            },
+          ].map((item, idx) => (
+            <div key={idx} className="rounded-xl bg-secondary p-5 grid sm:grid-cols-3 gap-4 items-center">
+              <div>
+                <span className="text-xs font-medium text-sky-500 uppercase tracking-wider">Scenario</span>
+                <h4 className="font-semibold text-sm mt-0.5">{item.scenario}</h4>
+              </div>
+              <div className="text-sm text-muted-foreground">
+                <span className="text-red-400 font-medium text-xs block mb-1">Standard Presets:</span>
+                {item.preset}
+              </div>
+              <div className="text-sm text-muted-foreground">
+                <span className="text-green-400 font-medium text-xs block mb-1">RewriteMate Custom System:</span>
+                {item.custom}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Writing Process */}
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold tracking-tight">The Writing Process</h2>
         <div className="grid gap-4 sm:grid-cols-2">
           {[
             { step: "1. Plan", desc: "Know your audience and your goal before you write. What do you want the reader to know, feel, or do?" },
-            { step: "2. Draft", desc: "Write without editing. Get your ideas down first. Don&apos;t worry about perfection — you will fix it in the next step." },
+            { step: "2. Draft", desc: "Write without editing. Get your ideas down first. Don't worry about perfection — you will fix it in the next step." },
             { step: "3. Revise", desc: "Read your draft aloud. Cut unnecessary words. Check that your argument flows logically." },
             { step: "4. Edit", desc: "Fix grammar, spelling, and punctuation. Use a grammar checker to catch what you missed." },
           ].map((s) => (
@@ -86,6 +145,31 @@ export default function WritingGuide() {
               <p className="text-sm text-muted-foreground"><span className="text-green-400">After:</span> {w.after}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+{/* Technical Differentiators */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold tracking-tight">Engineered for Writing Flexibility</h2>
+        <div className="grid gap-4 sm:grid-cols-3">
+          <div className="rounded-xl bg-secondary p-5">
+            <h3 className="font-semibold text-sm">Custom Task Cards</h3>
+            <p className="text-sm text-muted-foreground mt-2">
+              Build prompts inside the main app configuration sheet and pin them directly to your keyboard layout as instant task chips.
+            </p>
+          </div>
+          <div className="rounded-xl bg-secondary p-5">
+            <h3 className="font-semibold text-sm">Live Free-Form Input</h3>
+            <p className="text-sm text-muted-foreground mt-2">
+              Type real-time editing commands into the floating top-bar input row without leaving your messaging or document screen.
+            </p>
+          </div>
+          <div className="rounded-xl bg-secondary p-5">
+            <h3 className="font-semibold text-sm">Total Privacy Assurance</h3>
+            <p className="text-sm text-muted-foreground mt-2">
+              Process text entirely on-demand. Zero backend data collection or message retention, keeping sensitive client interactions fully protected.
+            </p>
+          </div>
         </div>
       </section>
 

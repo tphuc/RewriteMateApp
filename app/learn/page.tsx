@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BookOpen, PenLine, FileText, Mail, Briefcase, Quote, BookText, ArrowRight } from "lucide-react";
+import { BookOpen, PenLine, FileText, Mail, ArrowRight, Hash, WandSparkles } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Learn to Write Better — Guides & Resources | RewriteMate",
   description:
-    "Free writing guides covering grammar, punctuation, email writing, essay structure, career writing, and vocabulary. Improve your writing skills with RewriteMate.",
+    "Free writing guides covering grammar, email writing, essay structure, social media content workflows, and custom AI command recipes. Improve your writing with RewriteMate.",
   alternates: { canonical: "https://rewritemate.app/learn" },
 };
 
@@ -14,9 +14,8 @@ const guides = [
   { href: "/learn/writing-guide", label: "Writing Guide", icon: <PenLine className="w-5 h-5" />, desc: "Practical tips to write clearly, concisely, and with confidence." },
   { href: "/learn/essay-writing", label: "Essay Writing", icon: <FileText className="w-5 h-5" />, desc: "Structure, outline, and polish essays for school or work." },
   { href: "/learn/email-writing", label: "Email Writing Tips", icon: <Mail className="w-5 h-5" />, desc: "Write professional emails that get read and get replies." },
-  { href: "/learn/career", label: "Career & Professional", icon: <Briefcase className="w-5 h-5" />, desc: "Resumes, cover letters, LinkedIn — writing that lands opportunities." },
-  { href: "/learn/punctuation-guide", label: "Punctuation Guide", icon: <Quote className="w-5 h-5" />, desc: "Learn commas, semicolons, dashes, and more with examples." },
-  { href: "/learn/vocabulary", label: "Vocabulary & Word Choice", icon: <BookText className="w-5 h-5" />, desc: "Expand your word choice and say exactly what you mean." },
+  { href: "/learn/social-media-workflows", label: "Social Media Workflows", icon: <Hash className="w-5 h-5" />, desc: "Write captions, switch tones, and create content faster with AI keyboard workflows." },
+  { href: "/learn/custom-command-recipes", label: "Custom Command Recipes", icon: <WandSparkles className="w-5 h-5" />, desc: "Copy-ready AI prompts to save as one-tap keyboard shortcuts." },
 ];
 
 export default function LearnHub() {

@@ -1,60 +1,59 @@
+import { readdirSync, existsSync } from 'fs'
+import { join } from 'path'
+import { getBlogPosts } from '@/lib/blog'
+import { POSTS_PER_PAGE } from './const'
 
-import { getBlogPosts } from '@/lib/blog';
-import { POSTS_PER_PAGE } from './const';
-export const baseUrl = 'https://rewritemate.app';
+export const baseUrl = 'https://rewritemate.app'
+
+function getSubRoutes(dir: string): string[] {
+  const fullPath = join(process.cwd(), 'app', dir)
+  if (!existsSync(fullPath)) return []
+  return readdirSync(fullPath, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && existsSync(join(fullPath, entry.name, 'page.tsx')))
+    .map((entry) => `/${dir}/${entry.name}`)
+}
 
 export default async function sitemap() {
-	console.log('🛠️ [SITEMAP] Generating sitemap...');
+  const topLevelRoutes = [
+    '',
+    '/blog',
+    '/ios',
+    '/macos',
+    '/privacy',
+    '/terms-and-conditions',
+  ]
 
-	// Static routes
-	const routes = [
-		'',
-		'/blog',
-		'/tools/comparison/rewritemate-vs-grammarly',
-		'/tools/comparison/apple-writing-tools-alternative',
-		'/free-rewriter',
-		'/grammar-checker',
-		'/learn',
-		'/learn/grammar-guide',
-		'/learn/writing-guide',
-		'/learn/essay-writing',
-		'/learn/email-writing',
-		'/learn/career',
-		'/learn/punctuation-guide',
-		'/learn/vocabulary',
-	].map((route) => ({
-		url: `${baseUrl}${route}`,
-		lastModified: new Date().toISOString().split('T')[0],
-	}));
-	console.log('✅ [SITEMAP] Static routes:', routes);
+  const freeToolRoutes = getSubRoutes('(free-tools)')
+  const learnRoutes = getSubRoutes('learn')
+  const comparisonRoutes = getSubRoutes('tools/comparison')
 
-	// Blog posts
-	let blogs: any[] = [];
-	let paginatedBlogRoutes: any[] = [];
+  const staticRoutes = [...topLevelRoutes, ...freeToolRoutes, '/learn', ...learnRoutes, ...comparisonRoutes].map(
+    (route) => ({
+      url: `${baseUrl}${route}`,
+      lastModified: new Date().toISOString().split('T')[0],
+    }),
+  )
 
-	try {
-		const posts = getBlogPosts();
-		blogs = posts.map((post) => ({
-			url: `${baseUrl}/blog/${post.slug}`,
-			lastModified: post.metadata?.publishedAt ?? new Date().toISOString(),
-		}));
-		console.log('✅ [SITEMAP] Blog posts:', blogs.length);
+  let blogs: { url: string; lastModified: string }[] = []
+  let paginatedBlogRoutes: { url: string; lastModified: string }[] = []
 
-		// Paginated blog routes
-		const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
-		for (let i = 1; i <= totalPages; i++) {
-			paginatedBlogRoutes.push({
-				url: `${baseUrl}/blog?page=${i}`,
-				lastModified: new Date().toISOString().split('T')[0],
-			});
-		}
-		console.log('✅ [SITEMAP] Paginated blog routes:', paginatedBlogRoutes.length);
-	} catch (err) {
-		console.error('❌ [SITEMAP] Failed to load blog posts:', err);
-	}
+  try {
+    const posts = getBlogPosts()
+    blogs = posts.map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: post.metadata?.publishedAt ?? new Date().toISOString(),
+    }))
 
-	const all = [...routes, ...blogs, ...paginatedBlogRoutes];
-	console.log('✅ [SITEMAP] Total entries:', all.length);
+    const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
+    for (let i = 1; i <= totalPages; i++) {
+      paginatedBlogRoutes.push({
+        url: `${baseUrl}/blog?page=${i}`,
+        lastModified: new Date().toISOString().split('T')[0],
+      })
+    }
+  } catch (err) {
+    console.error('❌ [SITEMAP] Failed to load blog posts:', err)
+  }
 
-	return all;
+  return [...staticRoutes, ...blogs, ...paginatedBlogRoutes]
 }

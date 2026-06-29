@@ -3,16 +3,15 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { ChevronDown, BookOpen, PenLine, FileText, Mail, Briefcase, Quote, BookText, GraduationCap } from "lucide-react"
+import { ChevronDown, BookOpen, PenLine, FileText, Mail, GraduationCap, Hash, WandSparkles } from "lucide-react"
 
 const topics = [
   { href: "/learn/grammar-guide", label: "Grammar Guide", icon: <BookOpen className="w-4 h-4" /> },
   { href: "/learn/writing-guide", label: "Writing Guide", icon: <PenLine className="w-4 h-4" /> },
   { href: "/learn/essay-writing", label: "Essay Writing", icon: <FileText className="w-4 h-4" /> },
   { href: "/learn/email-writing", label: "Email Writing Tips", icon: <Mail className="w-4 h-4" /> },
-  { href: "/learn/career", label: "Career & Professional", icon: <Briefcase className="w-4 h-4" /> },
-  { href: "/learn/punctuation-guide", label: "Punctuation Guide", icon: <Quote className="w-4 h-4" /> },
-  { href: "/learn/vocabulary", label: "Vocabulary & Word Choice", icon: <BookText className="w-4 h-4" /> },
+  { href: "/learn/social-media-workflows", label: "Social Media Workflows", icon: <Hash className="w-4 h-4" /> },
+  { href: "/learn/custom-command-recipes", label: "Custom Command Recipes", icon: <WandSparkles className="w-4 h-4" /> },
   { href: "/learn", label: "All Guides", icon: <GraduationCap className="w-4 h-4" /> },
 ]
 

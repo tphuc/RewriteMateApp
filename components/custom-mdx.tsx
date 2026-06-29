@@ -5,9 +5,10 @@ import { highlight } from 'sugar-high';
 import React, { FC } from 'react';
 import remarkGfm from 'remark-gfm';
 import { cn } from '@/lib/utils';
-import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Dialog, DialogClose, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { StyledImage } from './styled-image';
 import { AppStoreBtn } from './appstore-btn';
+import { X } from 'lucide-react';
 
 
 interface TableProps {
@@ -134,7 +135,7 @@ type ImageFlowProps = {
 function FlowImage({ src: _src, alt }: { src: string; alt?: string }) {
 	let src = _src?.startsWith('http') ? _src : `https://storage.googleapis.com/tubememo-public/rewritemate/${_src}`
 	return (
-		<Dialog >
+		<Dialog>
 			<DialogTrigger asChild>
 				<div className="relative h-full flex-shrink-0 snap-center cursor-pointer">
 					<StyledImage
@@ -147,15 +148,25 @@ function FlowImage({ src: _src, alt }: { src: string; alt?: string }) {
 				</div>
 			</DialogTrigger>
 
-			<DialogContent className="max-w-[95vw] max-h-[95vh] p-0 flex flex-col items-center justify-center bg-transparent shadow-none border-none">
-				<DialogTitle className="text-sm mb-2">{alt || 'dialog'}</DialogTitle>
-				<Image
-					src={src}
-					alt={alt || ""}
-					width={1200}
-					height={900}
-					className="rounded-md max-h-[90vh] w-auto h-auto"
-				/>
+			<DialogContent className="bg-transparent max-w-screen max-h-screen translate-x-0 translate-y-0" style={{ border: 0, left: 0, top: 0 }}>
+				
+
+
+				<div className="w-[100vw] h-[100vh] flex flex-col items-center justify-center">
+				<DialogTitle className=" z-50 p-2 text-sm shrink-0">
+					{alt}
+				</DialogTitle>
+					<DialogClose className='bg-background rounded-full border absolute top-4 left-4'>
+						<X />
+					</DialogClose>
+					<Image
+						src={src}
+						alt={alt ?? ""}
+						width={1200}
+						height={900}
+						className="max-w-full max-h-full object-contain"
+					/>
+				</div>
 			</DialogContent>
 		</Dialog>
 	);
@@ -164,9 +175,7 @@ function FlowImage({ src: _src, alt }: { src: string; alt?: string }) {
 export function ImageFlow({ images, alt, ...props }: ImageFlowProps) {
 	return (
 		<div className='relative'>
-			<div className="
-					flex overflow-x-auto gap-4 py-2 snap-x snap-mandatory px-2
-				" >
+			<div className="flex overflow-x-auto gap-4 py-2 snap-x snap-mandatory px-2" >
 				{images?.map?.((url: any, idx: any) => (
 					<FlowImage key={idx} src={url} alt={alt} />
 				))}
@@ -302,25 +311,25 @@ const RewriteMateCTA = ({
 			}}
 			className="rounded-2xl p-4 md:p-6 space-y-2"
 		>
-		
-				<h3 style={{margin:0}} className="text-2xl tracking-tighter font-semibold text-white">
-					{current.title}
-				</h3>
 
-				<p style={{margin:0}} className="text-white/80">
-					{current.headline}
-				</p>
+			<h3 style={{ margin: 0 }} className="text-2xl tracking-tighter font-semibold text-white">
+				{current.title}
+			</h3>
 
-				<a
-					className="inline-flex mt-4 no-underline"
-					target="_blank"
-					rel="noopener noreferrer"
-					href="https://apps.apple.com/app/rewritemate-ai-keyboard/id6755306532"
-				>
-					<div className="flex items-center  gap-2 bg-white text-black rounded-full px-4 py-2 font-medium">
-						{current.cta}
-					</div>
-				</a>
+			<p style={{ margin: 0 }} className="text-white/80">
+				{current.headline}
+			</p>
+
+			<a
+				className="inline-flex mt-4 no-underline"
+				target="_blank"
+				rel="noopener noreferrer"
+				href="https://apps.apple.com/app/rewritemate-ai-keyboard/id6755306532"
+			>
+				<div className="flex items-center  gap-2 bg-white text-black rounded-full px-4 py-2 font-medium">
+					{current.cta}
+				</div>
+			</a>
 
 		</div>
 	)
@@ -358,7 +367,7 @@ export const CustomMDX: FC<MDXRemoteProps> = (props) => {
 				blockDangerousJS: false
 			}}
 
-			
+
 		/>
 	);
 };

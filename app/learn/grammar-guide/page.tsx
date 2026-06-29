@@ -80,7 +80,68 @@ export default function GrammarGuide() {
         </div>
       </section>
 
-     
+      {/* Grammar vs Context */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold tracking-tight">Moving Beyond Basic Auto-Correct</h2>
+        <p className="text-muted-foreground text-sm leading-relaxed max-w-2xl">
+          Perfect grammar is important, but context is what makes your writing connect. Traditional
+          spellcheck tools only see static rules. They don&apos;t know who you are talking to or what
+          your true goals are.
+        </p>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="rounded-xl bg-secondary p-5 border border-amber-500/10">
+            <h3 className="font-semibold text-sm text-amber-400">Where Standard Checkers Fail</h3>
+            <p className="text-sm text-muted-foreground mt-2">
+              They strip out your personality. They force passive voice warnings on sentences designed
+              to sound conversational, making your emails read like a sterile template.
+            </p>
+          </div>
+          <div className="rounded-xl bg-secondary p-5 border border-sky-500/10">
+            <h3 className="font-semibold text-sm text-sky-400">How AI Context Solves It</h3>
+            <p className="text-sm text-muted-foreground mt-2">
+              An AI keyboard reads your message as a whole. It ensures your text is completely
+              error-free while preserving the exact tone, cadence, and warmth you intended.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Prompt Shortcuts Grid */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold tracking-tight">Custom Prompts for Advanced Grammar Fixes</h2>
+        <p className="text-sm text-muted-foreground">
+          Instead of accepting a generic edit, use these custom instructions inside your keyboard to polish text exactly your way:
+        </p>
+        <div className="space-y-3">
+          {[
+            {
+              useCase: "The Executive Polish",
+              prompt: "Fix all grammar and punctuation errors, but keep the language punchy, direct, and under 30 words total.",
+              benefit: "Perfect for quick, professional text replies while moving between meetings."
+            },
+            {
+              useCase: "The Friendly Editorial Review",
+              prompt: "Correct structural flow issues and typos. Keep the tone warm, empathetic, and casual.",
+              benefit: "Ideal for keeping your personal Slack or Discord updates smooth and readable."
+            },
+            {
+              useCase: "Bilingual Flow Adjustment",
+              prompt: "Translate my text into natural, idiomatic English. Smooth out any awkward phrasing or direct translation errors.",
+              benefit: "Helps native and non-native speakers write confidently across messaging apps."
+            }
+          ].map((item, idx) => (
+            <div key={idx} className="rounded-xl bg-secondary p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div className="space-y-1 max-w-xs">
+                <h4 className="font-semibold text-sm text-sky-400">{item.useCase}</h4>
+                <p className="text-xs text-muted-foreground">{item.benefit}</p>
+              </div>
+              <div className="bg-background/50 p-3 rounded-lg border border-border flex-1 text-sm font-mono text-muted-foreground">
+                &ldquo;{item.prompt}&rdquo;
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* AI Writing CTA */}
       <section className="rounded-3xl bg-gradient-to-br from-sky-500/10 via-blue-500/10 to-purple-500/10 border border-sky-500/20 p-8 md:p-10 text-center space-y-4">
@@ -91,8 +152,9 @@ export default function GrammarGuide() {
           AI Writing Assistance That Makes Your Words Shine
         </h2>
         <p className="text-muted-foreground max-w-lg mx-auto">
-          Submit your best work with proper grammar and impeccable word choice.
-          RewriteMate makes mistake-free writing easy with AI-powered rewriting,
+          Submit your best work with proper grammar and choose your exact words with custom{" "}
+          <Link href="/learn/writing-guide" className="text-sky-400 underline">AI instructions</Link>{" "}
+          right where you type. RewriteMate makes mistake-free writing easy with AI-powered rewriting,
           tone adjustment, and translation — all from your keyboard.
         </p>
         <div className="flex items-center justify-center gap-4 pt-2">
@@ -116,6 +178,14 @@ export default function GrammarGuide() {
         <h2 className="text-2xl font-semibold tracking-tight">Frequently Asked Questions</h2>
         <div className="space-y-3">
           {[
+            {
+              q: "Can I use custom commands to fix complex phrasing rules?",
+              a: "Yes. With custom tasks, you can go beyond basic corrections. You can program instructions like 'fix grammar and change passive phrasing to active' or 'convert these sloppy bullet points into clear sentences' and save it as a permanent keyboard shortcut.",
+            },
+            {
+              q: "Does checking my grammar expose my personal data or keystrokes?",
+              a: "No. Unlike traditional cloud keyboards that continuously monitor and store everything you type, RewriteMate works strictly on-demand. Text is sent for AI parsing only when you actively trigger a command, and data is never retained or collected on servers.",
+            },
             {
               q: "What is grammar?",
               a: "Grammar is the set of structural rules that govern the composition of clauses, phrases, and words in a language. It includes parts of speech, punctuation, sentence structure, and spelling conventions.",

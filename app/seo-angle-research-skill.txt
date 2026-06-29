@@ -1,0 +1,228 @@
+
+
+
+---
+name: rewritemate-seo-angles-research
+description: Use this skill whenever the user wants to research SEO content angles, discover keywords, generate blog post ideas, plan a content calendar, or identify fresh content gaps. Triggers include phrases like "blog post ideas", "SEO angles", "content strategy", "keyword research", "blog ideas", "generate content ideas", "find keywords for", "content calendar", "what should I write about", or any request to plan SEO-optimized content for a product or brand. Also use when the user provides a product brief and wants content output, wants to deduplicate ideas against existing posts, or asks to identify audience-specific content angles. When in doubt, if the user is thinking about what content to create and has product context available, use this skill.
+---
+ 
+# SEO Angles & Keyword Research Skill
+ 
+A reusable 3-step workflow that turns a product description + content strategy into fresh, deduplicated, keyword-grounded blog post ideas — ready for writing.
+ 
+---
+ 
+## Required Inputs
+ 
+Gather from context or ask the user before starting:
+ 
+| Input | Required | Description |
+|---|---|---|
+| Product description | ✅ | What the product does, who it's for, core features |
+| Positioning / differentiators | ✅ | Competitors, key personas, core value props |
+| SEO strategy or content buckets | Preferred | Existing audience/pain/context frameworks |
+| Existing content source | Optional | API URL, file, or list of titles/summaries for deduplication |
+| Target platform | Optional | Medium, web blog, etc. — affects title and format rules |
+| Number of ideas to generate | Optional | Default: 3 |
+ 
+If no existing content source is available, skip Step 1.5 and proceed with all extracted angles.
+ 
+---
+ 
+## Step 1 — Extract SEO Angles
+ 
+Generate **8 SEO angles** by crossing these four dimensions using the provided product context:
+ 
+| Dimension | Derive From |
+|---|---|
+| **Audience** | Product's primary personas |
+| **Pain point** | Specific friction the product solves for that persona |
+| **Context** | Where / when this pain moment occurs (in-app, at work, on mobile, on deadline) |
+| **Entry awareness** | `problem-aware` \| `solution-aware` \| `product-aware` |
+ 
+**Rules for good angles:**
+- Anchor every angle in a real user frustration — never a product feature in disguise
+- Mix awareness levels: aim for ~4 problem-aware, ~3 solution-aware, ~1 product-aware
+- Each angle must be specific enough that a different person's pain wouldn't fit the same description
+- Avoid: "AI helps with writing" — too broad. Aim for: "non-native professional sounds robotic in client emails"
+**Output format per angle:**
+```
+angle: [short label, 3-6 words]
+audience: [specific persona]
+pain_point: [concrete friction being solved]
+context: [where / when this moment happens]
+entry_awareness_layer: problem-aware | solution-aware | product-aware
+```
+ 
+---
+ 
+## Step 1.5 — Deduplicate Against Existing Content
+ 
+**Only run this step if an existing content source is provided.**
+ 
+1. Fetch or read existing posts (API, file, or provided list)
+2. For each of the 8 angles, compare against every existing post on:
+   - Topic / theme overlap with title or summary
+   - Keyword / concept overlap
+3. Score similarity on a 0–100% scale per comparison
+4. **Discard any angle that scores 95%+ similar to any existing post**
+5. If fewer than 3 angles survive, generate additional angles until you have at least 3
+Report to user before continuing:
+> "Checked [N] existing posts. Removed [X] overlapping angles. Proceeding with [Y] fresh angles."
+ 
+---
+ 
+## Step 2 — Keyword Discovery & Filtering
+ 
+For each surviving angle:
+ 
+1. Construct **2–3 realistic Google search queries** a real user would type while experiencing that pain point (not product-centric — write from the user's frustration)
+2. Run `web_search` for each query
+3. From results, extract keyword phrases that appear in: page titles, meta descriptions, "People also ask" sections, and competitor blog headlines
+**Keep keywords that are:**
+- Informational or how-to intent
+- Long-tail and specific to a real friction moment
+- Clearly matched to a pain point the product solves
+- Platform/context-specific (mobile, iOS, B2B, SaaS, etc.) when applicable
+**Discard keywords that are:**
+- Too broad (generic category terms — e.g., "AI writing tool", "productivity app")
+- Competitor brand names (unless explicitly creating comparison content)
+- Purely transactional / app-store download intent
+- Not connected to the product's core value proposition
+**Output format per keyword:**
+```
+keyword: [exact phrase as users would search it]
+intent: how-to | listicle | comparison | problem-aware | informational
+audience: [who is searching this]
+relevance: [which product feature or benefit directly solves this]
+```
+ 
+Target shortlist: **5–8 keywords** after filtering.
+ 
+---
+ 
+## Step 3 — Generate Blog Post Ideas
+ 
+1. Group surviving keywords by shared intent and topic
+2. Identify the **strongest cluster** — most specific pain, clearest format, highest search-to-content match
+3. Generate the specified number of blog post ideas (default: 3) from that cluster
+**Output format per idea:**
+```
+title: [punchy, human, curiosity-driven — see platform rules below]
+keyword: [target keyword phrase from Step 2]
+intent: [search intent type]
+format: how-to | listicle | comparison | opinion | problem-aware
+hook: [one sentence: what makes this angle interesting or shareable]
+word_count_range: [e.g. "1200–1500"]
+platform_tags: [platform-specific tagging guidance — see below]
+```
+ 
+**Content guardrails — apply to every idea:**
+- The post must be about the *user's problem first* — the product is the solution, not the subject
+- No post should be primarily about the product ("What is [Product]?" is not a valid angle)
+- No pricing claims, speed/accuracy benchmarks, or feature comparisons without evidence
+- Avoid thin listicles (pure enumeration without depth) — curators deprioritize them
+- Each post must be completable in 1200–1800 words with a genuine, non-salesy takeaway
+- Product mention: not in hook, not in setup — earned by establishing the problem first (section 2 or later)
+---
+ 
+## Platform-Specific Rules
+ 
+### Medium
+- Title: curiosity-driven, **under 60 characters** (Medium feed card limit)
+- Subtitle: one sentence, max 140 characters — expands on the title
+- Tone: personal, opinionated, story-driven — not informational/corporate
+- Length: 1200–1800 words (5–7 min read — algorithm rewards full read-through)
+- No keyword stuffing — Medium uses tags, not crawl-based SEO
+- Provide exactly **5 tags** from: `Productivity`, `Writing`, `iPhone`, `Technology`, `Artificial Intelligence`, `iOS`, `Self Improvement`, `Mobile`, `Communication`, `Email Writing`, `AI Tools`, `Writing Tips`, `Remote Work`, `Apps`, `Content Creation`
+- Bad title pattern: "How to Use an AI Writing Keyboard App for Better Emails"
+- Good title pattern: "I Stopped Copy-Pasting to ChatGPT. Here's What I Do Instead."
+### Web Blog / WordPress
+- Title: keyword-rich, 55–65 characters, target keyword near the front
+- Meta description: 140–160 characters, include target keyword
+- Length: 1500–2500 words for competitive keywords
+- Add internal linking suggestions (2–3 related posts)
+- H2/H3 structure should naturally contain keyword variants
+### Unknown Platform
+- Default to Medium-style formatting and flag that platform-specific rules may vary
+---
+ 
+## Self-Check Before Delivering
+ 
+Before presenting final ideas to the user, verify each idea against this checklist:
+ 
+```
+[ ] All ideas have different formats (not all how-tos, not all listicles)
+[ ] No two ideas target the same primary audience segment
+[ ] Title is under 60 characters (Medium) or keyword-front (web blog)
+[ ] Product name does not appear in any title or hook
+[ ] Ideas span at least 2 different awareness levels
+[ ] Each keyword is from Step 2 results (not invented)
+[ ] Exactly 5 tags provided per idea (Medium platform)
+[ ] No thin listicle formats
+```
+ 
+---
+ 
+## Example Output (Full Workflow)
+ 
+**Product context:** iOS keyboard app that rewrites text inside any app, no copy-paste needed
+ 
+**Angle extracted (Step 1):**
+```
+angle: copy-paste workflow tax
+audience: non-native English professionals
+pain_point: must leave current app to fix writing — breaks focus and momentum
+context: replying to a client email in Mail or Slack on iPhone
+entry_awareness_layer: problem-aware
+```
+ 
+**Keywords discovered (Step 2):**
+```
+keyword: how to fix email tone on iPhone without switching apps
+intent: how-to
+audience: professionals writing work emails on mobile
+relevance: inline tone adjustment with zero copy-paste friction
+ 
+keyword: fix awkward English email iPhone
+intent: problem-aware
+audience: non-native speakers writing professional messages
+relevance: grammar fix + paraphrase inside any app
+```
+ 
+**Blog idea generated (Step 3):**
+```
+title: The Hidden Tax on Every Email You Send From Your Phone
+keyword: how to fix email tone on iPhone without switching apps
+intent: problem-aware → how-to
+format: how-to
+hook: Reframes copy-paste friction as an invisible productivity cost — one most readers have never consciously named
+word_count_range: 1200–1500
+platform_tags: Productivity, Writing, iPhone, Self Improvement, Communication
+```
+ 
+---
+ 
+## Adapting to Different Products
+ 
+This skill works for any product. When adapting:
+ 
+1. Replace persona examples with the product's actual target segments
+2. Anchor pain points in the product's documented frictions — don't invent ones it doesn't solve
+3. Adjust keyword filter criteria to match the product's category (e.g., for B2B SaaS: filter for enterprise, team, workflow-specific terms)
+4. If the product has a specific competitor set, weight comparison-intent keywords accordingly
+5. If a blog platform guideline file exists in the project, reference it for platform-specific formatting rules
+---
+ 
+## Notes on Deduplication Scoring
+ 
+Similarity scoring guidance for Step 1.5:
+ 
+| Score | Meaning | Action |
+|---|---|---|
+| 0–40% | Different topic/audience | Keep — fresh angle |
+| 41–70% | Adjacent topic, different angle | Keep — flag the overlap to user |
+| 71–94% | Significant overlap, different format | Keep — note it may cannibalize |
+| 95–100% | Essentially the same angle | Discard |
+ 
+When in doubt, keep the angle but surface the potential overlap to the user so they can decide.

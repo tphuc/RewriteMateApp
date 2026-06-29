@@ -278,7 +278,7 @@ export default function Home() {
       <Comparison />
 
       <FaqSection />
-      <LatestBlogPosts />
+      {/* <LatestBlogPosts /> */}
 
       <Backlinks />
       <Footer2 />

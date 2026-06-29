@@ -1,0 +1,195 @@
+---
+name: rewritemate-blog-writer
+description: Use this skill whenever the user wants to write a full SEO blog post or article for RewriteMate. Triggers include phrases like "write SEO blog for idea...", "write blog post about...", "write blog for idea N", "write a Medium post about...", "generate article content", "draft the blog", or any request to produce a full article for the RewriteMate brand from a provided idea, keyword, or brief. Use this skill even for casual requests like "write me a blog about X for RewriteMate" or "turn this idea into a full post." Always use this skill when a RewriteMate blog output is expected — do not write RewriteMate articles from scratch without it.
+---
+ 
+# RewriteMate Blog Writer
+ 
+Produces a complete, publish-ready MDX blog post for the RewriteMate brand. Output follows Medium best practices (personal, story-driven, short paragraphs), uses the required frontmatter format, and is saved as a `.mdx` file.
+ 
+---
+ 
+## Step 0 — Load Context (Always First)
+ 
+Before writing a single word, read these three project files:
+ 
+```
+view /mnt/project/product-ios.md       # Product features, positioning, personas, differentiators
+view /mnt/project/seo-strategy.md      # 10 SEO content buckets + target queries per bucket
+view /mnt/project/medium-blog-guidelines.md  # Platform tone, structure rules, formatting, and the publishing checklist
+```
+ 
+Do not skip this step. These files contain the constraints the post must satisfy (feature list, tone rules, tag list, CTA wording, etc.).
+ 
+---
+ 
+## Step 1 — Validate and Research the Idea
+ 
+The input idea typically contains: `title`, `subtitle`/`summary`, `keyword`, `intent`, `format`, `hook`, `word_count_range`, and `tags`. If any of these are missing, infer from context or ask.
+ 
+**For comparison or factual articles** (e.g., device specs, competitor features, app behaviour): run web searches to verify all specific claims before writing. Stale facts in a published post are a credibility problem. Search examples:
+- Device eligibility: `"[product] device requirements [year]"`
+- App behaviour: `"[feature] not working in [app] [year]"`
+- Competitor status: `"[competitor] current [feature] [year]"`
+Do not fabricate statistics, version numbers, or competitor claims. If a fact can't be verified, cut it or soften the claim.
+ 
+---
+ 
+## Step 2 — Plan the Structure
+ 
+Map the idea to this standard shape before writing:
+ 
+| Part | Length | Rules |
+|---|---|---|
+| Hook | 3 sentences | Opens with a scene, frustration, or counterintuitive statement. Concept clear within 50 words. Never starts with "In today's…" |
+| Setup | 100–150 words | Names the problem and makes the reader feel seen. No "In this post I will…" |
+| Body sections | 4–6 sections | Each section = one problem angle or practical tip. Bold heading (Medium H2). 1–3 sentence paragraphs throughout. |
+| RewriteMate mention | 2–3 max | Never in hook or setup. First mention only after problem is fully established (section 2–3 minimum). Show a specific feature in a real scenario, not a generic "AI helps" claim. |
+| CTA + closing | 1–2 paragraphs | Genuine takeaway + one low-pressure App Store link. Optional closing question to invite responses. |
+ 
+Decide the sections before you start drafting — changes to the skeleton mid-write are expensive.
+ 
+---
+ 
+## Step 3 — Write the MDX Body
+ 
+### Tone rules
+- First-person, personal, opinionated. Medium rewards real voices, not brand copy.
+- Short paragraphs. 1–3 sentences. Never more than 4.
+- Contractions throughout (it's, you'll, we've, don't).
+- No corporate language: never use "leverage", "streamline", "utilize", "synergy".
+- One point of view per section — tepid "it depends" positions don't spread on Medium.
+### Per-section requirements
+- Open each section with the strongest sentence, not throat-clearing.
+- Include exactly one pull quote (blockquote) per section — the line most likely to be highlighted or shared. Format: `> Your pull quote here.`
+- Keep pull quotes to one sentence. They render large in Medium's editor.
+### Inline formatting
+- Image placeholders: `<!-- IMAGE: [description of what to upload] -->`
+  - Include 1–2 per post. First near the top (after setup), second near the RewriteMate introduction.
+  - Describe workflow context, not just product UI: *"Side-by-side comparison of stiff vs. natural email rewrite in iPhone Mail app"* not just *"RewriteMate screenshot"*.
+- All links: `[anchor text](URL)` format. Never paste raw URLs.
+- App Store link: `https://apps.apple.com/app/rewritemate-ai-keyboard/id6755306532`
+- Homepage: `https://www.rewritemate.app`
+### Feature language (only describe features that exist)
+ 
+| Feature | Natural phrasing |
+|---|---|
+| Inline keyboard rewriting | "right inside whatever app you're using" / "without leaving the app" |
+| Tone adjustment | "switch the tone to professional, casual, or friendly in one tap" |
+| Grammar & clarity | "catch errors and clean up the sentence" |
+| Rewrite / Paraphrase | "reword it so it actually sounds like you meant it" |
+| Shorten / Expand | "trim it down" / "flesh it out" |
+| Translation | "translate it while keeping the meaning intact" |
+| Custom commands | "set up your own commands for the things you do all the time" |
+| Works everywhere | "works in Messages, Mail, Instagram, anywhere you type" |
+ 
+### RewriteMate mention rules
+- Earn the mention. The problem must be so clear by section 2–3 that the product mention feels like a relief, not a pitch.
+- Frame it as the structural solution: explain *why* it works differently, not just *that* it works better.
+- Never use superlatives ("the best", "the only", "perfect"). Frame as an observation, not a claim.
+- CTA wording: low-pressure only. Examples:
+  - ✅ "If you want to try it, RewriteMate is free to download on the App Store."
+  - ✅ "Takes about a minute to set up."
+  - ❌ "Download RewriteMate TODAY and transform your writing forever!"
+---
+ 
+## Step 4 — Apply the MDX Frontmatter
+ 
+ALWAYS use this exact frontmatter structure at the top of the file:
+ 
+```
+---
+title: "..."
+publishedAt: "YYYY-MM-DD"
+summary: "..."
+keywords: [
+  "...",
+  "...",
+  "...",
+  "..."
+]
+image: ""
+---
+```
+ 
+**Field rules:**
+- `title`: The article's Medium-style title. Punchy, human, curiosity-driven. **Under 60 characters.** No keyword stuffing.
+- `publishedAt`: Use the current date in `YYYY-MM-DD` format.
+- `summary`: The subtitle/deck. One sentence, max 140 characters. Expands on the title and gives a reason to keep reading.
+- `keywords`: An array of 6–10 keyword strings — long-tail phrases from the idea brief + related terms from the SEO strategy buckets. Include: core keyword, audience-specific variants, problem/symptom phrasing, and at least one comparison/alternative phrase where relevant.
+- `image`: Leave as empty string `""` — the publisher fills this in.
+**Keyword array example:**
+```
+keywords: [
+  "how to sound natural in English work messages",
+  "professional email tone iPhone",
+  "non-native English speaker writing tips",
+  "fix stiff English email iPhone",
+  "AI keyboard for ESL professionals",
+  "paraphrase text without switching apps iOS",
+  "how to write natural business English",
+  "improve email tone on iPhone"
+]
+```
+ 
+Do NOT add a `TAGS:` line at the bottom for MDX format. Instead, include Medium tags in a code comment at the end of the file: `{/* MEDIUM TAGS: Tag1, Tag2, Tag3, Tag4, Tag5 */}` — 5 tags from the approved list in `medium-blog-guidelines.md`.
+ 
+---
+ 
+## Step 5 — Self-Check Before Delivering
+ 
+Run through every item before saving the file. Fix anything that fails before output.
+ 
+```
+[ ] Title is punchy and under 60 characters
+[ ] Summary/subtitle is present and under 140 characters
+[ ] Hook lands in the first 3 sentences — no preamble
+[ ] RewriteMate not mentioned until section 2 or later
+[ ] All body paragraphs are 1–3 sentences
+[ ] One pull quote (blockquote) per section
+[ ] No raw URLs — all links use [anchor](URL) format
+[ ] 1–2 image placeholders with descriptive context
+[ ] All CTA wording is low-pressure (no "today!", "transform", "best")
+[ ] Word count between 1200–1800
+[ ] Closing question added to invite Medium responses
+[ ] keywords array has 6–10 items covering the core idea + variants
+[ ] publishedAt date is set to today
+[ ] image field is empty string ""
+[ ] File saved as .mdx
+```
+ 
+---
+ 
+## Step 6 — Save and Present
+ 
+Save the completed file to:
+```
+/mnt/user-data/outputs/blog-[slug].mdx
+```
+ 
+Derive the slug from the title: lowercase, hyphens for spaces, drop punctuation.
+Examples:
+- "Your English Is Fine. Your Emails Just Don't Sound Like It." → `blog-your-english-is-fine.mdx`
+- "Apple Intelligence Skipped Your iPhone. Here's What I Use." → `blog-apple-intelligence-skipped-your-iphone.mdx`
+Then call `present_files` with the `.mdx` file path.
+ 
+Follow with a brief note covering:
+1. Any structural decisions made (why the sections were ordered that way)
+2. Any claims that were web-searched and verified
+3. The placement of the first RewriteMate mention and why
+---
+ 
+## Common Pitfalls — Avoid These
+ 
+| Pitfall | Fix |
+|---|---|
+| RewriteMate mentioned in hook or setup | Move to section 2–3 minimum |
+| Body paragraphs > 4 sentences | Split into two paragraphs |
+| No pull quote in a section | Every section needs one blockquote |
+| Generic feature claim ("AI makes writing better") | Reference a specific command by name |
+| Raw URLs in body | Wrap all URLs: `[text](url)` |
+| Title over 60 characters | Shorten — cut "How to" openers first |
+| "Leverage", "streamline", "utilize" | Use plain alternatives |
+| Hard sell CTA ("Download NOW!") | Soften to "free to download on the App Store" |
+| Invented stats or competitor claims | Verify via web search or remove |
+| Medium tags missing | Add as MDX comment at file end |
