@@ -98,15 +98,29 @@ function RoundedImage(props: any) {
 
 			</DialogTrigger>
 
-			<DialogContent className="max-w-[95vw] max-h-[95vh] p-0 flex flex-col items-center justify-center bg-transparent shadow-none border-none">
-				<DialogTitle className='text-sm'>{props.alt}</DialogTitle>
-				<img
-					src={props.src}
-					alt={props.alt || ''}
-					width={1200}
-					height={900}
-					className="rounded-md max-h-[90vh] w-auto h-auto"
-				/>
+			<DialogContent className="max-w-[90vw] max-h-[90vh] w-full h-full bg-transparent border-0 shadow-none p-0 gap-0 flex items-center justify-center overflow-hidden">
+				<DialogTitle className="sr-only">
+					{props.alt || "Image preview"}
+				</DialogTitle>
+
+				{/* Absolute overlay for your visible text title */}
+				{props.alt && (
+					<div className="absolute top-4 left-1/2 -translate-x-1/2 z-50 bg-black/60 text-white px-3 py-1.5 rounded-md text-sm backdrop-blur-xs pointer-events-none">
+						{props.alt}
+					</div>
+				)}
+
+				{/* Relative Wrapper matching the max constraints */}
+				<div className="relative w-full h-full max-w-[90vw] max-h-[90vh]">
+					<Image
+						src={props.src}
+						alt={props.alt ?? "Image preview"}
+						fill
+						sizes="90vw"
+						priority
+						className="object-contain"
+					/>
+				</div>
 			</DialogContent>
 		</Dialog>
 	);
@@ -148,23 +162,27 @@ function FlowImage({ src: _src, alt }: { src: string; alt?: string }) {
 				</div>
 			</DialogTrigger>
 
-			<DialogContent className="bg-transparent max-w-screen max-h-screen translate-x-0 translate-y-0" style={{ border: 0, left: 0, top: 0 }}>
-				
-
-
-				<div className="w-[100vw] h-[100vh] flex flex-col items-center justify-center">
-				<DialogTitle className=" z-50 p-2 text-sm shrink-0">
-					{alt}
+			<DialogContent className="max-w-[90vw] max-h-[90vh] w-full h-full bg-transparent border-0 shadow-none p-0 gap-0 flex items-center justify-center overflow-hidden">
+				<DialogTitle className="sr-only">
+					{alt || "Image preview"}
 				</DialogTitle>
-					<DialogClose className='bg-background rounded-full border absolute top-4 left-4'>
-						<X />
-					</DialogClose>
+
+				{/* Absolute overlay for your visible text title */}
+				{alt && (
+					<div className="absolute top-4 left-1/2 -translate-x-1/2 z-50 bg-black/60 text-white px-3 py-1.5 rounded-md text-sm backdrop-blur-xs pointer-events-none">
+						{alt}
+					</div>
+				)}
+
+				{/* Relative Wrapper matching the max constraints */}
+				<div className="relative w-full h-full max-w-[90vw] max-h-[90vh]">
 					<Image
 						src={src}
-						alt={alt ?? ""}
-						width={1200}
-						height={900}
-						className="max-w-full max-h-full object-contain"
+						alt={alt ?? "Image preview"}
+						fill
+						sizes="90vw"
+						priority
+						className="object-contain"
 					/>
 				</div>
 			</DialogContent>

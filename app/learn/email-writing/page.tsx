@@ -32,6 +32,7 @@ export default function EmailWriting() {
         </div>
         <p className="text-sm text-muted-foreground">AI keyboard for iOS and macOS. Free to try.</p>
       </section>
+      <img alt='rewritemate ai keyboard' className="rounded-3xl bg-secondary border" src='https://res.cloudinary.com/diq74hzgo/image/upload/rewritemate/20260630_1746.avif'/>
 
       {/* Structure of a Great Email */}
       <section className="space-y-6">

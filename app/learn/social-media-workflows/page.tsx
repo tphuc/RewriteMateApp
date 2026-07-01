@@ -81,6 +81,7 @@ export default function SocialMediaWorkflows() {
         </div>
       </section>
 
+      <img alt='rewritemate ai keyboard' className="rounded-3xl bg-secondary border" src='https://res.cloudinary.com/diq74hzgo/image/upload/rewritemate/20260630_1746.avif'/>
       {/* Tone Switching for Every Platform */}
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold tracking-tight">Tone Switching for Every Platform</h2>
@@ -163,6 +164,7 @@ export default function SocialMediaWorkflows() {
           </div>
         </div>
       </section>
+      
 
       {/* Custom Commands for Recurring Formats */}
       <section className="space-y-6">
@@ -200,9 +202,10 @@ export default function SocialMediaWorkflows() {
           ))}
         </div>
       </section>
-
+     
       {/* AI Assistant CTA */}
-      <section className="rounded-3xl bg-gradient-to-br from-sky-500/10 via-blue-500/10 to-purple-500/10 border border-sky-500/20 p-8 md:p-10 text-center space-y-4">
+      <section className="rounded-3xl bg-gradient-to-br from-sky-500/10 via-cyan-500/10 to-teal-500/10 p-8 md:p-10 border border-sky-500/20  text-center space-y-4">
+
         <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-500/20 to-blue-500/20 flex items-center justify-center mx-auto">
           <Sparkles className="w-7 h-7 text-sky-500" />
         </div>

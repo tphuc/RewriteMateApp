@@ -29,7 +29,7 @@ export default function EssayWriting() {
         </div>
         <p className="text-sm text-muted-foreground">AI keyboard for iOS and macOS. Free to try.</p>
       </section>
-
+      <img alt='rewritemate ai keyboard' className="rounded-3xl bg-secondary border" src='https://res.cloudinary.com/diq74hzgo/image/upload/rewritemate/20260630_1746.avif'/>
       {/* NEW SECTION: The Reality of Academic Writing on Mobile */}
       <section className="rounded-2xl border border-border bg-card p-6 md:p-8 space-y-4">
         <div className="flex items-center gap-2 text-amber-500">

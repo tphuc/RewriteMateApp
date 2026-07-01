@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check, Sparkles, WandSparkles, Code2, FolderOpen, Beaker, Grid3x3 } from "lucide-react";
+import { ImageFlow } from "@/components/custom-mdx";
 
 export const metadata: Metadata = {
   title: "Custom Command Recipes — AI Prompts for RewriteMate | RewriteMate",
@@ -141,6 +142,8 @@ export default function CustomCommandRecipes() {
         </div>
       </section>
 
+      <ImageFlow images={['https://res.cloudinary.com/diq74hzgo/image/upload/rewritemate/20260630_1146.jpeg']}/>
+
       {/* Prompt Playground */}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold tracking-tight">Testing with Prompt Playground</h2>
@@ -165,9 +168,10 @@ export default function CustomCommandRecipes() {
           </div>
         </div>
       </section>
-
+     
+      <ImageFlow images={['https://res.cloudinary.com/diq74hzgo/image/upload/rewritemate/20260630_1510.jpeg']}/>
       {/* AI Assistant CTA */}
-      <section className="rounded-3xl bg-gradient-to-br from-sky-500/10 via-blue-500/10 to-purple-500/10 border border-sky-500/20 p-8 md:p-10 text-center space-y-4">
+      <section className="rounded-3xl bg-gradient-to-br from-teal-500/10 via-blue-500/10 to-cyan-500/10 p-8 md:p-10 border border-sky-300/50 text-center space-y-4">
         <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-500/20 to-blue-500/20 flex items-center justify-center mx-auto">
           <Sparkles className="w-7 h-7 text-sky-500" />
         </div>

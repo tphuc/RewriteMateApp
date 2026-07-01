@@ -17,7 +17,7 @@ const topics = [
 
 function LearnList({ isMobile }: { isMobile?: boolean }) {
   return (
-    <div className={isMobile ? "flex flex-col gap-1" : "grid grid-cols-2 gap-1 min-w-[280px]"}>
+    <div className={isMobile ? "flex flex-col gap-1" : "grid grid-cols-2 gap-1"}>
       {topics.map((topic) => (
         <Link
           key={topic.label}

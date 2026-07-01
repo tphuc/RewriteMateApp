@@ -106,6 +106,7 @@ export default function GrammarGuide() {
         </div>
       </section>
 
+      <img alt='rewritemate ai keyboard' className="rounded-3xl bg-secondary" src='https://res.cloudinary.com/diq74hzgo/image/upload/10050411_v9hemk.jpg' />
       {/* Prompt Shortcuts Grid */}
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold tracking-tight">Custom Prompts for Advanced Grammar Fixes</h2>
