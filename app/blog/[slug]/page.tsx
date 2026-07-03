@@ -103,8 +103,8 @@ export default async function Blog({ params }: any) {
 
 				<BlogAuthor
 					name="Felix Tran"
-					role="Indie Developer & RewriteMate Founder"
-					bio=""
+					role="RewriteMate Dev & Editorial Lead"
+					bio="Write about everyday workflows, systems that help ideas move faster, from first draft to finished work."
 				/>
 			</article>
 		</main>

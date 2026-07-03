@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 
 const siteConfig = {
-  name: 'RewriteMate — AI Writing Tool assistant for macOS and iOS',
+  name: 'RewriteMate AI Keyboard — Proofread, Translate, Grammar Check',
   description:
     'Helps you instantly improve, rephrase, and refine any text. The better writing tool, built right into your workflow.',
   url: 'https://rewritemate.app',

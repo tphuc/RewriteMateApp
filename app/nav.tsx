@@ -46,7 +46,7 @@ export default function Nav() {
         <div className='flex items-center justify-center gap-2'>
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="https://storage.googleapis.com/tubememo-public/rewritemate/logo.webp"
+              src="/logo.webp"
               alt="RewriteMate Logo"
               width={30}
               height={30}

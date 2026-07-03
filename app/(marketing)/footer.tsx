@@ -14,7 +14,7 @@ export default function Footer2() {
           {/* Logo */}
           <div className="col-span-full md:col-span-1">
             <div className=" flex items-center justify-center ">
-              <img src="https://storage.googleapis.com/tubememo-public/rewritemate/logo.webp" width={256} height={256} className="w-20 h-20" />
+              <img src="/logo.webp" width={256} height={256} className="w-20 h-20" />
             </div>
 
           </div>

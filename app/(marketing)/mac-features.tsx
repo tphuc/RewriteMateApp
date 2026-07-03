@@ -47,7 +47,7 @@ export default function IOSFeatures() {
                     <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='/apple-mail.webp' style={{ width: 60, height: 60 }} width={300} height={300} alt='Mail' />
                     <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px] rounded-[10px] border shadow-xs overflow-hidden" src='/apple-notes.webp' style={{ width: 60, height: 60 }} width={300} height={300} alt='Notes' />
                     <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='/notion-logo.webp' style={{ width: 60, height: 60 }} width={300} height={300} alt='Notion' />
-                    <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='https://storage.googleapis.com/tubememo-public/rewritemate/logo.webp' style={{ width: 60, height: 60 }} width={300} height={300} alt='RewriteMate' />
+                    <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='/logo.webp' style={{ width: 60, height: 60 }} width={300} height={300} alt='RewriteMate' />
 
                     <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px] rounded-[12px]" src='/imessage.webp' style={{ width: 60, height: 60 }} width={300} height={300} alt='Messages' />
                     <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px] rounded-[12px]" src='/instagram.avif' style={{ width: 60, height: 60 }} width={300} height={300} alt='Instagram' />

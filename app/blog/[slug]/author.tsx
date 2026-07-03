@@ -39,7 +39,7 @@ export default function BlogAuthor({
           {role}
         </p>
 
-        <p className="mt-3 max-w-prose text-sm leading-relaxed text-foreground">
+        <p className="max-w-prose text-sm leading-relaxed text-foreground">
           {bio}
         </p>
       </div>
