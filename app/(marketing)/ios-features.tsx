@@ -6,7 +6,7 @@ import Image from "next/image"
 export default function IOSFeatures() {
     return (
 
-        <div className=" py-[10%] px-3 max-w-screen-lg mx-auto relative space-y-20 md:space-y-30">
+        <div className=" px-3 max-w-screen-lg py-20 mx-auto relative space-y-20 md:space-y-30">
 
 
 
@@ -47,7 +47,7 @@ export default function IOSFeatures() {
                     <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='/apple-mail.webp' style={{ width: 60, height: 60 }} width={300} height={300} alt='Mail' />
                     <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px] rounded-[10px] border shadow-xs overflow-hidden" src='/apple-notes.webp' style={{ width: 60, height: 60 }} width={300} height={300} alt='Notes' />
                     <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='/notion-logo.webp' style={{ width: 60, height: 60 }} width={300} height={300} alt='Notion' />
-                    <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='https://storage.googleapis.com/tubememo-public/rewritemate/logo.webp' style={{ width: 60, height: 60 }} width={300} height={300} alt='RewriteMate' />
+                    <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px]" src='/logo.webp' style={{ width: 60, height: 60 }} width={300} height={300} alt='RewriteMate' />
 
                     <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px] rounded-[12px]" src='/imessage.webp' style={{ width: 60, height: 60 }} width={300} height={300} alt='Messages' />
                     <Image className="transition-transform ease-out duration-300 hover:scale-[1.1] hover:-translate-y-[10px] rounded-[12px]" src='/instagram.avif' style={{ width: 60, height: 60 }} width={300} height={300} alt='Instagram' />
@@ -63,7 +63,7 @@ export default function IOSFeatures() {
 
                 <div className="grow-progress rounded-[40px] row-span-2 col-span-full md:col-span-1 overflow-hidden bg-background px-[10%] pb-[10%] md:pb-[8%] space-y-10">
                     <div className="">
-                        <Image className="transition-transform ease-out duration-300 hover:scale-[1.02] hover:-translate-y-[10px] w-full" src='/text-selection.avif'  width={300} height={300} alt='Mail' />
+                        <Image className="border-0 transition-transform ease-out duration-300 hover:scale-[1.02] hover:-translate-y-[10px] w-full" src='/text-selection.avif'  width={300} height={300} alt='Mail' />
                     </div>
                     <div className="space-y-2">
                         <h3 className="text-secondary-foreground text-3xl md:text-4xl font-semibold text-center  max-w-xl mx-auto">

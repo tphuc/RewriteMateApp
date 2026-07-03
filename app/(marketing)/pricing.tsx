@@ -12,14 +12,14 @@ export default function PricingCard() {
       <h1 className="relative mx-auto max-w-2xl text-center py-[5%] text-4xl md:text-6xl font-bold tracking-tight leading-tight">
         Write With Confidence Everywhere
       </h1>
-        <div className="w-full max-w-4xl rounded-4xl bg-gradient-to-b from-sky-500 to-blue-500 text-primary-foreground px-10 py-16 md:px-16 md:py-20 ">
+        <div className="w-full max-w-4xl rounded-4xl bg-gradient-to-b from-background to-background/50 px-10 py-16 md:px-16 md:py-20 ">
 
           {/* Title */}
           <h2 className="text-center text-4xl md:text-5xl font-semibold tracking-tight">
             Pricing & Plans
           </h2>
 
-          <p className="mt-4 text-center text-primary-foreground/80 text-lg max-w-xl mx-auto">
+          <p className="mt-4 text-center  text-lg max-w-xl mx-auto">
             Subscription or lifetime purchase. For you on all your devices.
           </p>
 
@@ -27,28 +27,28 @@ export default function PricingCard() {
 
             {/* Segmented Control */}
             <div className="flex justify-center">
-              <TabsList className="rounded-full bg-primary-foreground/20 backdrop-blur-md h-12 p-1">
+              <TabsList className="rounded-full bg-secondary border backdrop-blur-md h-12 p-0.5">
                 <TabsTrigger
 
                   value="monthly"
-                  className="rounded-full px-6 py-3 text-background/90 hover:text-background data-[state=active]:bg-background data-[state=active]:text-foreground"
+                  className="rounded-full px-6 py-3 bg-secondary data-[state=active]:bg-background data-[state=active]:text-foreground"
                 >
                   Monthly
                 </TabsTrigger>
 
                 <TabsTrigger
                   value="annual"
-                  className="rounded-full px-6 py-3 text-background/90 hover:text-background data-[state=active]:bg-background data-[state=active]:text-foreground"
+                  className="rounded-full px-6 py-3 bg-secondary data-[state=active]:bg-background data-[state=active]:text-foreground"
                 >
                   Annual
                 </TabsTrigger>
 
-                <TabsTrigger
+                {/* <TabsTrigger
                   value="byok"
-                  className="rounded-full px-6 py-3 text-background/90 hover:text-background data-[state=active]:bg-background data-[state=active]:text-foreground"
+                  className="rounded-full px-6 py-3 bg-secondary data-[state=active]:bg-background data-[state=active]:text-foreground"
                 >
                   BYOK
-                </TabsTrigger>
+                </TabsTrigger> */}
               </TabsList>
             </div>
 
@@ -56,9 +56,9 @@ export default function PricingCard() {
             <TabsContent value="monthly" className="mt-10 text-center">
               <div>
                 <span className="text-5xl md:text-6xl font-semibold tracking-tight">
-                  $5.99
+                  $6.99
                 </span>
-                <span className="text-xl md:text-2xl text-primary-foreground/80">
+                <span className="text-xl md:text-2xl ">
                   /month
                 </span>
               </div>
@@ -68,15 +68,15 @@ export default function PricingCard() {
             <TabsContent value="annual" className="mt-10 text-center">
               <div>
                 <span className="text-5xl md:text-6xl font-semibold tracking-tight">
-                  $49.99
+                  $39.99
                 </span>
-                <span className="text-xl md:text-2xl text-primary-foreground/80">
+                <span className="text-xl md:text-2xl">
                   /year
                 </span>
               </div>
             </TabsContent>
 
-            <TabsContent value="byok" className="mt-10 text-center">
+            {/* <TabsContent value="byok" className="mt-10 text-center">
               <div>
               <p className="text-xl md:text-2xl text-primary-foreground/80">
                  Available for macOS version only
@@ -88,7 +88,7 @@ export default function PricingCard() {
                   paid once
                 </p>
               </div>
-            </TabsContent>
+            </TabsContent> */}
 
           </Tabs>
 
@@ -98,7 +98,7 @@ export default function PricingCard() {
              Download on AppStore
             </Link> */}
 
-            <Link   href="https://apps.apple.com/app/rewritemate/id6755306532" className="w-full sm:w-auto px-10 py-3 rounded-full bg-primary-foreground/20 backdrop-blur-md text-primary-foreground font-medium hover:bg-primary-foreground/30 transition">
+            <Link   href="https://apps.apple.com/app/rewritemate/id6755306532" className="w-full sm:w-auto px-10 py-3 rounded-full bg-blue-500 text-white backdrop-blur-md font-medium hover:bg-blue-400 transition">
                Try for Free
             </Link>
           </div>

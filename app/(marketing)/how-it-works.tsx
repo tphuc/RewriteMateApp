@@ -1,21 +1,18 @@
-import { MousePointerClick, WandSparkles, ClipboardPaste } from "lucide-react";
+import PhoneCarousel from "./phone-carousel";
 
 const steps = [
   {
-    icon: <MousePointerClick className="w-8 h-8" />,
     title: "Select your text",
     description:
       "Highlight any text in any app — Mail, Notes, Notion, Messages, or Safari. RewriteMate works wherever you write.",
   },
   {
-    icon: <WandSparkles className="w-8 h-8" />,
     title: "Choose how to rewrite",
     description:
       "Pick a preset or create your own custom instruction. Adjust tone, shorten, expand, or rephrase — all with one tap.",
   },
   {
-    icon: <ClipboardPaste className="w-8 h-8" />,
-    title: "Done — paste and go",
+    title: "Replace and go",
     description:
       "Your improved text replaces the original. No switching apps, no copy-paste hassle. Stay in flow.",
   },
@@ -24,29 +21,32 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section className="max-w-screen-lg mx-auto px-4 py-20">
-      <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-center mb-2">
-        How RewriteMate Works
-      </h2>
-      <p className="text-center text-muted-foreground text-xl mb-12 max-w-lg mx-auto">
-        Rewrite text anywhere on your Mac or iPhone in three simple steps.
-      </p>
+      <div className="text-center">
+        <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">
+          How RewriteMate Works
+        </h2>
+        <p className="text-muted-foreground text-xl mt-3 max-w-lg mx-auto">
+          Rewrite text anywhere on your Mac or iPhone in three simple steps.
+        </p>
+      </div>
 
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="relative grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] md:gap-6">
+        <div className="md:sticky md:top-1/2 md:self-start md:col-start-2 md:row-start-1 md:row-end-4 flex justify-center py-8">
+          <PhoneCarousel />
+        </div>
+
         {steps.map((step, i) => (
           <div
             key={step.title}
-            className="relative flex flex-col items-center text-center rounded-3xl bg-secondary p-8"
+            className={`py-8 md:py-16  ${i % 2 === 0 ? "md:text-right md:col-start-1" : "md:text-left md:col-start-3"}`}
           >
-            <span className="absolute top-4 left-4 text-4xl font-bold text-muted-foreground/20">
-              0{i + 1}
+            <span className="text-sm text-left md:text-center font-semibold tracking-widest text-sky-500 uppercase">
+              Step {i + 1}
             </span>
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-500/20 to-blue-500/20 flex items-center justify-center text-sky-500 mb-5">
-              {step.icon}
-            </div>
-            <h3 className="text-xl font-semibold tracking-tight mb-2">
+            <h3 className="text-2xl  md:text-3xl font-semibold tracking-tight mt-2">
               {step.title}
             </h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">
+            <p className={`text-muted-foreground mt-3 text-base md:text-lg  leading-relaxed max-w-md ${i % 2 === 0 ? "md:ml-auto" : "md:mr-auto"}`}>
               {step.description}
             </p>
           </div>

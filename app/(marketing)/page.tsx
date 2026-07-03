@@ -16,34 +16,34 @@ import UseCases from "./use-cases";
 
 const roles = [
   {
-    icon: <DeveloperCode className="w-8 h-8 fill-background" />,
-    title: "Developers",
+    icon: <BriefCase className="w-8 h-8 fill-background" />,
+    title: "Professionals & Office Workers",
     description:
-      "Clean up explanations without losing technical accuracy. Refine documentation and PR notes while keeping your original intent intact.",
-  },
-  {
-    icon: <PaintPallete className="w-8 h-8 fill-background" />,
-    title: "Designers",
-    description:
-      "Clarify your thinking without flattening your voice. Adjust tone and structure while staying true to how you communicate.",
+      "Write clear, professional emails and messages every time. Proofread, adjust tone, and shorten or expand text directly in Mail, Slack, and Notion — without leaving the app.",
   },
   {
     icon: <TextBubble className="w-8 h-8 fill-background" />,
-    title: "Content & Marketing",
+    title: "Content Creators & Marketers",
     description:
-      "Polish what you’ve already written. Improve clarity, flow, and consistency without rewriting from scratch.",
+      "Generate captions, social posts, and copy faster. Switch tones instantly, rephrase repetitive content, and create custom commands for your recurring formats.",
   },
   {
     icon: <BubbleLeftRight className="w-8 h-8 fill-background" />,
-    title: "Sales & Support",
+    title: "Non-Native English Speakers",
     description:
-      "Fine-tune replies before you send them. Soften tone, tighten wording, and keep your message clear under pressure.",
+      "Write with confidence in English. Fix grammar, paraphrase sentences, simplify complex language, and translate to and from over 100 languages — all from the keyboard.",
   },
   {
-    icon: <BriefCase className="w-8 h-8 fill-background" />,
+    icon: <DeveloperCode className="w-8 h-8 fill-background" />,
+    title: "Students",
+    description:
+      "Polish essays, reports, and applications. Proofread for mistakes, expand on rough ideas, paraphrase to avoid repetition, and simplify vocabulary with one tap.",
+  },
+  {
+    icon: <PaintPallete className="w-8 h-8 fill-background" />,
     title: "Founders & Operators",
     description:
-      "Refine important messages before they go out. Keep your voice consistent across updates, strategy docs, and announcements.",
+      "Make every high-stakes message land right. Refine tone, tighten wording, and keep your voice consistent across investor updates, strategy docs, and team announcements.",
   },
 ]
 
@@ -96,9 +96,9 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="relative bg-background min-h-screen scrollbar-hide">
+    <div className="relative bg-background pt-[61px] min-h-screen scrollbar-hide">
 
-      <main className="space-y-2 mx-auto max-w-screen-lg mt-30 md:mt-[5%] pb-[5%] px-3 rounded-4xl overflow-hidden">
+      <main className="space-y-2 mx-auto pt-10 max-w-screen-lg overflow-hidden px-2">
         <Script
           type="application/ld+json"
           id="faq-schema"
@@ -139,55 +139,47 @@ export default function Home() {
         />
 
 
-        <div className="relative grow-progress-2 space-y-4">
-          {/* <div className="absolute top-0 left-0 bg-gradient-to-b from-secondary via-secondary/80 to-transparent w-full h-[30%]  z-10" /> */}
+        <section className="relative overflow-hidden pb-20 rounded-4xl grow-progress-2">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 px-4 mx-auto">
+            <div className="flex-1 space-y-6 text-center lg:text-left">
+              <h1 className="text-5xl md:text-6xl font-semibold tracking-tight text-foreground ">
+              Your keyboard, made for better writing
+              </h1>
+              <p className="text-lg md:text-xl max-w-md mx-auto lg:mx-0">
+                An AI writing assistant keyboard for iPhone and iOS to rewrite, rephrase, refine, translate, and improve text anywhere you type.
+              </p>
+              <Link
+                href="https://apps.apple.com/app/rewritemate/id6755306532"
+                className="inline-flex rounded-full hover:opacity-90 text-white items-center gap-2 whitespace-nowrap bg-gradient-to-tr from-sky-500/90 to-blue-500 px-8 py-3 text-center font-medium"
+              >
+                 Try for Free
+              </Link>
 
-          <div className="relative  max-w-screen-lg px-4 mx-auto">
-            <div className="relative z-10">
-              <img
-                src='/hero-macos.avif'
-                alt="RewriteMate macOS app interface"
-                className="w-full rounded-xl w-full"
-                style={{ objectFit: "contain", }}
-              />
+                <span className="flex flex-wrap justify-center lg:justify-start gap-2 text-xs text-secondary-foreground/60">
+                  <span className="rounded-full bg-secondary px-3 py-1 font-medium">AI Keyboard</span>
+                  <span className="rounded-full bg-secondary px-3 py-1 font-medium">Paraphrase</span>
+                  <span className="rounded-full bg-secondary px-3 py-1 font-medium">Rewrite Text</span>
+                  <span className="rounded-full bg-secondary px-3 py-1 font-medium">Proofread</span>
+                  <span className="rounded-full bg-secondary px-3 py-1 font-medium">Translate</span>
+                  <span className="rounded-full bg-secondary px-3 py-1 font-medium">Change Tone</span>
+                  <span className="rounded-full bg-secondary px-3 py-1 font-medium">Grammar Check</span>
+                  <span className="rounded-full bg-secondary px-3 py-1 font-medium">Custom Commands</span>
+                </span>
+            </div>
+
+            <div className="flex-1 flex justify-center lg:justify-end">
               <img
                 src='/hero-ios.avif'
                 alt="RewriteMate iOS keyboard extension"
-                className="absolute z-20 -bottom-[5%] right-[2%] md:right-[0%] scale-[0.96] rounded-xl w-[30%]"
-                style={{ objectFit: "contain", }}
+                className="max-w-xs w-full rounded-xl"
+                style={{ objectFit: "contain" }}
               />
             </div>
-
-            <div className="absolute z-0 mx-auto bottom-10 left-[20%] w-[60%] h-[200px] 
-  bg-gradient-to-br from-sky-600/80 via-sky-500/80 to-blue-400/80 
-  blur-3xl"
-            />
           </div>
-          <div className="relative pb-5 space-y-4">
+        </section>
 
-            <h1 className="relative mx-auto max-w-xl text-center text-4xl md:text-6xl font-bold tracking-tight leading-tight">
-              <span className="bg-gradient-to-br from-cyan-400 via-sky-500 to-blue-600 bg-clip-text text-transparent">
-                Your Better <br /> AI Writing Assistant
-              </span>
-            </h1>
-            <p className="text-center max-w-md mx-auto text-xl">
-              Instantly improve, rephrase, and refine any text. The better writing tool, built for iOS and macOS.
-            </p>
-          </div>
-        </div>
+        
 
-        <div className="z-20 gap-4 flex flex-col lg:flex-row px-4 items-center justify-center">
-
-          <div className='flex items-center justify-center flex-1 gap-2'>
-            <Link
-              href="https://apps.apple.com/app/rewritemate/id6755306532"
-              className="relative rounded-full hover:opacity-90 text-white flex overflow-hidden items-center shadow-xs flex-nowrap gap-2  whitespace-nowrap bg-gradient-to-tr from-sky-500/90 to-blue-500 px-8 py-2 text-center font-medium"
-            >
-               Try for Free
-            </Link>
-          </div>
-
-        </div>
         {/* <div className="flex items-center justify-center">
           <a href="https://launchigniter.com/product/rewritemate-ai-keyboard?ref=badge-rewritemate-ai-keyboard" target="_blank">
             <img src="https://launchigniter.com/api/badge/rewritemate-ai-keyboard?theme=light" alt="Featured on LaunchIgniter" width="212" height="55" />
@@ -227,15 +219,8 @@ export default function Home() {
       <div className="bg-[#111112] relative w-full">
 
         <div className="relative grow-progress max-w-screen-lg py-10 px-4 mx-auto">
-          <img
-            src='/hero-macos.avif'
-            className="w-full z-10 relative rounded-xl w-full"
-            style={{ objectFit: "contain", }}
-          />
-          <div className="absolute z-0 mx-auto bottom-10 left-[15%] w-[70%] h-[300px] 
-  bg-gradient-to-b from-sky-500/50 via-blue-500/50 to-sky-300/50 
-  blur-3xl"
-          />
+ 
+          
 
         </div>
 
@@ -243,31 +228,42 @@ export default function Home() {
           <div className="mx-auto max-w-5xl px-6">
             <div className="max-w-2xl mb-16">
               <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">
-                AI Writing Assistant for Every Professional
+                AI Writing Assistant for Work, School & Everyday Life
               </h2>
               <p className="mt-4 opacity-80 text-xl leading-relaxed">
-                RewriteMate helps professionals communicate clearly across every workflow.
+                Rewrite, proofread, paraphrase, and translate text directly inside any app — from emails and Slack to essays and social posts.
               </p>
             </div>
-
-            <div className="grid gap-y-12 gap-x-16 md:grid-cols-2">
+            <div className="flex flex-col md:flex-row w-full gap-4">
+            <div className="absolute z-0 mx-auto bottom-10 left-[15%] w-[50%] h-[300px] 
+  bg-gradient-to-b from-sky-500/20 via-blue-500/20 to-sky-300/20 
+  blur-3xl"
+          />
+            <img
+            src='/hero2.webp'
+            className="w-full z-10 max-w-xs md:max-w-sm mx-auto relative rounded-xl"
+            style={{ objectFit: "contain", }}
+          />
+           <div className="flex-1 grid gap-y-12">
               {roles.map((role) => (
                 <div key={role.title} className="group">
                   <div className="flex items-center gap-2">
                     <span className="text-2xl">
                       {role.icon}
                     </span>
-                    <span className="text-2xl md:text-3xl font-medium tracking-tight">
+                    <span className="text-xl md:text-2xl font-medium tracking-tight">
                       {role.title}
                     </span>
                   </div>
 
-                  <p className="mt-4 opacity-80 text-lg leading-relaxed max-w-md">
+                  <p className="mt-4 opacity-80 text-md leading-relaxed max-w-xl">
                     {role.description}
                   </p>
                 </div>
               ))}
             </div>
+            </div>
+           
           </div>
         </section>
       </div>

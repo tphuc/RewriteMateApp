@@ -25,7 +25,7 @@ export default function Footer2() {
             <ul className="space-y-3">
               <li><Link href="/" className="hover:text-foreground/90 transition">Download for iOS</Link></li>
               <li><Link href="/macos" className="hover:text-foreground/90 transition">Download for macOS</Link></li>
-              <li><Link href="/#pricing" className="hover:text-foreground/90 transition">Pricing</Link></li>
+              <li><Link href="/pricing" className="hover:text-foreground/90 transition">Pricing</Link></li>
               <li><Link href="#" className="hover:text-foreground/90 transition">Features</Link></li>
               {/* <li><Link href="#" className="hover:text-foreground/90 transition">Updates</Link></li> */}
               {/* <li><Link href="#" className="hover:text-foreground/90 transition">Use Cases</Link></li> */}

@@ -52,9 +52,9 @@ export default function Nav() {
               height={30}
               className="rounded-[4px] shadow-xs"
             />
-
+   <span className="hidden md:flex text-lg font-semibold">RewriteMate</span>
           </Link>
-          <div className="hidden md:flex text-lg font-semibold">RewriteMate</div>
+       
         </div>
 
 
@@ -122,6 +122,13 @@ const NavLinks = () => {
         iOS
       </Link> */}
 
+
+      <Link
+        href="/pricing"
+        className="w-full font-medium md:w-auto"
+      >
+        Pricing
+      </Link>
 
       <Link
         href="/blog"
