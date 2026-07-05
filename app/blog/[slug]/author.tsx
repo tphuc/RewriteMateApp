@@ -14,7 +14,7 @@ export default function BlogAuthor({
   avatarUrl = "/felixtran.webp",
 }: BlogAuthorProps) {
   return (
-    <div className="mt-12 flex items-start gap-4 rounded-2xl border border-neutral-200/70 bg-secondary p-5">
+    <div className="mt-12 flex items-start gap-4 rounded-2xl border border-neutral-200/70 bg-background p-5">
       {/* Avatar */}
       <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full bg-neutral-200 dark:bg-neutral-800">
         <Image

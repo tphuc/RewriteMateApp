@@ -157,7 +157,7 @@ function FlowImage({ src: _src, alt }: { src: string; alt?: string }) {
 						alt={alt || ""}
 						width={440}
 						style={{ width: "auto", height: 400 }}
-						className="object-cover h-[300px] w-auto border dark:border-none"
+						className="object-cover h-[300px] w-auto shadow-md dark:border-none"
 					/>
 				</div>
 			</DialogTrigger>
