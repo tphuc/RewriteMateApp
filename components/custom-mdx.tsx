@@ -72,7 +72,7 @@ const Paragraph: FC<{ children: React.ReactNode }> = ({ children }) => (
 );
 
 const CustomHR: FC = () => (
-	<hr className="my-8 border-t border-muted" />
+	<hr className="my-4 border-t border-input/60" />
 );
 
 const CustomBlockquote: FC<{ children: React.ReactNode }> = ({ children }) => (
