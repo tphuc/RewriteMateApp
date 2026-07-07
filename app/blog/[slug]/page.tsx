@@ -85,7 +85,7 @@ export default async function Blog({ params }: any) {
 						{formatDate(post?.metadata?.publishedAt)}
 					</p>
 
-					<h1 className="text-4xl font-semibold tracking-tight">
+					<h1 className="text-4xl font-bold tracking-tight">
 						{post?.metadata?.title}
 					</h1>
 
