@@ -320,20 +320,13 @@ Internal links
 
 ⸻
 
-Post 12 — QuillBot vs Grammarly vs RewriteMate for iPhone Writing
+Post 12 — QuillBot vs RewriteMate for iPhone Writing
 
 Primary keyword: quillbot vs grammarly iphone
 Secondary keywords: quillbot alternative iphone, paraphrase tool iphone, best ai writing app iphone
 Intent: Comparison
 Funnel stage: MOFU–BOFU
 Goal: Own “which tool should I use?” traffic from users comparing writing assistants.
-
-Internal links
-
-* Grammarly alternatives
-* RewriteMate vs Grammarly
-* How to paraphrase text on iPhone
-* Homepage
 
 ⸻
 
@@ -652,7 +645,7 @@ Internal links
 
 ⸻
 
-5) Suggested publishing priority
+1) Suggested publishing priority
 
 Phase 1 — Publish first (highest-leverage)
 
