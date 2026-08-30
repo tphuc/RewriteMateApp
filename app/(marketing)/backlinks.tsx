@@ -21,9 +21,9 @@ export default function Backlinks() {
         <img src="https://buildfinds.com/buildfinds/images/badges/featured-on-light.svg" alt="Featured on Build Finds" />
       </a>
 
-      <a href="https://aitoolboxer.com/projects/protato?utm_source=badge" target="_blank" rel="noopener noreferrer">
-        <img src="https://aitoolboxer.com/aitoolboxer/images/badges/featured-on-light.svg" alt="Featured on AI Tool Boxer"  />
-      </a>
+      <a href="https://aitoolboxer.com/projects/rewritemate?utm_source=badge" target="_blank" rel="noopener noreferrer">
+  <img src="https://aitoolboxer.com/aitoolboxer/images/badges/featured-on-light.svg" alt="Featured on AI Tool Boxer" style="height:44px;width:auto"/>
+</a>
 
     </div>
   );
