@@ -22,7 +22,7 @@ export default function Backlinks() {
       </a>
 
       <a href="https://aitoolboxer.com/projects/rewritemate?utm_source=badge" target="_blank" rel="noopener noreferrer">
-  <img src="https://aitoolboxer.com/aitoolboxer/images/badges/featured-on-light.svg" alt="Featured on AI Tool Boxer" style="height:44px;width:auto"/>
+  <img src="https://aitoolboxer.com/aitoolboxer/images/badges/featured-on-light.svg" alt="Featured on AI Tool Boxer"/>
 </a>
 
     </div>
