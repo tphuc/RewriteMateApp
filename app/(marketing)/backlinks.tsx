@@ -22,12 +22,12 @@ export default function Backlinks() {
       </a>
 
       <a href="https://aitoolboxer.com/projects/rewritemate?utm_source=badge" target="_blank" rel="noopener noreferrer">
-  <img src="https://aitoolboxer.com/aitoolboxer/images/badges/featured-on-light.svg" alt="Featured on AI Tool Boxer"/>
-</a>
+        <img src="https://aitoolboxer.com/aitoolboxer/images/badges/featured-on-light.svg" alt="Featured on AI Tool Boxer"/>
+      </a>
 
-<a href="https://golanz.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer">
-  <img src="https://golanz.com/golanz/images/badges/featured-on-light.svg" alt="Featured on Go Lanz" />
-</a>
+      <a href="https://golanz.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer">
+        <img src="https://golanz.com/golanz/images/badges/featured-on-light.svg" alt="Featured on Go Lanz" />
+      </a>
 
     </div>
   );
