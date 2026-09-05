@@ -33,6 +33,11 @@ export default function Backlinks() {
 <a href="https://startupfinds.com/projects/rewritemate?utm_source=badge" target="_blank" rel="noopener noreferrer">
   <img src="https://startupfinds.com/startupfinds/images/badges/featured-on-light.svg" alt="Featured on Startup Finds" />
 </a>
+
+<a href="https://launchfinds.com/projects/rewritemate?utm_source=badge" target="_blank" rel="noopener noreferrer">
+  <img src="https://launchfinds.com/launchfinds/images/badges/featured-on-light.svg" alt="Featured on Launch Finds"/>
+</a>
+
     </div>
   );
 }
