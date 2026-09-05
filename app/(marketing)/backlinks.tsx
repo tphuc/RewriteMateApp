@@ -1,6 +1,7 @@
 export default function Backlinks() {
   return (
-    <div className="flex items-center gap-2 justify-center py-4 border-t border-border/50 bg-secondary/50 border-b w-full overflow-x-scroll scrollbar-hide no-scrollbar">
+        <div className="flex items-center justify-start gap-4 py-4 px-4 border-t border-border/50 bg-secondary/50 border-b w-full overflow-x-auto scrollbar-hide no-scrollbar [&>a]:shrink-0">
+
       <a href="https://twelve.tools" target="_blank">
         <img src="https://twelve.tools/badge0-white.svg" alt="Featured on Twelve Tools" width="200" height="54" />
       </a>
@@ -29,6 +30,9 @@ export default function Backlinks() {
         <img src="https://golanz.com/golanz/images/badges/featured-on-light.svg" alt="Featured on Go Lanz" />
       </a>
 
+<a href="https://startupfinds.com/projects/rewritemate?utm_source=badge" target="_blank" rel="noopener noreferrer">
+  <img src="https://startupfinds.com/startupfinds/images/badges/featured-on-light.svg" alt="Featured on Startup Finds" />
+</a>
     </div>
   );
 }
