@@ -38,6 +38,43 @@ export default function Backlinks() {
   <img src="https://launchfinds.com/launchfinds/images/badges/featured-on-light.svg" alt="Featured on Launch Finds"/>
 </a>
 
+{/*  */}
+
+<a href="https://makerpocket.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+
+<a href="https://buildfinds.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+
+<a href="https://saashunt.best/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+
+<a href="https://smolhunt.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+
+<a href="https://devhub.best/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+
+<a href="https://smollaunchpad.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+
+<a href="https://smollist.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+
+<a href="https://lookingfortools.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+
+<a href="https://smolstartup.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+
+<a href="https://theresatoolfor.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+
+<a href="https://smolspot.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+
+<a href="https://supalaun.ch/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+
+<a href="https://linksalad.me/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+
+<a href="https://findtoolfor.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+
+<a href="https://discovernewtools.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+
+<a href="https://smolshow.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+
+<a href="https://devtoolsdir.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+
+
     </div>
   );
 }
