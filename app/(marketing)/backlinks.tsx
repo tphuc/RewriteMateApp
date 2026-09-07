@@ -52,6 +52,8 @@ export default function Backlinks() {
 
 <a href="https://smollaunchpad.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
 
+<a href="https://smolsaas.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer">
+</a>
 <a href="https://smollist.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
 
 <a href="https://lookingfortools.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
