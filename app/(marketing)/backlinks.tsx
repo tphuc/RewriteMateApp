@@ -61,10 +61,10 @@ export default function Backlinks() {
 <a href="https://shipthing.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer">
 </a>
 
-<a href="https://smolstartup.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
+<a href="https://smolstartup.com/projects/rewritemate-ai-keyboard-3249?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
 
 <a href="https://theresatoolfor.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
-
+{/* progress */}
 
 
 <a href="https://smolspot.com/projects/rewritemate-ai-keyboard?utm_source=badge" target="_blank" rel="noopener noreferrer"></a>
