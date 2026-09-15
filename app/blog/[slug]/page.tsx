@@ -6,6 +6,7 @@ import { StyledImage } from '@/components/styled-image';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import BlogAuthor from './author';
+import { BlogLinkingCard } from '@/components/blog-linking-card';
 import { serialize } from 'next-mdx-remote/serialize'
 import remarkGfm from 'remark-gfm';
 
@@ -100,6 +101,11 @@ export default async function Blog({ params }: any) {
 				<div className="prose prose-neutral max-w-none">
 					<CustomMDX source={post.content} />
 				</div>
+
+				<BlogLinkingCard
+					currentSlug={post.slug}
+					slugs={post.metadata.related}
+				/>
 
 				<BlogAuthor
 					name="Felix Tran"

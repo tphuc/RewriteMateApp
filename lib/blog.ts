@@ -8,8 +8,12 @@ export type Metadata = {
 	summary: string;
 	colors?: string;
 	image?: string;
-	keywords: any; // now properly typed as array
-	related?: any;
+	keywords: string[];
+	/**
+	 * Optional, ordered list of blog slugs to feature as related reading.
+	 * When omitted, BlogLinkingCard chooses posts with the closest keyword match.
+	 */
+	related?: string[];
 };
 
 

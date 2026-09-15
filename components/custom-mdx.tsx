@@ -9,6 +9,7 @@ import { Dialog, DialogClose, DialogContent, DialogTitle, DialogTrigger } from '
 import { StyledImage } from './styled-image';
 import { AppStoreBtn } from './appstore-btn';
 import { X } from 'lucide-react';
+import { BlogLinkingCard } from './blog-linking-card';
 
 
 interface TableProps {
@@ -369,7 +370,8 @@ const components = {
 	p: Paragraph,
 	ImageGrid: ImageGrid,
 	ImageFlow,
-	RewriteMateCTA
+	RewriteMateCTA,
+	BlogLinkingCard,
 };
 
 export const CustomMDX: FC<MDXRemoteProps> = (props) => {
